@@ -1,0 +1,38 @@
+2026-05-30 20:00:33 | main                 | INFO    | ============================================================
+2026-05-30 20:00:33 | main                 | INFO    | STEP 1: Downloading stock data via yfinance
+2026-05-30 20:00:33 | main                 | INFO    | ============================================================
+2026-05-30 20:00:54 | main                 | INFO    | Downloaded 49 stocks successfully
+2026-05-30 20:00:54 | main                 | INFO    | 
+STEP 2: Downloading Nifty 50 (market proxy)
+2026-05-30 20:00:54 | main                 | INFO    | Nifty 50: 3777 rows
+2026-05-30 20:00:54 | main                 | INFO    | 
+STEP 3: Loading benchmark TRI data
+2026-05-30 20:00:54 | main                 | WARNING | No TRI data found. Please download from https://www.niftyindices.com/reports/historical-data
+2026-05-30 20:00:54 | main                 | INFO    | 
+STEP 4: Saving to database
+2026-05-30 20:01:10 | main                 | INFO    | Database summary: {'db_path': 'C:\\Users\\VAIBHAV\\OneDrive\\Desktop\\Stocks\\new quant\\data\\market_data.db', 'total_rows': 181299, 'total_stocks': 49, 'date_range': '2011-01-03 to 2026-05-29'}
+2026-05-30 20:01:10 | main                 | INFO    | 
+Download complete! ✓
+2026-05-30 20:02:10 | main                 | INFO    | ============================================================
+2026-05-30 20:02:10 | main                 | INFO    | LOADING DATA
+2026-05-30 20:02:10 | main                 | INFO    | ============================================================
+2026-05-30 20:02:24 | main                 | INFO    | Data: 3800 dates × 49 stocks
+2026-05-30 20:02:24 | main                 | INFO    | 
+Running 1 backtest configurations...
+2026-05-30 20:02:24 | main                 | INFO    | 
+============================================================
+2026-05-30 20:02:24 | main                 | INFO    | CONFIG: 15 stocks, monthly rebalancing
+2026-05-30 20:02:24 | main                 | INFO    | ============================================================
+2026-05-30 20:06:27 | main                 | INFO    | 
+All reports saved to C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\results/
+2026-05-30 20:06:27 | main                 | INFO    | Backtest complete! ✓
+2026-05-30 20:07:41 | main                 | INFO    | ============================================================
+2026-05-30 20:07:41 | main                 | INFO    | LOADING DATA
+2026-05-30 20:07:41 | main                 | INFO    | ============================================================
+2026-05-30 20:07:55 | main                 | INFO    | Data: 3800 dates × 49 stocks
+2026-05-30 20:07:55 | main                 | INFO    | 
+Running 12 backtest configurations...
+2026-05-30 20:07:55 | main                 | INFO    | 
+============================================================
+2026-05-30 20:07:55 | main                 | INFO    | CONFIG: 5 stocks, weekly rebalancing
+2026-05-30 20:07:55 | main                 | INFO    | ============================================================

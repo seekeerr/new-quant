@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python test_market_filters.py)",
+      "PowerShell($env:PYTHONUTF8=1; py main.py costs 2>&1 | Select-Object -First 8)",
+      "PowerShell($env:PYTHONUTF8=1; py main.py costs | Select-Object -First 5; \"EXIT=$LASTEXITCODE\")"
+    ]
+  }
+}

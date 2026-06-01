@@ -1,0 +1,10 @@
+2026-05-30 20:02:24 | backtest             | INFO    | Starting backtest: 2012-01-03 to 2026-05-29, 15 stocks, monthly rebalancing
+2026-05-30 20:06:25 | backtest             | INFO    | Backtest complete: 2012-01-03 to 2026-05-29, 60 rebalances, ₹51,715 total costs, final value: ₹85,343
+2026-05-30 20:07:55 | backtest             | INFO    | Starting backtest: 2012-01-03 to 2026-05-29, 5 stocks, weekly rebalancing
+2026-05-30 20:17:20 | backtest             | INFO    | Liquidated on 2015-07-27. Cooldown until 2015-08-26
+2026-05-30 20:24:17 | backtest             | INFO    | Liquidated on 2016-11-15. Cooldown until 2016-12-15
+2026-05-30 20:38:41 | backtest             | INFO    | Liquidated on 2018-11-06. Cooldown until 2018-12-06
+2026-05-30 20:45:14 | backtest             | INFO    | Liquidated on 2019-08-07. Cooldown until 2019-09-06
+2026-05-30 20:51:27 | backtest             | INFO    | Liquidated on 2020-03-23. Cooldown until 2020-04-22
+2026-05-30 21:15:01 | backtest             | INFO    | Liquidated on 2022-05-23. Cooldown until 2022-06-22
+2026-05-30 21:28:51 | backtest             | INFO    | Liquidated on 2023-06-12. Cooldown until 2023-07-12

@@ -1,0 +1,90 @@
+2026-05-30 19:56:47 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-05-30 20:00:33 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-05-30 20:00:33 | downloader           | INFO    | Downloading 50 stocks (0 from cache)...
+2026-05-30 20:00:43 | downloader           | WARNING | TATAMOTORS.NS: No data returned (attempt 1)
+2026-05-30 20:00:48 | downloader           | WARNING | TATAMOTORS.NS: No data returned (attempt 2)
+2026-05-30 20:00:53 | downloader           | WARNING | TATAMOTORS.NS: No data returned (attempt 3)
+2026-05-30 20:00:53 | downloader           | ERROR   | TATAMOTORS.NS: Failed after 3 attempts
+2026-05-30 20:00:54 | downloader           | INFO    | Download complete: 49/50 stocks (1 failed)
+2026-05-30 20:00:54 | downloader           | INFO    | Downloading Nifty 50 (^NSEI)...
+2026-05-30 20:02:10 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-05-30 20:02:11 | downloader           | INFO    | Downloading 1 stocks (49 from cache)...
+2026-05-30 20:02:14 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-05-30 20:02:19 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-05-30 20:02:24 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-05-30 20:02:24 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-30 20:02:24 | downloader           | INFO    | Download complete: 49/50 stocks (1 failed)
+2026-05-30 20:02:24 | downloader           | INFO    | Nifty 50 loaded from cache.
+2026-05-30 20:07:41 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-05-30 20:07:41 | downloader           | INFO    | Downloading 1 stocks (49 from cache)...
+2026-05-30 20:07:45 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-05-30 20:07:50 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-05-30 20:07:55 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-05-30 20:07:55 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-30 20:07:55 | downloader           | INFO    | Download complete: 49/50 stocks (1 failed)
+2026-05-30 20:07:55 | downloader           | INFO    | Nifty 50 loaded from cache.
+2026-05-30 21:35:03 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-05-30 21:35:07 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-05-30 21:35:12 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-05-30 21:35:17 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-05-30 21:35:17 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-30 22:14:00 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-05-30 22:14:03 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-05-30 22:14:08 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-05-30 22:14:13 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-05-30 22:14:13 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-31 17:06:31 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-05-31 17:06:37 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-05-31 17:06:42 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-05-31 17:06:47 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-05-31 17:06:47 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-31 17:23:47 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-05-31 17:23:51 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-05-31 17:23:56 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-05-31 17:24:01 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-05-31 17:24:01 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-31 17:53:51 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-31 22:41:18 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-31 22:42:02 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-31 23:45:58 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-05-31 23:47:47 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 01:15:35 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-06-02 01:15:38 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-06-02 01:15:43 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-06-02 01:15:48 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-06-02 01:15:48 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 01:16:54 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-06-02 01:16:58 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-06-02 01:17:03 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-06-02 01:17:08 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-06-02 01:17:08 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 01:17:11 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-06-02 01:17:14 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-06-02 01:17:19 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-06-02 01:17:24 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-06-02 01:17:24 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 01:18:58 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-06-02 01:19:01 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-06-02 01:19:06 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-06-02 01:19:11 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-06-02 01:19:11 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 01:19:26 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-06-02 01:19:29 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-06-02 01:19:34 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-06-02 01:19:39 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-06-02 01:19:39 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 01:20:49 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-06-02 01:20:53 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-06-02 01:20:58 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-06-02 01:21:03 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-06-02 01:21:03 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 01:21:05 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-06-02 01:21:08 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-06-02 01:21:13 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-06-02 01:21:18 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-06-02 01:21:18 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 01:22:28 | downloader           | WARNING | Constituents CSV not found at C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\data\nifty500_constituents.csv. Using sample list of 50 stocks for testing.
+2026-06-02 01:22:32 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 1)
+2026-06-02 01:22:37 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
+2026-06-02 01:22:42 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
+2026-06-02 01:22:42 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
