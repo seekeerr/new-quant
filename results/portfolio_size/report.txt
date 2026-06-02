@@ -1,0 +1,75 @@
+====================================================================================================
+                   PORTFOLIO-SIZE (CONCENTRATION) EXPERIMENT — COMPARISON REPORT                    
+                 Buffer20 / Quarterly / Equal Weight / 12-1 Momentum / Net of Costs                 
+====================================================================================================
+Initial Capital: ₹500,000
+Period: 2012-01-03 to 2026-05-29
+Champion settings held fixed: pure 12-1 momentum, quarterly rebalance,
+equal weight, ranking buffer = 20. ONLY the portfolio size N varies.
+NOTE: Daily valuation forward-fills a missing close so a held stock is not
+      marked to zero on the one partial-data date (2026-05-28). Signals and
+      trade prices are unchanged; the champion mechanics are intact.
+
+Metric                                   Top3             Top5             Top7            Top10
+----------------------------------------------------------------------------------------------------
+1. CAGR                                28.20%           26.25%           24.11%           20.44%
+2. Max Drawdown                       -40.20%          -39.85%          -37.36%          -38.70%
+3. Sharpe Ratio                          0.87             0.90             0.87             0.74
+4. Calmar Ratio                          0.70             0.66             0.65             0.53
+5. Annual Volatility                   25.06%           22.07%           20.28%           18.92%
+6. Total Trades (exec)                    201              338              475              684
+7. Transaction Costs (₹)              257,314          261,642          234,007          190,009
+8. Final Value (₹)                 17,886,386       14,354,335       11,216,863        7,276,496
+9. Time Underwater                      87.0%            86.2%            86.5%            87.0%
+----------------------------------------------------------------------------------------------------
+
+SUPPORTING METRICS
+----------------------------------------------------------------------------------------------------
+Total Return                          3477.3%          2770.9%          2143.4%          1355.3%
+Cost Drag (CAGR pts)                    0.39%            0.40%            0.44%            0.49%
+Avg Turnover/Rebal                      21.5%            23.2%            24.7%            26.1%
+Peak Value (₹)                     22,829,021       18,434,116       13,552,170        8,927,235
+Value @ Max DD (₹)                  1,064,469        2,354,303        2,380,230        1,963,374
+----------------------------------------------------------------------------------------------------
+
+10. RECOVERY TIME (from deepest drawdown trough back to prior peak):
+     Top3    : trough 2016-01-21 → 445 days (recovered 2017-04-10)
+     Top5    : trough 2020-03-23 → 148 days (recovered 2020-08-18)
+     Top7    : trough 2020-03-23 → 154 days (recovered 2020-08-24)
+     Top10   : trough 2020-03-23 → 226 days (recovered 2020-11-04)
+
+11. ROLLING 3-YEAR CAGR (min / median / max across all 3Y windows):
+     Top3    : min 15.7%  |  median 35.0%  |  max 59.6%
+     Top5    : min 5.1%  |  median 33.6%  |  max 61.5%
+     Top7    : min 8.2%  |  median 31.1%  |  max 46.5%
+     Top10   : min 5.7%  |  median 26.4%  |  max 40.2%
+
+12. YEAR-WISE RETURNS
+----------------------------------------------------------------------------------------------------
+Year                 Top3             Top5             Top7            Top10
+2012               22.6%            28.6%            28.6%            28.0% 
+2013                4.2%             8.3%            15.6%            12.1% 
+2014               84.8%            62.1%            41.4%            35.8% 
+2015                0.9%            21.1%            15.1%            21.3% 
+2016               11.4%            22.2%            27.0%            15.9% 
+2017               81.3%            63.9%            66.3%            71.7% 
+2018               22.9%            16.4%            16.3%             9.0% 
+2019               17.1%             9.7%            14.1%            12.1% 
+2020               66.0%            53.3%            44.3%            26.9% 
+2021               53.9%            67.1%            48.3%            47.7% 
+2022               33.1%            15.3%             7.3%             0.4% 
+2023               29.6%            35.4%            35.9%            31.2% 
+2024                5.5%            -2.7%             0.0%             2.4% 
+2025               35.9%            23.3%            19.7%            12.6% 
+2026              -20.9%           -17.2%           -14.4%           -14.8% 
+----------------------------------------------------------------------------------------------------
+Avg                29.9%            27.1%            24.4%            20.8% 
+====================================================================================================
+
+──────────────────────────────────────────────VERDICT───────────────────────────────────────────────
+  Highest CAGR        : Top3  (28.20%)
+  Best Calmar (risk-adj): Top3  (Calmar 0.70, MaxDD -40.20%)
+  Best Sharpe         : Top5  (0.90)
+  Note: smaller N concentrates momentum alpha (higher CAGR potential, deeper
+        single-stock drawdowns); larger N diversifies (smoother, diluted edge).
+====================================================================================================

@@ -31,7 +31,7 @@ warnings.filterwarnings("ignore")
 import pandas as pd
 import numpy as np
 
-from config import SystemConfig
+from config import SystemConfig, RESULTS_DIR
 from data.downloader import download_all_stocks, download_market_proxy, build_price_panel
 from run_pure_momentum import run_pure_momentum_backtest
 
@@ -114,73 +114,140 @@ def underwater_curve_stats(equity: pd.Series):
     }
 
 
-def print_config_report(label, equity, initial_capital):
-    print(f"\n{'='*65}")
-    print(f"  CONFIG: {label}")
-    print(f"{'='*65}")
+def print_config_report(label, equity, initial_capital, emit):
+    """Emit the human-readable report and return a flat dict for the CSV."""
+    emit(f"\n{'='*65}")
+    emit(f"  CONFIG: {label}")
+    emit(f"{'='*65}")
 
     # 1. Initial Capital
-    print(f"\n  1. Initial Capital:          Rs {initial_capital:>14,.2f}")
+    emit(f"\n  1. Initial Capital:          Rs {initial_capital:>14,.2f}")
 
     # 2. Final Portfolio Value
     final_value = equity.iloc[-1]
     total_return_pct = (final_value / initial_capital - 1) * 100
-    print(f"  2. Final Portfolio Value:    Rs {final_value:>14,.2f}  ({total_return_pct:+.1f}%)")
+    emit(f"  2. Final Portfolio Value:    Rs {final_value:>14,.2f}  ({total_return_pct:+.1f}%)")
 
     # 3 & 4. Peak and Max Drawdown
     all_time_peak_value = equity.max()
     all_time_peak_date = equity.idxmax()
-    print(f"  3. Peak Portfolio Value:     Rs {all_time_peak_value:>14,.2f}  ({all_time_peak_date.date()})")
+    emit(f"  3. Peak Portfolio Value:     Rs {all_time_peak_value:>14,.2f}  ({all_time_peak_date.date()})")
 
     mdd = analyze_max_drawdown(equity)
-    print(f"\n  4. Maximum Drawdown:")
-    print(f"     Peak before drawdown:     Rs {mdd['peak_value']:>14,.2f}  ({mdd['peak_date'].date()})")
-    print(f"     Portfolio at Trough:      Rs {mdd['trough_value']:>14,.2f}  ({mdd['trough_date'].date()})")
-    print(f"     Drawdown Amount:          Rs {mdd['peak_value'] - mdd['trough_value']:>14,.2f}  ({mdd['max_dd_pct']:.1%})")
-    print(f"     Peak-to-Trough Duration:  {mdd['drawdown_duration_days']} calendar days")
+    emit(f"\n  4. Maximum Drawdown:")
+    emit(f"     Peak before drawdown:     Rs {mdd['peak_value']:>14,.2f}  ({mdd['peak_date'].date()})")
+    emit(f"     Portfolio at Trough:      Rs {mdd['trough_value']:>14,.2f}  ({mdd['trough_date'].date()})")
+    emit(f"     Drawdown Amount:          Rs {mdd['peak_value'] - mdd['trough_value']:>14,.2f}  ({mdd['max_dd_pct']:.1%})")
+    emit(f"     Peak-to-Trough Duration:  {mdd['drawdown_duration_days']} calendar days")
 
     # 5. Recovery Time
-    print(f"\n  5. Recovery After Max Drawdown:")
+    emit(f"\n  5. Recovery After Max Drawdown:")
     if mdd['recovery_date']:
-        print(f"     Recovery Date:            {mdd['recovery_date'].date()}")
-        print(f"     Trough-to-Recovery:       {mdd['recovery_days']} calendar days")
+        emit(f"     Recovery Date:            {mdd['recovery_date'].date()}")
+        emit(f"     Trough-to-Recovery:       {mdd['recovery_days']} calendar days")
         total_dd_cycle = mdd['drawdown_duration_days'] + mdd['recovery_days']
-        print(f"     Full DD Cycle (P->T->R):  {total_dd_cycle} calendar days")
+        emit(f"     Full DD Cycle (P->T->R):  {total_dd_cycle} calendar days")
     else:
-        print(f"     *** NOT YET RECOVERED as of backtest end ***")
+        emit(f"     *** NOT YET RECOVERED as of backtest end ***")
         days_since_trough = (equity.index[-1] - mdd['trough_date']).days
         current_from_trough = (equity.iloc[-1] / mdd['trough_value'] - 1) * 100
-        print(f"     Days since trough:        {days_since_trough} calendar days")
-        print(f"     Recovery progress:        {current_from_trough:+.1f}% from trough")
+        emit(f"     Days since trough:        {days_since_trough} calendar days")
+        emit(f"     Recovery progress:        {current_from_trough:+.1f}% from trough")
         still_needed = (mdd['peak_value'] / equity.iloc[-1] - 1) * 100
-        print(f"     Still needs:              +{still_needed:.1f}% to reach prior peak")
+        emit(f"     Still needs:              +{still_needed:.1f}% to reach prior peak")
 
     # 6. Underwater Curve Statistics
     uw = underwater_curve_stats(equity)
     if uw:
-        print(f"\n  6. Underwater Curve Statistics:")
-        print(f"     % Time Spent Underwater:  {uw['pct_time_underwater']:.1f}%")
-        print(f"     # Drawdown Periods:       {uw['num_dd_periods']}")
-        print(f"     Avg Depth:                {uw['avg_depth_pct']:.2%}")
-        print(f"     Median Depth:             {uw['median_depth_pct']:.2%}")
-        print(f"     Avg Duration (days):      {uw['avg_duration_days']:.0f} days")
+        emit(f"\n  6. Underwater Curve Statistics:")
+        emit(f"     % Time Spent Underwater:  {uw['pct_time_underwater']:.1f}%")
+        emit(f"     # Drawdown Periods:       {uw['num_dd_periods']}")
+        emit(f"     Avg Depth:                {uw['avg_depth_pct']:.2%}")
+        emit(f"     Median Depth:             {uw['median_depth_pct']:.2%}")
+        emit(f"     Avg Duration (days):      {uw['avg_duration_days']:.0f} days")
         if uw['worst_5_drawdowns']:
-            worst = uw['worst_5_drawdowns']
-            print(f"     5 Worst Drawdowns:")
-            for i, d in enumerate(worst, 1):
-                dd_amount = mdd['peak_value'] * abs(d)  # rough proxy
-                print(f"       #{i}: {d:.2%}")
+            emit(f"     5 Worst Drawdowns:")
+            for i, d in enumerate(uw['worst_5_drawdowns'], 1):
+                emit(f"       #{i}: {d:.2%}")
+
+    return {
+        "config": label,
+        "initial_capital": initial_capital,
+        "final_value": final_value,
+        "total_return_pct": total_return_pct,
+        "peak_value": all_time_peak_value,
+        "peak_date": all_time_peak_date.date(),
+        "maxdd_peak_value": mdd["peak_value"],
+        "maxdd_peak_date": mdd["peak_date"].date(),
+        "maxdd_trough_value": mdd["trough_value"],
+        "maxdd_trough_date": mdd["trough_date"].date(),
+        "max_dd_pct": mdd["max_dd_pct"],
+        "peak_to_trough_days": mdd["drawdown_duration_days"],
+        "recovery_days": mdd["recovery_days"],
+        "pct_time_underwater": uw.get("pct_time_underwater") if uw else None,
+        "num_dd_periods": uw.get("num_dd_periods") if uw else None,
+        "avg_dd_depth_pct": uw.get("avg_depth_pct") if uw else None,
+        "median_dd_depth_pct": uw.get("median_depth_pct") if uw else None,
+        "avg_dd_duration_days": uw.get("avg_duration_days") if uw else None,
+    }
+
+
+def write_walkthrough(out_dir, rows, config):
+    df = pd.DataFrame(rows)
+    path = out_dir / "WALKTHROUGH.md"
+    lines = []
+    lines.append("# Pure 12-1 Momentum — Drawdown & Portfolio-Value Analysis\n")
+    lines.append(f"_Generated by `analyze_drawdown_stats.py` — capital Rs "
+                 f"{config.portfolio.initial_capital:,.0f}, period "
+                 f"{config.backtest.start_date} to {config.backtest.end_date}._\n")
+    lines.append("## What this is\n")
+    lines.append(
+        "Rupee-value portfolio statistics for the validated pure 12-1 momentum strategy "
+        "(no risk overlays), net of all Indian transaction costs, across four configs.\n")
+    lines.append("## Final & peak values by config\n")
+    lines.append("| Config | Final Value | Peak Value | Peak Date | Max DD | Recovery |")
+    lines.append("|---|---|---|---|---|---|")
+    for _, r in df.iterrows():
+        rec = f"{int(r['recovery_days'])}d" if pd.notna(r["recovery_days"]) else "not recovered"
+        lines.append(f"| {r['config']} | Rs {r['final_value']:,.0f} | "
+                     f"Rs {r['peak_value']:,.0f} | {r['peak_date']} | "
+                     f"{r['max_dd_pct']:.1%} | {rec} |")
+    lines.append("")
+    lines.append("## Key takeaway\n")
+    lines.append(
+        "All four configs grew Rs 5L into the Rs 28L-82L range but carry brutal max drawdowns "
+        "(-56% to -68%), and **all peaked in mid-to-late 2024 and remain in their deepest-ever "
+        "drawdown at the backtest end (May 2026)** — none had recovered the prior peak. This is "
+        "the risk that motivated the market-filter experiment (see "
+        "`../market_filters/WALKTHROUGH.md`).\n")
+    lines.append("## Files in this folder\n")
+    lines.append("- `factor_report_*.png` — full gross-vs-net report per config (from "
+                 "`run_pure_momentum.py`)\n"
+                 "- `factor_comparison.png` — all configs on one chart\n"
+                 "- `drawdown_stats.csv` — machine-readable version of the numbers below\n"
+                 "- `drawdown_stats.txt` — full console output\n"
+                 "- `WALKTHROUGH.md` — this file\n")
+    path.write_text("\n".join(lines), encoding="utf-8")
 
 
 def main():
     config = SystemConfig()
     initial_capital = config.portfolio.initial_capital
 
-    print("=" * 65)
-    print("  PURE MOMENTUM — RUPEE VALUE PORTFOLIO STATISTICS")
-    print(f"  Initial Capital: Rs {initial_capital:,.0f}")
-    print(f"  Period: {config.backtest.start_date} to {config.backtest.end_date}")
-    print("=" * 65)
+    out_dir = RESULTS_DIR / "pure_momentum"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    report_lines = []
+
+    def emit(line=""):
+        print(line)
+        report_lines.append(line)
+
+    emit("=" * 65)
+    emit("  PURE MOMENTUM — RUPEE VALUE PORTFOLIO STATISTICS")
+    emit(f"  Initial Capital: Rs {initial_capital:,.0f}")
+    emit(f"  Period: {config.backtest.start_date} to {config.backtest.end_date}")
+    emit("=" * 65)
 
     print("\nLoading data from cache...")
     stock_data = download_all_stocks(use_cache=True)
@@ -202,6 +269,7 @@ def main():
         (10, "quarterly"),
     ]
 
+    rows = []
     for n_stocks, freq in param_grid:
         label = f"{n_stocks} Stocks / {freq.capitalize()} (NET)"
         print(f"\nRunning {label}...")
@@ -220,9 +288,19 @@ def main():
             continue
 
         equity = result["equity_curve"]
-        print_config_report(label, equity, initial_capital)
+        rows.append(print_config_report(label, equity, initial_capital, emit))
 
-    print(f"\n{'='*65}\n")
+    emit(f"\n{'='*65}\n")
+
+    # ── Save artifacts ──
+    pd.DataFrame(rows).to_csv(out_dir / "drawdown_stats.csv", index=False)
+    (out_dir / "drawdown_stats.txt").write_text("\n".join(report_lines), encoding="utf-8")
+    write_walkthrough(out_dir, rows, config)
+
+    print(f"\nArtifacts written to: {out_dir}")
+    print("  - drawdown_stats.csv")
+    print("  - drawdown_stats.txt")
+    print("  - WALKTHROUGH.md")
 
 
 if __name__ == "__main__":

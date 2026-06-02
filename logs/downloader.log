@@ -88,3 +88,21 @@
 2026-06-02 01:22:37 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 2)
 2026-06-02 01:22:42 | downloader           | WARNING | TATMOTORS.NS: No data returned (attempt 3)
 2026-06-02 01:22:42 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 02:36:00 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 02:36:23 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 17:58:30 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 18:05:54 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 20:40:34 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 21:09:50 | downloader           | ERROR   | DUMMYVEDL1.NS: Failed after 3 attempts
+2026-06-02 21:10:00 | downloader           | ERROR   | DUMMYVEDL2.NS: Failed after 3 attempts
+2026-06-02 21:10:10 | downloader           | ERROR   | DUMMYVEDL3.NS: Failed after 3 attempts
+2026-06-02 21:10:20 | downloader           | ERROR   | DUMMYVEDL4.NS: Failed after 3 attempts
+2026-06-02 21:13:08 | downloader           | ERROR   | TATMOTORS.NS: Failed after 3 attempts
+2026-06-02 21:13:21 | downloader           | ERROR   | DUMMYVEDL1.NS: Failed after 3 attempts
+2026-06-02 21:13:31 | downloader           | ERROR   | DUMMYVEDL2.NS: Failed after 3 attempts
+2026-06-02 21:13:41 | downloader           | ERROR   | DUMMYVEDL3.NS: Failed after 3 attempts
+2026-06-02 21:13:51 | downloader           | ERROR   | DUMMYVEDL4.NS: Failed after 3 attempts
+2026-06-02 21:16:17 | downloader           | ERROR   | DUMMYVEDL1.NS: Failed after 3 attempts
+2026-06-02 21:16:27 | downloader           | ERROR   | DUMMYVEDL2.NS: Failed after 3 attempts
+2026-06-02 21:16:37 | downloader           | ERROR   | DUMMYVEDL3.NS: Failed after 3 attempts
+2026-06-02 21:16:47 | downloader           | ERROR   | DUMMYVEDL4.NS: Failed after 3 attempts

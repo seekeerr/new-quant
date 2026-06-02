@@ -1,0 +1,139 @@
+=================================================================
+  PURE MOMENTUM — RUPEE VALUE PORTFOLIO STATISTICS
+  Initial Capital: Rs 500,000
+  Period: 2011-06-01 to 2026-05-30
+=================================================================
+
+=================================================================
+  CONFIG: 5 Stocks / Monthly (NET)
+=================================================================
+
+  1. Initial Capital:          Rs     500,000.00
+  2. Final Portfolio Value:    Rs   6,091,857.20  (+1118.4%)
+  3. Peak Portfolio Value:     Rs   8,739,573.26  (2024-06-03)
+
+  4. Maximum Drawdown:
+     Peak before drawdown:     Rs   8,739,573.26  (2024-06-03)
+     Portfolio at Trough:      Rs   3,831,897.18  (2026-05-28)
+     Drawdown Amount:          Rs   4,907,676.09  (-56.2%)
+     Peak-to-Trough Duration:  724 calendar days
+
+  5. Recovery After Max Drawdown:
+     *** NOT YET RECOVERED as of backtest end ***
+     Days since trough:        1 calendar days
+     Recovery progress:        +59.0% from trough
+     Still needs:              +43.5% to reach prior peak
+
+  6. Underwater Curve Statistics:
+     % Time Spent Underwater:  90.5%
+     # Drawdown Periods:       128
+     Avg Depth:                -4.02%
+     Median Depth:             -1.51%
+     Avg Duration (days):      25 days
+     5 Worst Drawdowns:
+       #1: -56.15%
+       #2: -42.26%
+       #3: -26.03%
+       #4: -23.14%
+       #5: -19.78%
+
+=================================================================
+  CONFIG: 5 Stocks / Quarterly (NET)
+=================================================================
+
+  1. Initial Capital:          Rs     500,000.00
+  2. Final Portfolio Value:    Rs   8,202,465.78  (+1540.5%)
+  3. Peak Portfolio Value:     Rs  11,270,784.53  (2024-09-26)
+
+  4. Maximum Drawdown:
+     Peak before drawdown:     Rs  11,270,784.53  (2024-09-26)
+     Portfolio at Trough:      Rs   3,596,616.20  (2026-05-28)
+     Drawdown Amount:          Rs   7,674,168.33  (-68.1%)
+     Peak-to-Trough Duration:  609 calendar days
+
+  5. Recovery After Max Drawdown:
+     *** NOT YET RECOVERED as of backtest end ***
+     Days since trough:        1 calendar days
+     Recovery progress:        +128.1% from trough
+     Still needs:              +37.4% to reach prior peak
+
+  6. Underwater Curve Statistics:
+     % Time Spent Underwater:  88.6%
+     # Drawdown Periods:       156
+     Avg Depth:                -3.88%
+     Median Depth:             -1.54%
+     Avg Duration (days):      20 days
+     5 Worst Drawdowns:
+       #1: -68.09%
+       #2: -40.72%
+       #3: -32.26%
+       #4: -21.30%
+       #5: -19.45%
+
+=================================================================
+  CONFIG: 10 Stocks / Monthly (NET)
+=================================================================
+
+  1. Initial Capital:          Rs     500,000.00
+  2. Final Portfolio Value:    Rs   6,782,496.18  (+1256.5%)
+  3. Peak Portfolio Value:     Rs   8,635,325.53  (2024-09-27)
+
+  4. Maximum Drawdown:
+     Peak before drawdown:     Rs   8,635,325.53  (2024-09-27)
+     Portfolio at Trough:      Rs   3,480,932.94  (2026-05-28)
+     Drawdown Amount:          Rs   5,154,392.59  (-59.7%)
+     Peak-to-Trough Duration:  608 calendar days
+
+  5. Recovery After Max Drawdown:
+     *** NOT YET RECOVERED as of backtest end ***
+     Days since trough:        1 calendar days
+     Recovery progress:        +94.8% from trough
+     Still needs:              +27.3% to reach prior peak
+
+  6. Underwater Curve Statistics:
+     % Time Spent Underwater:  87.3%
+     # Drawdown Periods:       173
+     Avg Depth:                -3.26%
+     Median Depth:             -1.31%
+     Avg Duration (days):      18 days
+     5 Worst Drawdowns:
+       #1: -59.69%
+       #2: -42.01%
+       #3: -21.58%
+       #4: -20.68%
+       #5: -17.03%
+
+=================================================================
+  CONFIG: 10 Stocks / Quarterly (NET)
+=================================================================
+
+  1. Initial Capital:          Rs     500,000.00
+  2. Final Portfolio Value:    Rs   6,571,200.51  (+1214.2%)
+  3. Peak Portfolio Value:     Rs   8,142,006.87  (2024-09-27)
+
+  4. Maximum Drawdown:
+     Peak before drawdown:     Rs   8,142,006.87  (2024-09-27)
+     Portfolio at Trough:      Rs   2,827,396.47  (2026-05-28)
+     Drawdown Amount:          Rs   5,314,610.40  (-65.3%)
+     Peak-to-Trough Duration:  608 calendar days
+
+  5. Recovery After Max Drawdown:
+     *** NOT YET RECOVERED as of backtest end ***
+     Days since trough:        1 calendar days
+     Recovery progress:        +132.4% from trough
+     Still needs:              +23.9% to reach prior peak
+
+  6. Underwater Curve Statistics:
+     % Time Spent Underwater:  87.3%
+     # Drawdown Periods:       168
+     Avg Depth:                -3.26%
+     Median Depth:             -1.25%
+     Avg Duration (days):      18 days
+     5 Worst Drawdowns:
+       #1: -65.27%
+       #2: -40.46%
+       #3: -23.65%
+       #4: -19.25%
+       #5: -16.65%
+
+=================================================================

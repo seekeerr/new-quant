@@ -1,0 +1,108 @@
+==============================================================================
+  MARKET-TIMING FILTERS ON PURE 12-1 MOMENTUM (NET of costs)
+  Initial Capital: Rs 500,000
+  Period: 2011-06-01 to 2026-05-30
+  Overlay: 100% cash when NIFTY < MA; re-enter momentum when NIFTY > MA
+==============================================================================
+
+
+##############################################################################
+#  CONFIG: 5 stocks / monthly rebalancing
+##############################################################################
+
+Filter                      CAGR  %Base   MaxDD     UW  <-10%  <-20%  Ulcer    Recov      FinalValue
+----------------------------------------------------------------------------------------------------
+Baseline (no filter)      19.0%   100% -56.2%    90%    33%    10%  11.3   NOTREC Rs   6,091,857
+NIFTY > 200 DMA           13.1%    69% -37.6%    93%    53%    25%  16.0     480d Rs   2,931,886
+NIFTY > 10-month SMA      13.5%    71% -30.4%    93%    50%    22%  14.2     439d Rs   3,093,584
+NIFTY > 12-month SMA      15.8%    83% -27.5%    92%    41%    14%  11.9     433d Rs   4,117,621
+  UW=% days underwater | <-10%/<-20%=% days in DD beyond that depth | Ulcer=RMS drawdown
+
+  Filter activity (time parked in cash / exits / re-entries):
+    NIFTY > 200 DMA           22.3% in cash |  68 exits |  69 re-entries | costs Rs670,394
+    NIFTY > 10-month SMA      22.9% in cash |  76 exits |  77 re-entries | costs Rs732,147
+    NIFTY > 12-month SMA      21.4% in cash |  55 exits |  57 re-entries | costs Rs690,102
+
+  Objective check (keep >=80% CAGR, cut DD & underwater):
+    [FAIL] NIFTY > 200 DMA          CAGR 69% of base | DD improved (-56%->-38%) | Underwater    worse (90%->93%)
+    [FAIL] NIFTY > 10-month SMA     CAGR 71% of base | DD improved (-56%->-30%) | Underwater    worse (90%->93%)
+    [FAIL] NIFTY > 12-month SMA     CAGR 83% of base | DD improved (-56%->-27%) | Underwater    worse (90%->92%)
+
+  Chart saved: C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\results\market_filters\equity_5stocks_monthly.png
+
+
+##############################################################################
+#  CONFIG: 5 stocks / quarterly rebalancing
+##############################################################################
+
+Filter                      CAGR  %Base   MaxDD     UW  <-10%  <-20%  Ulcer    Recov      FinalValue
+----------------------------------------------------------------------------------------------------
+Baseline (no filter)      21.4%   100% -68.1%    89%    33%     9%  11.2   NOTREC Rs   8,202,466
+NIFTY > 200 DMA           14.6%    68% -38.0%    91%    46%    28%  16.5     487d Rs   3,567,174
+NIFTY > 10-month SMA      15.4%    72% -30.9%    91%    43%    24%  14.6     602d Rs   3,931,807
+NIFTY > 12-month SMA      18.3%    85% -24.0%    90%    39%     9%  11.3   NOTREC Rs   5,621,724
+  UW=% days underwater | <-10%/<-20%=% days in DD beyond that depth | Ulcer=RMS drawdown
+
+  Filter activity (time parked in cash / exits / re-entries):
+    NIFTY > 200 DMA           22.3% in cash |  68 exits |  69 re-entries | costs Rs569,529
+    NIFTY > 10-month SMA      22.9% in cash |  75 exits |  77 re-entries | costs Rs658,215
+    NIFTY > 12-month SMA      21.4% in cash |  55 exits |  57 re-entries | costs Rs615,029
+
+  Objective check (keep >=80% CAGR, cut DD & underwater):
+    [FAIL] NIFTY > 200 DMA          CAGR 68% of base | DD improved (-68%->-38%) | Underwater    worse (89%->91%)
+    [FAIL] NIFTY > 10-month SMA     CAGR 72% of base | DD improved (-68%->-31%) | Underwater    worse (89%->91%)
+    [FAIL] NIFTY > 12-month SMA     CAGR 85% of base | DD improved (-68%->-24%) | Underwater    worse (89%->90%)
+
+  Chart saved: C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\results\market_filters\equity_5stocks_quarterly.png
+
+
+##############################################################################
+#  CONFIG: 10 stocks / monthly rebalancing
+##############################################################################
+
+Filter                      CAGR  %Base   MaxDD     UW  <-10%  <-20%  Ulcer    Recov      FinalValue
+----------------------------------------------------------------------------------------------------
+Baseline (no filter)      19.8%   100% -59.7%    87%    27%     6%   9.8   NOTREC Rs   6,782,496
+NIFTY > 200 DMA           13.8%    69% -24.4%    91%    47%     6%  11.7   NOTREC Rs   3,213,857
+NIFTY > 10-month SMA      12.8%    65% -24.9%    92%    47%     7%  11.7   NOTREC Rs   2,848,575
+NIFTY > 12-month SMA      16.4%    83% -21.9%    90%    31%     1%   8.8     261d Rs   4,440,617
+  UW=% days underwater | <-10%/<-20%=% days in DD beyond that depth | Ulcer=RMS drawdown
+
+  Filter activity (time parked in cash / exits / re-entries):
+    NIFTY > 200 DMA           22.3% in cash |  68 exits |  69 re-entries | costs Rs637,809
+    NIFTY > 10-month SMA      22.9% in cash |  76 exits |  77 re-entries | costs Rs648,707
+    NIFTY > 12-month SMA      21.4% in cash |  55 exits |  57 re-entries | costs Rs637,709
+
+  Objective check (keep >=80% CAGR, cut DD & underwater):
+    [FAIL] NIFTY > 200 DMA          CAGR 69% of base | DD improved (-60%->-24%) | Underwater    worse (87%->91%)
+    [FAIL] NIFTY > 10-month SMA     CAGR 65% of base | DD improved (-60%->-25%) | Underwater    worse (87%->92%)
+    [FAIL] NIFTY > 12-month SMA     CAGR 83% of base | DD improved (-60%->-22%) | Underwater    worse (87%->90%)
+
+  Chart saved: C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\results\market_filters\equity_10stocks_monthly.png
+
+
+##############################################################################
+#  CONFIG: 10 stocks / quarterly rebalancing
+##############################################################################
+
+Filter                      CAGR  %Base   MaxDD     UW  <-10%  <-20%  Ulcer    Recov      FinalValue
+----------------------------------------------------------------------------------------------------
+Baseline (no filter)      19.6%   100% -65.3%    87%    23%     4%   8.9   NOTREC Rs   6,571,201
+NIFTY > 200 DMA           12.3%    63% -26.2%    92%    49%    14%  12.7     449d Rs   2,651,967
+NIFTY > 10-month SMA      12.1%    62% -23.9%    92%    49%    10%  12.4     451d Rs   2,587,723
+NIFTY > 12-month SMA      16.1%    82% -20.9%    90%    31%     1%   8.9     216d Rs   4,283,996
+  UW=% days underwater | <-10%/<-20%=% days in DD beyond that depth | Ulcer=RMS drawdown
+
+  Filter activity (time parked in cash / exits / re-entries):
+    NIFTY > 200 DMA           22.3% in cash |  68 exits |  69 re-entries | costs Rs450,006
+    NIFTY > 10-month SMA      22.9% in cash |  75 exits |  77 re-entries | costs Rs488,607
+    NIFTY > 12-month SMA      21.4% in cash |  55 exits |  57 re-entries | costs Rs475,126
+
+  Objective check (keep >=80% CAGR, cut DD & underwater):
+    [FAIL] NIFTY > 200 DMA          CAGR 63% of base | DD improved (-65%->-26%) | Underwater    worse (87%->92%)
+    [FAIL] NIFTY > 10-month SMA     CAGR 62% of base | DD improved (-65%->-24%) | Underwater    worse (87%->92%)
+    [FAIL] NIFTY > 12-month SMA     CAGR 82% of base | DD improved (-65%->-21%) | Underwater    worse (87%->90%)
+
+  Chart saved: C:\Users\VAIBHAV\OneDrive\Desktop\Stocks\new quant\results\market_filters\equity_10stocks_quarterly.png
+
+==============================================================================
