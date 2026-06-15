@@ -1,0 +1,108 @@
+====================================================================================================
+           ROBUSTNESS VALIDATION — MOMENTUM + LOWVOL 50/50 (survivorship-free, no tuning)           
+====================================================================================================
+Period 2012-01-03..2026-05-29 | Initial Rs 500,000 | Final Rs 3,163,176
+FULL-SAMPLE: CAGR 13.67% | Sharpe 0.41 | Alpha +2.00% | MaxDD -36.64% | Beta 0.69
+
+----------------------------------------------------------------------------------------------------
+TEST 1 — SPLIT SAMPLE
+----------------------------------------------------------------------------------------------------
+Sub-period          CAGR    Sharpe     Alpha     MaxDD    Beta     days
+2012-2018         7.55%      0.07   -3.74%  -36.64%    0.62     1724
+2019-2026        19.80%      0.71   +7.98%  -28.56%    0.74     1827
+
+  Both halves positive alpha? NO   (alpha -3.74% / +7.98%)
+  Sharpe stable across halves? 0.07 vs 0.71
+
+----------------------------------------------------------------------------------------------------
+TEST 2 — ROLLING 5-YEAR WINDOWS (monthly step)
+----------------------------------------------------------------------------------------------------
+  112 windows.  Each metric — min / median / max:
+     CAGR    : +1.99% / +12.09% / +34.82%
+     Sharpe  : -0.24 / 0.31 / 1.42
+     Alpha   : -3.38% / +0.60% / +16.77%
+     MaxDD   : -36.64% / -28.56% / -22.03%
+  Windows with POSITIVE alpha : 58%  (65/112)
+  Windows with POSITIVE CAGR  : 100%
+  Windows Sharpe > full(0.20*): 69%
+
+----------------------------------------------------------------------------------------------------
+TEST 3 — HOLDINGS BREADTH
+----------------------------------------------------------------------------------------------------
+  Unique stocks ever held         : 81
+  Total quarterly rebalances      : 58
+  Avg distinct names held / quarter: 4.91
+  Median quarters a name is held  : 3  (max 11)
+
+  TOP 20 MOST FREQUENTLY HELD (quarters held | total P&L Rs | % of total P&L):
+      1. BRITANNIA         11q          -48,342    -1.8%
+      2. KAJARIACER        11q          133,889     5.0%
+      3. HINDUNILVR        10q           97,773     3.7%
+      4. MARUTI            10q         -152,700    -5.7%
+      5. DIVISLAB           9q          -12,175    -0.5%
+      6. NESTLEIND          8q           62,091     2.3%
+      7. LUPIN              7q          128,844     4.8%
+      8. TCS                7q            9,474     0.4%
+      9. SUNPHARMA          7q           32,031     1.2%
+     10. ITC                6q          163,817     6.2%
+     11. ABBOTINDIA         6q           38,862     1.5%
+     12. TVSMOTOR           6q           64,878     2.4%
+     13. IGL                6q           55,051     2.1%
+     14. SHREECEM           6q           44,637     1.7%
+     15. THEBYKE            5q           34,494     1.3%
+     16. PGHH               5q            5,277     0.2%
+     17. INFY               5q               68     0.0%
+     18. BHARTIARTL         5q           93,762     3.5%
+     19. SANOFI             5q           50,616     1.9%
+     20. ZYDUSLIFE          5q          233,454     8.8%
+
+----------------------------------------------------------------------------------------------------
+TEST 4 — RETURN CONCENTRATION
+----------------------------------------------------------------------------------------------------
+  Total net P&L (final - initial) : Rs 2,663,176
+  Reconstructed sum of stock P&L  : Rs 2,663,176  (reconciliation gap +0, costs/rounding)
+  Gross winners P&L / gross losers: Rs 3,731,721 / Rs -1,068,545
+  Profitable names                : 55/81 (68%)
+
+  TOP 10 WINNERS contribute Rs 1,993,811
+     = 75% of TOTAL net P&L
+     = 53% of all GROSS positive P&L
+
+  Top 10 winners (P&L Rs | % total | quarters held):
+      1. TRENT                   568,134    21.3%     4q
+      2. ZYDUSLIFE               233,454     8.8%     5q
+      3. LT                      197,677     7.4%     3q
+      4. SBC                     173,429     6.5%     1q
+      5. ITC                     163,817     6.2%     6q
+      6. BAJAJ-AUTO              153,848     5.8%     4q
+      7. MINDTREE                142,945     5.4%     3q
+      8. KAJARIACER              133,889     5.0%    11q
+      9. LUPIN                   128,844     4.8%     7q
+     10. HINDUNILVR               97,773     3.7%    10q
+  Bottom 5 losers:
+         RAJESHEXPO              -59,798    -2.2%     3q
+         SBILIFE                 -74,953    -2.8%     2q
+         ZYLOG                   -90,481    -3.4%     2q
+         MARUTI                 -152,700    -5.7%    10q
+         HDFCLIFE               -225,142    -8.5%     3q
+
+----------------------------------------------------------------------------------------------------
+TEST 5 — UNIVERSE SEGMENTATION  (cap proxied by point-in-time ADTV rank)
+----------------------------------------------------------------------------------------------------
+  Segment   HoldQtrs   % Hold  Uniq names          P&L Rs  % total P&L
+  Large          137      48%          34       1,546,445          58%
+  Mid             90      32%          26         397,917          15%
+  Small           58      20%          21         718,815          27%
+
+  (Large = ADTV rank 1-100, Mid = 101-250, Small = 251-500 within the daily
+   500-name universe. A turnover-based size proxy, not free-float market cap.)
+
+====================================================================================================
+-----------------------------------------VALIDATION VERDICT-----------------------------------------
+  1. Split sample : both halves alpha>0 ? NO
+  2. Rolling 5y   : >=60% windows alpha>0 ? NO (58%)
+  3/4. Concentration: top-10 names = 75% of P&L => broad-based
+  5. Segments     : largest segment = Large at 58% of P&L => spread across caps
+
+  => OVERALL: PARTIALLY ROBUST / see caveats
+====================================================================================================

@@ -1,0 +1,7 @@
+rank,combination,evidence_1to5,india_fit_1to5,free_data_feasible_1to5,implementation_ease_1to5,survivorship_safety_1to5,data_requirement,verdict
+1,Momentum + Low Volatility,4,4,5,5,5,price only,Best evidence we can test today; attacks the -62% crash; no new data risk - RECOMMENDED NEXT
+2,Momentum + Quality,5,4,2,3,2,point-in-time fundamentals,Strongest long-run evidence; ideal for India junk problem; gated behind bias-prone fundamental data
+3,Momentum + Value,5,4,2,3,2,point-in-time fundamentals,Canonical diversifier (Value & Momentum Everywhere); same data gate as Quality
+4,Momentum + Profitability,4,3,2,3,2,point-in-time fundamentals,Clean narrower quality variant; thinner pair-specific evidence; same data gate
+5,Momentum + Size,2,4,4,4,3,price x shares outstanding,Weak/fragile standalone evidence; highest survivorship sensitivity; cost/manipulation exposed
+6,Momentum + Trend,3,3,5,5,5,price only,Already tested - cuts drawdown but adds no alpha. Spent. Not a candidate.

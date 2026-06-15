@@ -1,0 +1,15 @@
+# Upstox / broker credentials and tokens — NEVER commit these
+data/upstox_secrets.json
+data/.upstox_token.json
+data/*_secrets.json
+data/.*_token.json
+
+# Scratch / one-off files
+_*.py
+_*.log
+_*.csv
+_*.json
+
+# Python
+__pycache__/
+*.pyc

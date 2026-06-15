@@ -121,7 +121,14 @@ def run_buffered_backtest(
     config: SystemConfig,
     apply_costs: bool = True,
     label: str = "",
+    universe_builder=None,
+    scorer=None,
 ) -> dict:
+    # `scorer(close_panel, date, symbols) -> Series sorted best->worst` lets a caller
+    # swap the ranking signal without touching any mechanics. Default reproduces the
+    # validated pure 12-1 momentum behaviour exactly.
+    if scorer is None:
+        scorer = compute_12_1_momentum
     cfg = config
     start = pd.Timestamp(cfg.backtest.start_date)
     end = pd.Timestamp(cfg.backtest.end_date)
@@ -145,9 +152,12 @@ def run_buffered_backtest(
     # are unchanged.
     valuation_panel = close_panel.ffill()
 
-    universe_builder = UniverseBuilder(
-        close_panel, high_panel, low_panel, volume_panel, cfg.universe,
-    )
+    # A caller may inject a custom universe builder (e.g. one that caps to the
+    # top-N most liquid names). Default reproduces the validated behaviour exactly.
+    if universe_builder is None:
+        universe_builder = UniverseBuilder(
+            close_panel, high_panel, low_panel, volume_panel, cfg.universe,
+        )
     cost_model = CostModel(cfg.costs)
 
     cash = initial_capital
@@ -182,7 +192,7 @@ def run_buffered_backtest(
         if not universe.symbols:
             continue
 
-        momentum_scores = compute_12_1_momentum(close_panel, date, universe.symbols)
+        momentum_scores = scorer(close_panel, date, universe.symbols)
         if momentum_scores.empty or len(momentum_scores) < n_stocks:
             continue
 
@@ -208,8 +218,15 @@ def run_buffered_backtest(
             sell_qty = qty - target_qty
             if sell_qty <= 0:
                 continue
-            price = today_close.get(sym, 0)
-            if price <= 0:
+            price = today_close.get(sym, np.nan)
+            # A held name that has stopped trading (delisted/suspended) has a NaN
+            # close on the survivorship-free panels. Exit it at its last known mark
+            # (the forward-filled valuation price) rather than letting NaN poison
+            # cash. If no price ever existed, write the residual position off.
+            if not (price > 0):
+                price = today_value.get(sym, np.nan)
+            if not (price > 0):
+                del current_holdings[sym]
                 continue
             sell_value = sell_qty * price
             cost = 0.0
@@ -232,8 +249,8 @@ def run_buffered_backtest(
             buy_qty = target_qty - current_holdings.get(sym, 0)
             if buy_qty <= 0:
                 continue
-            price = today_close.get(sym, 0)
-            if price <= 0:
+            price = today_close.get(sym, np.nan)
+            if not (price > 0):
                 continue
             buy_value = buy_qty * price
             cost = 0.0
