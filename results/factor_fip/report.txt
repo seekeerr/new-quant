@@ -1,0 +1,88 @@
+====================================================================================================
+                     FROG-IN-THE-PAN (FIP) FACTOR — SURVIVORSHIP-FREE UNIVERSE                      
+                 Top10 / Quarterly / Equal Weight / Buffer20 / Net of Indian costs                  
+====================================================================================================
+Initial Capital: Rs 500,000   Period: 2012-01-03..2026-05-29
+New factor: FIP = pct(12-1 momentum) + pct(consistency); consistency = fraction of
+            positive daily returns over the 12-1 formation window [T-252, T-21].
+C and D use the validated 50/50 momentum+lowvol blend; only the ranking leg differs.
+Benchmark: NIFTY 500 PRICE index, CAGR 13.62% (true TRI ~ 14.92%).
+Benchmark date-parse bug fixed earlier -> Beta/Alpha are valid.
+
+Metric                        A. Momentum B. Frog-in-the-Pan    C. Mom + LowVol    D. FIP + LowVol
+----------------------------------------------------------------------------------------------------
+CAGR (net)                         18.07%             14.41%             17.37%             15.25%
+CAGR (gross)                       19.38%             15.53%             18.17%             15.95%
+Max Drawdown                      -56.26%            -56.25%            -33.46%            -29.38%
+Sharpe                               0.41               0.33               0.69               0.59
+Calmar                               0.32               0.26               0.52               0.52
+Alpha (ann.)                       +3.05%             +0.03%             +5.36%             +3.46%
+Beta                                 1.14               1.06               0.74               0.71
+Annual Vol                         28.24%             23.81%             15.72%             14.90%
+Sortino                              0.53               0.41               0.88               0.76
+Excess vs Bmk                      +4.45%             +0.79%             +3.75%             +1.63%
+Trades (exec)                         888                867                776                751
+Avg Turnover/Reb                    59.3%              55.4%              41.9%              38.0%
+Txn Costs (Rs)                    230,259            198,916            214,926            173,527
+Cost Drag (pts)                     1.32%              1.12%              0.79%              0.70%
+Time Underwater                     91.8%              90.3%              85.4%              86.1%
+Final Value (Rs)                5,467,748          3,476,426          5,022,294          3,862,611
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------------SUCCESS CRITERION------------------------------------------
+Pre-registered: D (FIP+LowVol) improves Sharpe AND/OR CAGR vs C (champion),
+                without materially worsening drawdown (> 3 pts deeper).
+  C (champion)   : CAGR 17.37% | Sharpe 0.69 | MaxDD -33.46%
+  D (candidate)  : CAGR 15.25% | Sharpe 0.59 | MaxDD -29.38%
+  delta D - C    : dCAGR -2.12% | dSharpe -0.10 | dMaxDD +4.08% (shallower)
+  => VERDICT: FAIL — D does not clear the bar; the champion stands.
+====================================================================================================
+
+--------------------------------------SPLIT-SAMPLE VALIDATION---------------------------------------
+First half : 2012-01-03 .. 2019-03-14    Second half : 2019-03-14 .. 2026-05-29
+Variant                    CAGR_1   Sharpe_1    MaxDD_1     CAGR_2   Sharpe_2    MaxDD_2
+----------------------------------------------------------------------------------------------------
+A. Momentum                 5.3%      -0.04     -56.3%      32.4%       0.91     -38.6%
+B. Frog-in-the-Pan          7.5%       0.04     -49.7%      21.8%       0.61     -45.9%
+C. Mom + LowVol            18.1%       0.88     -18.8%      16.6%       0.57     -33.5%
+D. FIP + LowVol            18.7%       0.94     -19.1%      11.9%       0.33     -29.4%
+NIFTY500 (px)              14.3%          -     -20.8%      12.9%          -     -38.3%
+----------------------------------------------------------------------------------------------------
+D-vs-C Sharpe edge: half1 +0.06, half2 -0.24  => SIGN FLIPS between halves (fragile)
+====================================================================================================
+
+-------------------------------------ROLLING-WINDOW VALIDATION--------------------------------------
+Rolling 3-Year CAGR (min / median / max) and rolling 1-Year Sharpe (median):
+Variant                  3yCAGR_min   3yCAGR_med   3yCAGR_max   1ySharpe_med
+----------------------------------------------------------------------------------------------------
+A. Momentum                  -8.5%        21.8%        54.2%           0.28
+B. Frog-in-the-Pan          -12.0%        18.9%        50.9%           0.37
+C. Mom + LowVol               2.4%        22.6%        36.3%           0.78
+D. FIP + LowVol               4.6%        17.8%        35.8%           0.79
+----------------------------------------------------------------------------------------------------
+D's rolling-3y CAGR >= C's on 19% of overlapping windows.
+====================================================================================================
+
+--------CONCENTRATION ANALYSIS (robustness only — N is NOT optimized; Top10 is the headline)--------
+Variant                  N      CAGR     MaxDD   Sharpe   Calmar    Alpha      Vol
+----------------------------------------------------------------------------------------------------
+A. Momentum              3     3.0%    -71.9%    -0.10     0.04   -12.1%    36.7%
+A. Momentum              5    13.9%    -61.2%     0.24     0.23    -0.8%    31.5%
+A. Momentum             10    18.1%    -56.3%     0.41     0.32    +3.1%    28.2%
+
+B. Frog-in-the-Pan       3    11.0%    -73.8%     0.14     0.15    -3.8%    31.9%
+B. Frog-in-the-Pan       5    13.6%    -71.0%     0.26     0.19    -1.1%    27.6%
+B. Frog-in-the-Pan      10    14.4%    -56.3%     0.33     0.26    +0.0%    23.8%
+
+C. Mom + LowVol          3    10.3%    -42.4%     0.19     0.24    -1.5%    19.7%
+C. Mom + LowVol          5    13.7%    -36.6%     0.41     0.37    +2.0%    17.3%
+C. Mom + LowVol         10    17.4%    -33.5%     0.69     0.52    +5.4%    15.7%
+
+D. FIP + LowVol          3    11.1%    -34.1%     0.24     0.32    -0.7%    19.2%
+D. FIP + LowVol          5    11.0%    -32.8%     0.28     0.34    -0.7%    16.4%
+D. FIP + LowVol         10    15.3%    -29.4%     0.59     0.52    +3.5%    14.9%
+
+Read: concentration (lower N) is a robustness check, not a tuning knob. The
+prior honest concentration study found lower N raised drawdown without a
+commensurate Sharpe gain; watch whether FIP behaves the same.
+====================================================================================================

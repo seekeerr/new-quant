@@ -85,8 +85,13 @@ def load_tri_csv(
     result = pd.DataFrame()
     result["tri_value"] = pd.to_numeric(df[value_col], errors="coerce")
 
-    # Parse dates — NSE uses DD-Mon-YYYY or DD/MM/YYYY format
-    result.index = pd.to_datetime(df[date_col], dayfirst=True, format="mixed")
+    # Parse dates. IMPORTANT: do NOT use `dayfirst=True, format="mixed"` here — for
+    # ISO 'YYYY-MM-DD' strings that combination flips month/day on every row where
+    # the day is <= 12 (e.g. 2011-01-03 -> 2011-03-01), scrambling the series after
+    # the chronological sort and injecting spurious +/-30-40% daily "returns"
+    # (benchmark vol blew up to ~77%, collapsing beta toward 0 and inflating alpha).
+    # Resolve the true format ISO-first so unambiguous dates are never reinterpreted.
+    result.index = _parse_dates(df[date_col])
     result.index.name = "Date"
 
     # Sort chronologically
@@ -115,6 +120,23 @@ def _find_column(df: pd.DataFrame, candidates: list) -> Optional[str]:
         if name in df.columns:
             return name
     return None
+
+
+def _parse_dates(raw: pd.Series) -> pd.DatetimeIndex:
+    """Robustly parse a benchmark date column without ever flipping month/day.
+
+    Tries explicit, unambiguous formats most-specific first so an ISO 'YYYY-MM-DD'
+    column is parsed as ISO (never day-first). Only falls back to day-first
+    inference for genuine DD/MM/YYYY numeric dates (the Indian convention), and
+    never uses the `format="mixed"` per-row heuristic that caused the original bug.
+    """
+    s = raw.astype(str).str.strip()
+    for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%d-%b-%Y", "%d-%B-%Y", "%d-%m-%Y", "%d/%m/%Y"):
+        parsed = pd.to_datetime(s, format=fmt, errors="coerce")
+        if parsed.notna().mean() > 0.95:
+            return pd.DatetimeIndex(parsed)
+    # Last resort: day-first inference for DD/MM/YYYY; still never US month-first.
+    return pd.DatetimeIndex(pd.to_datetime(s, dayfirst=True, errors="coerce"))
 
 
 def get_benchmark_returns(

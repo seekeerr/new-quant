@@ -1,0 +1,92 @@
+====================================================================================================
+                     52-WEEK-HIGH PROXIMITY FACTOR — SURVIVORSHIP-FREE UNIVERSE                     
+                 Top10 / Quarterly / Equal Weight / Buffer20 / Net of Indian costs                  
+====================================================================================================
+Initial Capital: Rs 500,000   Period: 2012-01-03..2026-05-29
+New factor: 52WH = close / max(close, last 252 trading days). Higher = better.
+C and D use the validated 50/50 momentum+lowvol blend; only the ranking leg differs.
+Benchmark: NIFTY 500 PRICE index, CAGR 12.57% (true TRI ~ 13.87%).
+
+Metric                   A. Pure Momentum    B. 52-Week High    C. Mom + LowVol   D. 52WH + LowVol
+----------------------------------------------------------------------------------------------------
+CAGR (net)                         18.07%             17.79%             17.37%              9.10%
+CAGR (gross)                       19.38%             19.52%             18.17%             10.29%
+Max Drawdown                      -56.26%            -42.32%            -33.46%            -28.91%
+Sharpe                               0.41               0.50               0.69               0.19
+Calmar                               0.32               0.42               0.52               0.31
+Alpha (ann.)(*)                   +12.76%            +12.34%            +11.63%             +3.23%
+Annual Vol                         28.24%             22.40%             15.72%             13.79%
+Beta (*)                             0.05               0.04               0.03               0.02
+Sortino                              0.53               0.63               0.88               0.24
+Excess vs Bmk                      +5.50%             +5.22%             +4.80%             -3.47%
+Trades (exec)                         888               1091                776                887
+Avg Turnover/Reb                    59.3%              91.8%              41.9%              60.6%
+Txn Costs (Rs)                    230,259            541,754            214,926            162,937
+Cost Drag (pts)                     1.32%              1.73%              0.79%              1.18%
+Time Underwater                     91.8%              90.4%              85.4%              89.7%
+Final Value (Rs)                5,467,748          5,287,667          5,022,294          1,753,497
+----------------------------------------------------------------------------------------------------
+(*) Beta/Alpha are UNRELIABLE: the benchmark daily-return series (get_benchmark_returns) is
+corrupted -- annualised vol ~77% with spurious +/-30-40% daily jumps from a date-parse ambiguity
+(dayfirst/mixed) in nifty500_tri.csv. This inflates benchmark variance, collapsing Beta toward 0 and
+overstating Jensen's Alpha (~ CAGR - rf). It is a PRE-EXISTING benchmark data issue (also present in
+earlier Top10 runs); the engine, costs, universe, and benchmark methodology were NOT modified. The
+CAGR-endpoint benchmark is unaffected, so 'Excess vs Bmk (CAGR)' is the trustworthy relative metric.
+
+-----------------------------------------SUCCESS CRITERION------------------------------------------
+Pre-registered: D (52WH+LowVol) improves Sharpe AND/OR CAGR vs C (champion),
+                without materially worsening drawdown (> 3 pts deeper).
+  C (champion)   : CAGR 17.37% | Sharpe 0.69 | MaxDD -33.46%
+  D (candidate)  : CAGR 9.10% | Sharpe 0.19 | MaxDD -28.91%
+  delta D - C    : dCAGR -8.27% | dSharpe -0.50 | dMaxDD +4.55% (shallower)
+  => VERDICT: FAIL — D does not clear the bar.
+====================================================================================================
+
+--------------------------------------SPLIT-SAMPLE VALIDATION---------------------------------------
+First half : 2012-01-03 .. 2019-03-14    Second half : 2019-03-14 .. 2026-05-29
+Variant                    CAGR_1   Sharpe_1    MaxDD_1     CAGR_2   Sharpe_2    MaxDD_2
+----------------------------------------------------------------------------------------------------
+A. Pure Momentum            5.3%      -0.04     -56.3%      32.4%       0.91     -38.6%
+B. 52-Week High            22.2%       0.78     -33.4%      13.5%       0.29     -42.3%
+C. Mom + LowVol            18.1%       0.88     -18.8%      16.6%       0.57     -33.5%
+D. 52WH + LowVol            9.7%       0.26     -22.8%       8.6%       0.13     -26.4%
+NIFTY500 (px)              12.2%          -     -32.9%      12.9%          -     -42.7%
+----------------------------------------------------------------------------------------------------
+D-vs-C Sharpe edge: half1 -0.62, half2 -0.43  => CONSISTENT sign across halves
+====================================================================================================
+
+-------------------------------------ROLLING-WINDOW VALIDATION--------------------------------------
+Rolling 3-Year CAGR (min / median / max) and rolling 1-Year Sharpe (median):
+Variant                  3yCAGR_min   3yCAGR_med   3yCAGR_max   1ySharpe_med
+----------------------------------------------------------------------------------------------------
+A. Pure Momentum             -8.5%        21.8%        54.2%           0.28
+B. 52-Week High              -3.3%        17.0%        58.1%           0.49
+C. Mom + LowVol               2.4%        22.6%        36.3%           0.78
+D. 52WH + LowVol             -3.9%        10.3%        23.6%           0.08
+----------------------------------------------------------------------------------------------------
+D's rolling-3y CAGR >= C's on 0% of overlapping windows.
+====================================================================================================
+
+--------CONCENTRATION ANALYSIS (robustness only — N is NOT optimized; Top10 is the headline)--------
+Variant                  N      CAGR     MaxDD   Sharpe   Calmar    Alpha      Vol
+----------------------------------------------------------------------------------------------------
+A. Pure Momentum         3     3.0%    -71.9%    -0.10     0.04    -2.3%    36.7%
+A. Pure Momentum         5    13.9%    -61.2%     0.24     0.23    +8.6%    31.5%
+A. Pure Momentum        10    18.1%    -56.3%     0.41     0.32   +12.8%    28.2%
+
+B. 52-Week High          3    23.4%    -47.7%     0.56     0.49   +17.9%    30.0%
+B. 52-Week High          5    19.4%    -43.8%     0.51     0.44   +13.9%    25.5%
+B. 52-Week High         10    17.8%    -42.3%     0.50     0.42   +12.3%    22.4%
+
+C. Mom + LowVol          3    10.3%    -42.4%     0.19     0.24    +4.5%    19.7%
+C. Mom + LowVol          5    13.7%    -36.6%     0.41     0.37    +7.9%    17.3%
+C. Mom + LowVol         10    17.4%    -33.5%     0.69     0.52   +11.6%    15.7%
+
+D. 52WH + LowVol         3     3.3%    -39.1%    -0.18     0.08    -2.6%    17.6%
+D. 52WH + LowVol         5     6.9%    -33.3%     0.03     0.21    +1.0%    15.4%
+D. 52WH + LowVol        10     9.1%    -28.9%     0.19     0.31    +3.2%    13.8%
+
+Read: concentration (lower N) is a robustness check, not a tuning knob. The
+prior honest concentration study found lower N raised drawdown without a
+commensurate Sharpe gain; watch whether 52WH behaves the same.
+====================================================================================================

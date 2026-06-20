@@ -1,0 +1,20 @@
+============================================================================================
+           CONCENTRATION ON THE HONEST (SURVIVORSHIP-FREE) UNIVERSE — NET OF COSTS          
+============================================================================================
+Initial Capital: Rs 500,000   Period: 2012-01-03..2026-05-29
+Shell: quarterly / equal weight / Buffer20. ONLY N varies. NIFTY500(px) CAGR 12.57%
+USER TARGET: 30% net CAGR.
+
+Signal         N     CAGR    MaxDD  Sharpe  Calmar    Alpha     Vol   3yMin
+--------------------------------------------------------------------------------------------
+PureMom        3    3.0%   -71.9%   -0.10    0.04    -2.3%   36.7%  -21.6%
+PureMom        5   13.9%   -61.2%    0.24    0.23    +8.6%   31.5%  -15.3%
+PureMom       10   18.1%   -56.3%    0.41    0.32   +12.8%   28.2%   -8.5%
+Mom+LowVol     3   10.3%   -42.4%    0.19    0.24    +4.5%   19.7%   -8.7%
+Mom+LowVol     5   13.7%   -36.6%    0.41    0.37    +7.9%   17.3%   -3.0%
+Mom+LowVol    10   17.4%   -33.5%    0.69    0.52   +11.6%   15.7%    2.4%
+--------------------------------------------------------------------------------------------
+Highest honest CAGR: PureMom/Top10 = 18.07% (MaxDD -56.3%, Sharpe 0.41)
+=> 30% target NOT reached on honest data. Best is 18.1%; gap to 30% = 11.9 CAGR points.
+   The ~28% Top3 in results/portfolio_size came from the BIASED universe, not this one.
+============================================================================================

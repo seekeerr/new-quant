@@ -1,0 +1,87 @@
+====================================================================================================
+                     LOW-MAX / ANTI-LOTTERY FACTOR — SURVIVORSHIP-FREE UNIVERSE                     
+                 Top10 / Quarterly / Equal Weight / Buffer20 / Net of Indian costs                  
+====================================================================================================
+Initial Capital: Rs 500,000   Period: 2012-01-03..2026-05-29
+New factor: MAX = max daily return over last 21 trading days; score = -MAX (lower MAX better).
+C and D use the validated 50/50 momentum+lowvol blend; only the ranking leg differs.
+Benchmark: NIFTY 500 PRICE index, CAGR 13.62% (true TRI ~ 14.92%).
+Benchmark date-parse bug fixed this session -> Beta/Alpha are valid.
+
+Metric                        A. Momentum         B. Low-MAX    C. Mom + LowVolD. Low-MAX + LowVol
+----------------------------------------------------------------------------------------------------
+CAGR (net)                         18.07%             10.73%             17.37%             11.84%
+CAGR (gross)                       19.38%             12.30%             18.17%             12.89%
+Max Drawdown                      -56.26%            -38.21%            -33.46%            -25.95%
+Sharpe                               0.41               0.29               0.69               0.45
+Calmar                               0.32               0.28               0.52               0.46
+Alpha (ann.)                       +3.05%             -0.87%             +5.36%             +1.24%
+Annual Vol                         28.24%             14.81%             15.72%             11.92%
+Beta                                 1.14               0.68               0.74               0.55
+Sortino                              0.53               0.37               0.88               0.59
+Excess vs Bmk                      +4.45%             -2.89%             +3.75%             -1.78%
+Trades (exec)                         888               1044                776                851
+Avg Turnover/Reb                    59.3%              83.7%              41.9%              54.5%
+Txn Costs (Rs)                    230,259            224,494            214,926            175,500
+Cost Drag (pts)                     1.32%              1.57%              0.79%              1.05%
+Time Underwater                     91.8%              91.4%              85.4%              87.3%
+Final Value (Rs)                5,467,748          2,169,324          5,022,294          2,505,214
+----------------------------------------------------------------------------------------------------
+
+-----------------------------------------SUCCESS CRITERION------------------------------------------
+Pre-registered: D (Low-MAX+LowVol) improves Sharpe AND/OR CAGR vs C (champion),
+                without materially worsening drawdown (> 3 pts deeper).
+  C (champion)   : CAGR 17.37% | Sharpe 0.69 | MaxDD -33.46%
+  D (candidate)  : CAGR 11.84% | Sharpe 0.45 | MaxDD -25.95%
+  delta D - C    : dCAGR -5.53% | dSharpe -0.24 | dMaxDD +7.51% (shallower)
+  => VERDICT: FAIL — D does not clear the bar; the champion stands.
+====================================================================================================
+
+--------------------------------------SPLIT-SAMPLE VALIDATION---------------------------------------
+First half : 2012-01-03 .. 2019-03-14    Second half : 2019-03-14 .. 2026-05-29
+Variant                    CAGR_1   Sharpe_1    MaxDD_1     CAGR_2   Sharpe_2    MaxDD_2
+----------------------------------------------------------------------------------------------------
+A. Momentum                 5.3%      -0.04     -56.3%      32.4%       0.91     -38.6%
+B. Low-MAX                  8.9%       0.20     -24.9%      12.5%       0.36     -32.2%
+C. Mom + LowVol            18.1%       0.88     -18.8%      16.6%       0.57     -33.5%
+D. Low-MAX + LowVol        13.5%       0.69     -12.4%      10.2%       0.28     -26.0%
+NIFTY500 (px)              14.3%          -     -20.8%      12.9%          -     -38.3%
+----------------------------------------------------------------------------------------------------
+D-vs-C Sharpe edge: half1 -0.19, half2 -0.29  => CONSISTENT sign across halves
+====================================================================================================
+
+-------------------------------------ROLLING-WINDOW VALIDATION--------------------------------------
+Rolling 3-Year CAGR (min / median / max) and rolling 1-Year Sharpe (median):
+Variant                  3yCAGR_min   3yCAGR_med   3yCAGR_max   1ySharpe_med
+----------------------------------------------------------------------------------------------------
+A. Momentum                  -8.5%        21.8%        54.2%           0.28
+B. Low-MAX                   -6.3%        12.7%        29.0%           0.40
+C. Mom + LowVol               2.4%        22.6%        36.3%           0.78
+D. Low-MAX + LowVol           4.1%        15.5%        25.2%           0.63
+----------------------------------------------------------------------------------------------------
+D's rolling-3y CAGR >= C's on 26% of overlapping windows.
+====================================================================================================
+
+--------CONCENTRATION ANALYSIS (robustness only — N is NOT optimized; Top10 is the headline)--------
+Variant                  N      CAGR     MaxDD   Sharpe   Calmar    Alpha      Vol
+----------------------------------------------------------------------------------------------------
+A. Momentum              3     3.0%    -71.9%    -0.10     0.04   -12.1%    36.7%
+A. Momentum              5    13.9%    -61.2%     0.24     0.23    -0.8%    31.5%
+A. Momentum             10    18.1%    -56.3%     0.41     0.32    +3.1%    28.2%
+
+B. Low-MAX               3     5.7%    -38.2%    -0.05     0.15    -4.8%    17.3%
+B. Low-MAX               5     8.2%    -33.3%     0.10     0.25    -3.1%    16.3%
+B. Low-MAX              10    10.7%    -38.2%     0.29     0.28    -0.9%    14.8%
+
+C. Mom + LowVol          3    10.3%    -42.4%     0.19     0.24    -1.5%    19.7%
+C. Mom + LowVol          5    13.7%    -36.6%     0.41     0.37    +2.0%    17.3%
+C. Mom + LowVol         10    17.4%    -33.5%     0.69     0.52    +5.4%    15.7%
+
+D. Low-MAX + LowVol      3     6.7%    -43.9%     0.01     0.15    -3.3%    14.8%
+D. Low-MAX + LowVol      5     9.1%    -33.0%     0.20     0.28    -1.3%    13.4%
+D. Low-MAX + LowVol     10    11.8%    -26.0%     0.45     0.46    +1.2%    11.9%
+
+Read: concentration (lower N) is a robustness check, not a tuning knob. The
+prior honest concentration study found lower N raised drawdown without a
+commensurate Sharpe gain; watch whether Low-MAX behaves the same.
+====================================================================================================
