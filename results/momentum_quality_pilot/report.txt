@@ -1,0 +1,48 @@
+====================================================================================
+                        PHASE 2A — MOMENTUM + QUALITY PILOT                         
+                       STATUS: FRAMEWORK READY — DATA PENDING                       
+====================================================================================
+
+The complete pilot framework is built and wired to the frozen Phase-1 champion
+engine (Top10 / quarterly / Buffer20 / equal weight / full Indian cost model).
+It is waiting on ONE thing: verified fundamentals.
+
+DATA SOURCE (single, hand-filled, no network):
+   C:\Users\KaranThakkar\Desktop\Karan data\New Folder\new-quant\data\cache_fundamentals\pilot_fundamentals.csv
+   template rows     : 485 company-years, 40 companies
+   verified + usable : 0
+   manual workload   : ~485 rows x 5 fields = ~2425 cells
+
+FIELDS TO FILL (per company-year row), then set verified=TRUE:
+   gross_profit, total_assets, net_profit, total_equity   (revenue+cogs optional;
+   gross_profit is auto-derived as revenue-cogs if left blank). filing_date is the
+   PIT gatekeeper — use the real exchange announcement date where known; otherwise
+   the engine falls back to period_end + 120 days.
+
+QUALITY METRICS (derived, never imported):
+   Gross Profitability (GP/Assets)
+   ROE (NetInc/Equity)
+
+COVERAGE GATE (why no verdict yet):
+   median quality-covered names in the top-500 universe per rebalance = 0
+   required to form a Top10 quality portfolio (B/D)            = 10
+   Below the threshold, B (Quality) and D (Mom+LowVol+Quality) cannot be formed,
+   so producing any PASS/FAIL would be noise. Held back by design.
+
+VARIANTS THAT WILL RUN ONCE DATA IS PRESENT:
+   A. Momentum             — 12-1 momentum (needs no fundamentals)
+   B. Quality              — GP/Assets + ROE composite
+   C. Mom+LowVol (champion)— the bar to beat
+   D. Mom+LowVol+Quality   — quality-tilted champion
+
+VALIDATION THAT WILL RUN: full period · split sample · rolling windows ·
+   concentration · sector concentration · contribution analysis.
+
+SUCCESS CRITERION (pre-registered): D improves Sharpe and/or CAGR vs champion C
+   without worsening drawdown by >3 pts, AND survives split-sample + rolling-window
+   validation (no sign-flip across halves). Else FAIL.
+
+====================================================================================
+PENDING — fundamentals not yet populated/verified; NO backtest conclusion produced.
+Fill + verify pilot_fundamentals.csv, then re-run:  py run_momentum_quality.py
+====================================================================================

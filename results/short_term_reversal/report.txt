@@ -1,0 +1,59 @@
+================================================================================================================
+                         PHASE 2B #1 — SHORT-TERM REVERSAL vs MOMENTUM+LOWVOL CHAMPION                          
+                Survivorship-free · equity-only top-500 liquid · Buffer20 · net of Indian costs                 
+================================================================================================================
+Capital Rs 500,000   Period 2012-01-03..2026-05-29
+Reversal signal: rank by most-recent 21-day return, lowest=best (buy losers). No skip, no tuning.
+Shell: equal weight / Buffer20 / quarterly / full Indian cost model — IDENTICAL to champion.
+Champion: Momentum + LowVol (0.5/0.5), Top10 / quarterly / Buffer20 — the frozen product.
+
+Metric                                STR Top3              STR Top5             STR Top10Champion Mom+LowVol T10
+----------------------------------------------------------------------------------------------------------------
+CAGR (net)                              -2.28%                -6.89%                 1.01%                17.37%
+CAGR (gross)                            -0.81%                -5.26%                 3.00%                18.17%
+Sharpe                                   -0.23                 -0.41                 -0.20                  0.69
+Calmar                                   -0.03                 -0.08                  0.01                  0.52
+Sortino                                  -0.35                 -0.60                 -0.27                  0.88
+Max Drawdown                           -77.70%               -89.34%               -82.05%               -33.46%
+Annual Vol                              39.01%                32.78%                27.50%                15.72%
+Alpha (Jensen)                         -16.47%               -21.38%               -13.61%                +5.36%
+Beta                                      1.03                  1.07                  1.09                  0.74
+Excess vs Bmk                          -15.90%               -20.51%               -12.61%                +3.75%
+Avg Turnover/Reb                         90.1%                 91.2%                 93.3%                 41.9%
+Txn Costs (Rs)                          93,943                75,200               136,174               214,926
+Cost Drag (pts)                          1.47%                 1.63%                 1.99%                 0.79%
+Time Underwater                          99.4%                 99.3%                 99.2%                 85.4%
+Final Value (Rs)                       358,707               178,878               578,010             5,022,294
+-- concentration --
+Avg # names                                3.0                   5.0                  10.0                  10.0
+Name HHI                                 0.333                 0.200                 0.100                 0.100
+-- split sample (CAGR) --
+First half CAGR                         -3.39%               -11.84%                -3.51%                18.11%
+Second half CAGR                        -1.16%                -1.67%                 5.74%                16.65%
+Roll 3y min                             -32.1%                -40.2%                -37.2%                  2.4%
+Roll 3y median                            2.7%                 -3.9%                  2.5%                 22.6%
+----------------------------------------------------------------------------------------------------------------
+NIFTY 500 price-index CAGR: 13.62% (true TRI ~ 14.92%)
+
+---------------MONTHLY vs QUARTERLY (reversal) — triggered because quarterly turnover was extreme---------------
+Config               CAGR(Q)     CAGR(M)   Sharpe(Q)   Sharpe(M)     Turn(Q)     Turn(M)       Cost(Q)       Cost(M)
+STR Top3             -2.28%     -27.10%       -0.23       -0.88       90.1%       89.7%        93,943       140,717
+STR Top5             -6.89%     -16.02%       -0.41       -0.68       91.2%       91.1%        75,200       194,528
+STR Top10             1.01%      -8.99%       -0.20       -0.55       93.3%       92.7%       136,174       284,548
+
+-----------------------------------------DIRECT COMPARISON vs CHAMPION------------------------------------------
+  Champion: CAGR 17.37% | Sharpe 0.69 | Calmar 0.52 | MaxDD -33.46% | Alpha +5.36%
+  STR Top3 vs champion:  dCAGR -19.65% | dSharpe -0.92 | dCalmar -0.55 | dMaxDD -44.24% (deeper)
+  STR Top5 vs champion:  dCAGR -24.26% | dSharpe -1.10 | dCalmar -0.60 | dMaxDD -55.88% (deeper)
+  STR Top10 vs champion:  dCAGR -16.36% | dSharpe -0.89 | dCalmar -0.51 | dMaxDD -48.59% (deeper)
+
+----------------------------------------------------VERDICT-----------------------------------------------------
+Pre-registered viability bar (best reversal config by Sharpe, net of costs):
+  Best reversal config: STR Top10  (CAGR 1.01%, Sharpe -0.20, Alpha -13.61%)
+  (1) net CAGR > benchmark (13.62%)      : False
+  (2) net Jensen alpha > 0                      : False
+  (3) Sharpe >= 0.45                          : False
+  (4) split-sample no sign-flip (both halves +) : False  (h1 -3.51%, h2 5.74%)
+
+FAIL — Momentum remains the superior style.
+================================================================================================================

@@ -1,0 +1,5 @@
+variant,definition,data_status
+A. Momentum,12-1 momentum,ready
+B. Quality,GP/Assets + ROE composite,PENDING
+C. Mom+LowVol (champion),0.5 mom + 0.5 lowvol,ready
+D. Mom+LowVol+Quality,0.4 mom + 0.4 lowvol + 0.2 quality,PENDING

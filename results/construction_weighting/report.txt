@@ -1,0 +1,49 @@
+========================================================================================================
+                      PHASE 2B #2 — PORTFOLIO CONSTRUCTION (position sizing only)                       
+              Frozen champion Top10 holdings · Quarterly · Buffer20 · net of Indian costs               
+========================================================================================================
+Capital Rs 500,000   Period 2012-01-03..2026-05-29
+Selection FROZEN: champion's exact Top10 names replayed for B/C/D; only weights differ.
+Risk model: daily-return covariance over 252d (champion vol window; not tuned).
+Identical-SELECTION integrity check across A/B/C/D: PASS (same names every rebalance).
+Note: Min-Variance funds 9.4/10 names on average (corner solutions size some to ~0) — a sizing effect, not a selection change.
+
+Metric                       A. Equal Weight      B. Inverse Vol              C. ERC     D. Min Variance
+--------------------------------------------------------------------------------------------------------
+CAGR (net)                            17.37%              16.78%              17.23%              16.90%
+CAGR (gross)                          18.17%              17.56%              18.08%              17.84%
+Sharpe                                  0.69                0.67                0.70                0.69
+Calmar                                  0.52                0.50                0.51                0.49
+Sortino                                 0.88                0.84                0.88                0.87
+Max Drawdown                         -33.46%             -33.33%             -33.83%             -34.78%
+Annual Vol                            15.72%              15.41%              15.33%              15.02%
+Alpha (Jensen)                        +5.36%              +4.84%              +5.38%              +5.52%
+Beta                                    0.74                0.73                0.72                0.65
+Excess vs Bmk                         +3.75%              +3.17%              +3.61%              +3.28%
+Avg Turnover/Reb                       41.9%               42.7%               43.5%               50.6%
+Txn Costs (Rs)                       214,926             206,386             214,165             227,045
+Cost Drag (pts)                        0.79%               0.78%               0.85%               0.95%
+Time Underwater                        85.4%               85.0%               85.2%               84.8%
+Final Value (Rs)                   5,022,294           4,671,065           4,932,651           4,736,420
+-- concentration (weights) --
+Avg # names                             10.0                10.0                10.0                 9.4
+Weight HHI                             0.100               0.103               0.105               0.164
+Avg max name wt                        10.1%               13.1%               14.1%               25.7%
+-- split sample (CAGR) --
+First half CAGR                       18.11%              17.56%              17.42%              15.83%
+Second half CAGR                      16.65%              16.02%              17.03%              17.97%
+Roll 3y min                             2.4%                3.2%                3.8%                7.0%
+Roll 3y median                         22.6%               21.3%               21.3%               19.4%
+--------------------------------------------------------------------------------------------------------
+NIFTY 500 price-index CAGR: 13.62% (true TRI ~ 14.92%)
+
+----------------------------------SUCCESS CRITERION vs A. Equal Weight----------------------------------
+  Bar: improve Sharpe AND/OR Calmar by >= 0.03 WITHOUT CAGR drop > 1.0 pt.
+  Equal Weight baseline: CAGR 17.37% | Sharpe 0.69 | Calmar 0.52
+  B. Inverse Vol    : dSharpe -0.02 | dCalmar -0.02 | dCAGR -0.59%  -> [no]
+  C. ERC            : dSharpe +0.01 | dCalmar -0.01 | dCAGR -0.15%  -> [no]
+  D. Min Variance   : dSharpe +0.00 | dCalmar -0.03 | dCAGR -0.48%  -> [no]
+
+------------------------------------------------VERDICT-------------------------------------------------
+FAIL — no construction scheme clears the bar; Equal Weight remains the champion's sizing.
+========================================================================================================
