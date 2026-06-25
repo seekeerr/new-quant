@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!--
+  Importable Windows Task Scheduler definition (alternative to register_task.ps1).
+  Import with:
+    schtasks /Create /TN "NSE_Market_Data_Daily_Maintenance" /XML pipeline\nse_daily_update.xml /F
+  NOTE: the <Command>/<Arguments>/<WorkingDirectory> paths below are machine-specific
+  (set for this repo location). If the repo moves, update the three paths or just
+  use register_task.ps1, which resolves paths automatically.
+-->
+<Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Description>Automatic NSE market-data maintenance (download/panels/adjust/validate/health). Data only — never trades or rebalances.</Description>
+    <URI>\NSE_Market_Data_Daily_Maintenance</URI>
+  </RegistrationInfo>
+  <Triggers>
+    <CalendarTrigger>
+      <StartBoundary>2026-06-26T19:00:00</StartBoundary>
+      <Enabled>true</Enabled>
+      <ScheduleByWeek>
+        <DaysOfWeek>
+          <Monday />
+          <Tuesday />
+          <Wednesday />
+          <Thursday />
+          <Friday />
+        </DaysOfWeek>
+        <WeeksInterval>1</WeeksInterval>
+      </ScheduleByWeek>
+    </CalendarTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id="Author">
+      <LogonType>InteractiveToken</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>
+    <RestartOnFailure>
+      <Interval>PT15M</Interval>
+      <Count>3</Count>
+    </RestartOnFailure>
+    <ExecutionTimeLimit>PT2H</ExecutionTimeLimit>
+    <Enabled>true</Enabled>
+  </Settings>
+  <Actions Context="Author">
+    <Exec>
+      <Command>powershell.exe</Command>
+      <Arguments>-NoProfile -NonInteractive -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KaranThakkar\Desktop\Karan data\New Folder\new-quant\pipeline\run_daily_update.ps1"</Arguments>
+      <WorkingDirectory>C:\Users\KaranThakkar\Desktop\Karan data\New Folder\new-quant</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>

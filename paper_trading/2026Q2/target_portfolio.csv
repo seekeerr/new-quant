@@ -1,0 +1,15 @@
+rank,symbol,score,quantity,price,weight_pct,in_top10,in_buffer20,classification,current_held
+1,SBIN,0.9039,39,1017.8,9.78,True,True,BUY,False
+3,SBC,0.879,1342,30.24,10.0,True,True,BUY,False
+6,TORNTPHARM,0.8564,9,4111.3,9.12,True,True,BUY,False
+7,TITAN,0.8564,9,4065.5,9.01,True,True,BUY,False
+2,MFSL,0.8888,27,1477.4,9.83,True,True,HOLD,True
+4,EICHERMOT,0.8639,5,6825.5,8.41,True,True,HOLD,True
+5,TVSMOTOR,0.8629,11,3425.8,9.28,True,True,HOLD,True
+8,SBILIFE,0.8564,22,1790.5,9.7,True,True,HOLD,True
+16,HEROMOTOCO,0.824,7,5122.0,8.83,True,True,HOLD,True
+19,MARUTI,0.8143,3,12509.0,9.25,True,True,HOLD,True
+24,NYKAA,0.797,0,239.97,0.0,False,False,SELL,True
+40,BHARTIARTL,0.7635,0,1781.9,0.0,False,False,SELL,True
+47,RELIANCE,0.7441,0,1369.2,0.0,False,False,SELL,True
+92,ASIANPAINT,0.689,0,2225.8,0.0,False,False,SELL,True

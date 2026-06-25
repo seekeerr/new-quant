@@ -1,0 +1,8 @@
+{"severity": "HALT", "category": "HALT", "title": "Test HALT", "detail": "demo", "ts": "2026-06-24T14:00:31"}
+{"severity": "NOTIFY", "category": "REBALANCE", "title": "Test notify", "detail": "demo", "ts": "2026-06-24T14:00:31"}
+{"severity": "HALT", "category": "HALT", "title": "C2 Backup Data Source", "detail": "Primary stale (26d old).", "ts": "2026-06-24T14:00:34"}
+{"severity": "HALT", "category": "HALT", "title": "C3 Corp-Action Reconciliation", "detail": "Corporate action affects held/target name(s): BAJFINANCE. Freeze those names until reconciled.", "ts": "2026-06-24T14:00:34"}
+{"severity": "HALT", "category": "DATA_FRESHNESS", "title": "Stale price data", "detail": "Primary cache last close is 26 days old (limit 5 trading days).", "ts": "2026-06-24T14:00:34"}
+{"severity": "HALT", "category": "HALT", "title": "C2 Backup Data Source", "detail": "Primary stale (26d old).", "ts": "2026-06-24T14:15:43"}
+{"severity": "HALT", "category": "HALT", "title": "C3 Corp-Action Reconciliation", "detail": "Corporate action affects held/target name(s): RELIANCE. Freeze those names until reconciled.", "ts": "2026-06-24T14:15:43"}
+{"severity": "HALT", "category": "DATA_FRESHNESS", "title": "Stale price data", "detail": "Primary cache last close is 26 days old (limit 5 trading days).", "ts": "2026-06-24T14:15:43"}

@@ -3,6 +3,7 @@ numpy>=1.24
 scipy>=1.10
 matplotlib>=3.7
 plotly>=5.15
+streamlit>=1.36          # operational dashboard (dashboard/app.py)
 requests>=2.31
 yfinance>=0.2.28
 tqdm>=4.65

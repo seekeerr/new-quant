@@ -1,0 +1,12 @@
+{
+  "rebalance_date": "2026-04-01",
+  "approver": "paper_operator",
+  "approved_at": "2026-06-24T14:15:40",
+  "git_commit": "8f0482f",
+  "config_fingerprint": "43e610ffbb82d789",
+  "trade_list_file": "c:\\Users\\KaranThakkar\\Desktop\\Karan data\\New Folder\\new-quant\\paper_trading\\2026Q2\\audit_package\\trade_list.csv",
+  "trade_list_sha256": "b0e5d81ad6b5f5b139691f2728126016ba5c9c6306859345bd178fbbe16caed0",
+  "frozen_tag": "price-only-final",
+  "note": "2026Q2 Track-A paper cycle 001",
+  "status": "APPROVED"
+}

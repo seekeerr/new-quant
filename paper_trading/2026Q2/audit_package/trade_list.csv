@@ -1,0 +1,15 @@
+date,symbol,action,quantity,price,costs,notes
+2026-04-01,SBILIFE,SELL,2,1790.5,45.05,buffer exit / trim
+2026-04-01,MFSL,SELL,2,1477.4,44.09,buffer exit / trim
+2026-04-01,EICHERMOT,SELL,1,6825.5,50.05,buffer exit / trim
+2026-04-01,BHARTIARTL,SELL,23,1781.9,102.71,buffer exit / trim
+2026-04-01,ASIANPAINT,SELL,18,2225.8,101.3,buffer exit / trim
+2026-04-01,RELIANCE,SELL,31,1369.2,104.97,buffer exit / trim
+2026-04-01,HEROMOTOCO,SELL,1,5122.0,47.43,buffer exit / trim
+2026-04-01,NYKAA,SELL,188,239.97,109.08,buffer exit / trim
+2026-04-01,TVSMOTOR,SELL,2,3425.8,50.09,buffer exit / trim
+2026-04-01,MARUTI,BUY,1,12509.0,44.76,top-up
+2026-04-01,SBIN,BUY,39,1017.8,90.75,new entry
+2026-04-01,SBC,BUY,1342,30.24,92.25,new entry
+2026-04-01,TORNTPHARM,BUY,9,4111.3,86.2,new entry
+2026-04-01,TITAN,BUY,9,4065.5,85.5,new entry

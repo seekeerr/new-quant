@@ -1,0 +1,48 @@
+{
+  "verdict": "HALT",
+  "rebalance_date": "2026-04-01",
+  "evaluated_at": "2026-06-24T14:15:43",
+  "git_commit": "8f0482f",
+  "config_fingerprint": "43e610ffbb82d789",
+  "frozen_tag": "price-only-final",
+  "trade_list": "c:\\Users\\KaranThakkar\\Desktop\\Karan data\\New Folder\\new-quant\\paper_trading\\2026Q2\\audit_package\\trade_list.csv",
+  "watch_size": 10,
+  "controls": {
+    "C2": {
+      "name": "Backup Data Source",
+      "status": "HALT",
+      "summary": "Primary stale (26d old).",
+      "report": "C:\\Users\\KaranThakkar\\Desktop\\Karan data\\New Folder\\new-quant\\paper_trading\\controls\\reports\\c2_data_discrepancy.csv"
+    },
+    "C3": {
+      "name": "Corp-Action Reconciliation",
+      "status": "HALT",
+      "summary": "Corporate action affects held/target name(s): RELIANCE. Freeze those names until reconciled.",
+      "report": "C:\\Users\\KaranThakkar\\Desktop\\Karan data\\New Folder\\new-quant\\paper_trading\\controls\\reports\\c3_corp_action_report.csv"
+    },
+    "C4": {
+      "name": "Broker Reconciliation",
+      "status": "PASS",
+      "summary": "All 10 positions reconcile with the broker.",
+      "report": "C:\\Users\\KaranThakkar\\Desktop\\Karan data\\New Folder\\new-quant\\paper_trading\\controls\\reports\\c4_broker_reconciliation.csv"
+    },
+    "C1": {
+      "name": "Approval Gate",
+      "status": "PASS",
+      "summary": "Approved by paper_operator at 2026-06-24T14:15:40; trade list, commit and config all match.",
+      "report": null
+    },
+    "C5": {
+      "name": "Alert Delivery",
+      "status": "NOTIFY",
+      "summary": "Delivered 3 alert(s) [3 HALT / 0 NOTIFY] over local.",
+      "report": null
+    }
+  },
+  "blocking_controls": [
+    "C2",
+    "C3",
+    "FRESHNESS"
+  ],
+  "n_alerts": 3
+}

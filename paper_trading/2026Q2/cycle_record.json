@@ -1,0 +1,70 @@
+{
+  "quarter": "2026Q2",
+  "signal_date": "2026-04-01",
+  "prior_date": "2026-01-01",
+  "verdict": "HALT",
+  "executed": false,
+  "prior_book": [
+    "ASIANPAINT",
+    "BHARTIARTL",
+    "EICHERMOT",
+    "HEROMOTOCO",
+    "MARUTI",
+    "MFSL",
+    "NYKAA",
+    "RELIANCE",
+    "SBILIFE",
+    "TVSMOTOR"
+  ],
+  "target_book": [
+    "EICHERMOT",
+    "HEROMOTOCO",
+    "MARUTI",
+    "MFSL",
+    "SBC",
+    "SBILIFE",
+    "SBIN",
+    "TITAN",
+    "TORNTPHARM",
+    "TVSMOTOR"
+  ],
+  "entered": [
+    "SBC",
+    "SBIN",
+    "TITAN",
+    "TORNTPHARM"
+  ],
+  "exited": [
+    "ASIANPAINT",
+    "BHARTIARTL",
+    "NYKAA",
+    "RELIANCE"
+  ],
+  "retained": [
+    "EICHERMOT",
+    "HEROMOTOCO",
+    "MARUTI",
+    "MFSL",
+    "SBILIFE",
+    "TVSMOTOR"
+  ],
+  "turnover_pct": 47.78,
+  "total_costs": 1054.23,
+  "n_trades": 14,
+  "determinism": true,
+  "pv_at_T": 405906.66,
+  "data_last_close": "2026-05-29",
+  "controls": {
+    "C2": "HALT",
+    "C3": "HALT",
+    "C4": "PASS",
+    "C1": "PASS",
+    "C5": "NOTIFY"
+  },
+  "blocking": [
+    "C2",
+    "C3",
+    "FRESHNESS"
+  ],
+  "n_alerts": 3
+}

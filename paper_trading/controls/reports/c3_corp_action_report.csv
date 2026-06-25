@@ -1,0 +1,270 @@
+type,symbol,date,detail,touches_watch
+symbol_change,GEOJITBNPP / GEOJITFSL,,ISIN INE007B01023 maps to 2 symbols,False
+symbol_change,INFOSYSTCH / INFY,,ISIN INE009A01021 maps to 2 symbols,False
+symbol_change,ACUTAAS / AMIORG,,ISIN INE00FF01025 maps to 2 symbols,False
+symbol_change,AFSL / AHL,,ISIN INE00ZE01026 maps to 2 symbols,False
+symbol_change,PRISMCEM / PRSMJOHNSN,,ISIN INE010A01011 maps to 2 symbols,False
+symbol_change,CADILAHC / ZYDUSLIFE,,ISIN INE010B01027 maps to 2 symbols,False
+symbol_change,HCIL / HSCL,,ISIN INE019C01026 maps to 2 symbols,False
+symbol_change,HEALTHX / MICROSEC / SASTASUNDR,,ISIN INE019J01013 maps to 3 symbols,False
+symbol_change,AFL / INSPIRISYS,,ISIN INE020G01017 maps to 2 symbols,False
+symbol_change,PRAKASHCON / SETUINFRA,,ISIN INE023M01027 maps to 2 symbols,False
+symbol_change,SORILINFRA / STOREONE,,ISIN INE034H01016 maps to 2 symbols,False
+symbol_change,ARVINFRA / ARVSMART,,ISIN INE034S01021 maps to 2 symbols,False
+symbol_change,AERONEU / SAH,,ISIN INE035801013 maps to 2 symbols,False
+symbol_change,ALIVUS / GLS,,ISIN INE03Q201024 maps to 2 symbols,False
+symbol_change,COHANCE / SUVENPHAR,,ISIN INE03QK01018 maps to 2 symbols,False
+symbol_change,ADOR / ADORWELD,,ISIN INE045A01017 maps to 2 symbols,False
+symbol_change,VAKRANGEE / VAKRANSOFT,,ISIN INE051B01021 maps to 2 symbols,False
+symbol_change,ABREL / CENTURYTEX,,ISIN INE055A01016 maps to 2 symbols,False
+symbol_change,AVENTIS / SANOFI,,ISIN INE058A01010 maps to 2 symbols,False
+symbol_change,HINDWAREAP / SHIL,,ISIN INE05AN01011 maps to 2 symbols,False
+symbol_change,NAVNETEDUL / NAVNETPUBL,,ISIN INE060A01024 maps to 2 symbols,False
+symbol_change,AEROENTER / SATINDLTD,,ISIN INE065D01027 maps to 2 symbols,False
+symbol_change,CGPOWER / CROMPGREAV,,ISIN INE067A01029 maps to 2 symbols,False
+symbol_change,AMTEKINDIA / CASTEXTECH,,ISIN INE068D01021 maps to 2 symbols,False
+symbol_change,EMBDL / IBREALEST,,ISIN INE069I01010 maps to 2 symbols,False
+symbol_change,BILVYAPAR / BINANIIND,,ISIN INE071A01013 maps to 2 symbols,False
+symbol_change,EPIGRAL / MFL,,ISIN INE071N01016 maps to 2 symbols,False
+symbol_change,EONELECT / INDOASIFU,,ISIN INE076H01017 maps to 2 symbols,False
+symbol_change,GOCLCORP / GULFCORP,,ISIN INE077F01035 maps to 2 symbols,False
+symbol_change,BURGERKING / RBA,,ISIN INE07T201019 maps to 2 symbols,False
+symbol_change,GBGLOBAL / MIL,,ISIN INE087J01028 maps to 2 symbols,False
+symbol_change,STLTECH / STRTECH,,ISIN INE089C01029 maps to 2 symbols,False
+symbol_change,IDFCBANK / IDFCFIRSTB,,ISIN INE092T01019 maps to 2 symbols,False
+symbol_change,LLOYDSENGG / LSIL,,ISIN INE093R01011 maps to 2 symbols,False
+symbol_change,REVATHIEQU / RVTH,,ISIN INE0DAB01012 maps to 2 symbols,False
+symbol_change,ARIS / ARISINFRA,,ISIN INE0H9P01028 maps to 2 symbols,False
+symbol_change,SETL / SGLTL,,ISIN INE0M4D01010 maps to 2 symbols,False
+symbol_change,HLVLTD / HOTELEELA,,ISIN INE102A01024 maps to 2 symbols,False
+symbol_change,SUNCLAYLTD / TVSHLTD,,ISIN INE105A01035 maps to 2 symbols,False
+symbol_change,3PLAND / PDUMJEIND,,ISIN INE105C01023 maps to 2 symbols,False
+symbol_change,63MOONS / FINANTECH,,ISIN INE111B01023 maps to 2 symbols,False
+symbol_change,HITECHCORP / HITECHPLAS,,ISIN INE120D01012 maps to 2 symbols,False
+symbol_change,INDUSTOWER / INFRATEL,,ISIN INE121J01017 maps to 2 symbols,False
+symbol_change,PIRLIFE / PIRPHYTO,,ISIN INE122J01015 maps to 2 symbols,False
+symbol_change,IBULISL / IBULLSLTD / IBWSL / SORILHOLD / YAARI / YAARII,,ISIN INE126M01010 maps to 6 symbols,False
+symbol_change,AKZOINDIA / JSWDULUX,,ISIN INE133A01011 maps to 2 symbols,False
+symbol_change,ISPATIND / JSWISPAT,,ISIN INE136A01022 maps to 2 symbols,False
+symbol_change,CYIENT / INFOTECENT,,ISIN INE136B01020 maps to 2 symbols,False
+symbol_change,UCAL / UCALFUEL,,ISIN INE139B01016 maps to 2 symbols,False
+symbol_change,PEL / PIRHEALTH,,ISIN INE140A01024 maps to 2 symbols,False
+symbol_change,MVLIND / NOESISIND,,ISIN INE141B01020 maps to 2 symbols,False
+symbol_change,BINDALAGRO / OSWALGREEN,,ISIN INE143A01010 maps to 2 symbols,False
+symbol_change,IBULHSGFIN / SAMMAANCAP,,ISIN INE148I01020 maps to 2 symbols,False
+symbol_change,CHOLAHLDNG / TIFIN,,ISIN INE149A01033 maps to 2 symbols,False
+symbol_change,ACLGATI / GATI,,ISIN INE152B01027 maps to 2 symbols,False
+symbol_change,TATAMOTORS / TMPV,,ISIN INE155A01022 maps to 2 symbols,False
+symbol_change,HEROHONDA / HEROMOTOCO,,ISIN INE158A01026 maps to 2 symbols,True
+symbol_change,VIKASLIFE / VIKASMCORP,,ISIN INE161L01027 maps to 2 symbols,False
+symbol_change,HGS / HGSL,,ISIN INE170I01016 maps to 2 symbols,False
+symbol_change,ADLABS / IMAGICAA,,ISIN INE172N01012 maps to 2 symbols,False
+symbol_change,MAX / MFSL,,ISIN INE180A01020 maps to 2 symbols,True
+symbol_change,BHARATFIN / SKSMICRO,,ISIN INE180K01011 maps to 2 symbols,False
+symbol_change,AJRINFRA / GAMMNINFRA,,ISIN INE181G01025 maps to 2 symbols,False
+symbol_change,INEABS / INEOSSTYRO / STYABS / STYRENIX,,ISIN INE189B01011 maps to 4 symbols,False
+symbol_change,ORCHIDCHEM / ORCHIDPHAR,,ISIN INE191A01019 maps to 2 symbols,False
+symbol_change,PVR / PVRINOX,,ISIN INE191H01014 maps to 2 symbols,False
+symbol_change,TATACONSUM / TATAGLOBAL,,ISIN INE192A01025 maps to 2 symbols,False
+symbol_change,WELSPUNIND / WELSPUNLIV,,ISIN INE192B01031 maps to 2 symbols,False
+symbol_change,AYMSYNTEX / WELSYNTEX,,ISIN INE193B01039 maps to 2 symbols,False
+symbol_change,PROZONECSC / PROZONER / PROZONINTU,,ISIN INE195N01013 maps to 3 symbols,False
+symbol_change,WORTH / WORTHPERI,,ISIN INE196Y01018 maps to 2 symbols,False
+symbol_change,MERCK / PGHL,,ISIN INE199A01012 maps to 2 symbols,False
+symbol_change,ALSTOMT&D / AREVAT&D / GET&D / GVT&D,,ISIN INE200A01026 maps to 4 symbols,False
+symbol_change,DALMIAREF / SHRINATRAJ,,ISIN INE200F01017 maps to 2 symbols,False
+symbol_change,EXPLEOSOL / SQSBFSI / THINKSOFT,,ISIN INE201K01015 maps to 3 symbols,False
+symbol_change,DEWANHOUS / DHFL,,ISIN INE202B01012 maps to 2 symbols,False
+symbol_change,SUNDARMHLD / TSFINV,,ISIN INE202Z01029 maps to 2 symbols,False
+symbol_change,SESAGOA / SSLT / VEDL,,ISIN INE205A01025 maps to 3 symbols,False
+symbol_change,AEGISCHEM / AEGISLOG,,ISIN INE208C01025 maps to 2 symbols,False
+symbol_change,ATFL / SUNDROP,,ISIN INE209A01019 maps to 2 symbols,False
+symbol_change,CEBBCO / JWL,,ISIN INE209L01016 maps to 2 symbols,False
+symbol_change,LTI / LTIM / LTM,,ISIN INE214T01019 maps to 3 symbols,False
+symbol_change,ZUARIAGRO / ZUARIGLOB / ZUARIIND,,ISIN INE217A01012 maps to 3 symbols,False
+symbol_change,GREENFIRE / PROSEED,,ISIN INE217G01027 maps to 2 symbols,False
+symbol_change,EQUIPPP / PROINDIA,,ISIN INE217G01035 maps to 2 symbols,False
+symbol_change,FOURSOFT / PALRED,,ISIN INE218G01017 maps to 2 symbols,False
+symbol_change,KALPATPOWR / KPIL,,ISIN INE220B01022 maps to 2 symbols,False
+symbol_change,FCEL / FCONSUMER / FVIL,,ISIN INE220J01025 maps to 3 symbols,False
+symbol_change,GATECH / STAMPEDE,,ISIN INE224E01028 maps to 2 symbols,False
+symbol_change,GATECHDVR / SCAPDVR,,ISIN INE224E01036 maps to 2 symbols,False
+symbol_change,OMINFRAL / OMMETALS,,ISIN INE239D01028 maps to 2 symbols,False
+symbol_change,LEEL / LLOYDELENG,,ISIN INE245C01019 maps to 2 symbols,False
+symbol_change,COREEDUTEC / COREPROTEC,,ISIN INE247G01024 maps to 2 symbols,False
+symbol_change,FEDDERELEC / FEDDERLOYD,,ISIN INE249C01011 maps to 2 symbols,False
+symbol_change,EPL / ESSELPACK,,ISIN INE255A01020 maps to 2 symbols,False
+symbol_change,GOLDINFRA / OLECTRA,,ISIN INE260D01016 maps to 2 symbols,False
+symbol_change,LAXMIMACH / LMW,,ISIN INE269B01029 maps to 2 symbols,False
+symbol_change,DHANI / IBSEC / IBVENTURES,,ISIN INE274G01010 maps to 3 symbols,False
+symbol_change,HUHTAMAKI / PAPERPROD,,ISIN INE275B01026 maps to 2 symbols,False
+symbol_change,HOTELRUGBY / UNIVAFOODS,,ISIN INE275F01019 maps to 2 symbols,False
+symbol_change,GARFIBRES / GARWALLROP,,ISIN INE276A01018 maps to 2 symbols,False
+symbol_change,KARDA / KBCGLOBAL,,ISIN INE278R01034 maps to 2 symbols,False
+symbol_change,ATLANTA / ATLANTAA,,ISIN INE285H01022 maps to 2 symbols,False
+symbol_change,TEAMGTY / TIMESGTY,,ISIN INE289C01025 maps to 2 symbols,False
+symbol_change,LLOYDSTEEL / UTTAMVALUE,,ISIN INE292A01015 maps to 2 symbols,False
+symbol_change,HBLENGINE / HBLPOWER,,ISIN INE292B01021 maps to 2 symbols,False
+symbol_change,SMLISUZU / SMLMAH,,ISIN INE294B01019 maps to 2 symbols,False
+symbol_change,NACLIND / NAGAAGRI,,ISIN INE295D01020 maps to 2 symbols,False
+symbol_change,NAM-INDIA / RNAM,,ISIN INE298J01013 maps to 2 symbols,False
+symbol_change,ELAND / MUDRA,,ISIN INE311H01018 maps to 2 symbols,False
+symbol_change,MOHOTAIND / MOHOTAMILL / RAIREKMOH,,ISIN INE313D01013 maps to 3 symbols,False
+symbol_change,ZENITHBIR / ZENITHSTL,,ISIN INE318D01020 maps to 2 symbols,False
+symbol_change,BYKE / THEBYKE,,ISIN INE319B01014 maps to 2 symbols,False
+symbol_change,HALEOSLABS / SMSLIFE,,ISIN INE320X01016 maps to 2 symbols,False
+symbol_change,MADRASCEM / RAMCOCEM,,ISIN INE331A01037 maps to 2 symbols,False
+symbol_change,NTL / SUJANATWR,,ISIN INE333I01036 maps to 2 symbols,False
+symbol_change,WABCO-TVS / WABCOINDIA / ZFCVINDIA,,ISIN INE342J01019 maps to 3 symbols,False
+symbol_change,HINDUJAVEN / NDLVENTURE / NXTDIGITAL,,ISIN INE353A01023 maps to 3 symbols,False
+symbol_change,AGRE / FMNL,,ISIN INE360L01017 maps to 2 symbols,False
+symbol_change,BARBEQUE / UFBL,,ISIN INE382M01027 maps to 2 symbols,False
+symbol_change,TCLCONS / TICL,,ISIN INE388G01026 maps to 2 symbols,False
+symbol_change,MRO-TEK / UMIYA-MRO,,ISIN INE398B01018 maps to 2 symbols,False
+symbol_change,IBPOW / RTNPOWER,,ISIN INE399K01017 maps to 2 symbols,False
+symbol_change,ADANIGAS / ATGL,,ISIN INE399L01023 maps to 2 symbols,False
+symbol_change,MINDAIND / UNOMINDA,,ISIN INE405E01023 maps to 2 symbols,False
+symbol_change,NUMERICPW / SWELECTES,,ISIN INE409B01013 maps to 2 symbols,False
+symbol_change,AGI / HSIL,,ISIN INE415A01038 maps to 2 symbols,False
+symbol_change,AHMEDFORGE / METALFORGE,,ISIN INE425A01011 maps to 2 symbols,False
+symbol_change,BCG / LYCOS,,ISIN INE425B01027 maps to 2 symbols,False
+symbol_change,CESCVENT / RPSGVENT,,ISIN INE425Y01011 maps to 2 symbols,False
+symbol_change,HORIZONINF / SKIL,,ISIN INE429F01012 maps to 2 symbols,False
+symbol_change,PERIATEA / PKTEA,,ISIN INE431F01018 maps to 2 symbols,False
+symbol_change,ANDPAPER / APPAPER / IPAPPM,,ISIN INE435A01028 maps to 3 symbols,False
+symbol_change,TEXINFRA / TEXMACOLTD,,ISIN INE435C01024 maps to 2 symbols,False
+symbol_change,DALMIABEL / DALMIABHA,,ISIN INE439L01019 maps to 2 symbols,False
+symbol_change,PITTIENG / PITTILAM,,ISIN INE450D01021 maps to 2 symbols,False
+symbol_change,MAXWELL / VIPCLOTHNG,,ISIN INE450G01024 maps to 2 symbols,False
+symbol_change,ADHUNIKIND / INCREDIBLE,,ISIN INE452L01012 maps to 2 symbols,False
+symbol_change,HALONIX / PHOENIXLL,,ISIN INE455B01016 maps to 2 symbols,False
+symbol_change,GANESHHOU / GANESHHOUC,,ISIN INE460C01014 maps to 2 symbols,False
+symbol_change,BOC / LINDEINDIA,,ISIN INE473A01011 maps to 2 symbols,False
+symbol_change,HYDROS&S / KINGFA,,ISIN INE473D01015 maps to 2 symbols,False
+symbol_change,DPL / DPTL / DVL,,ISIN INE477B01010 maps to 3 symbols,False
+symbol_change,KRITI / KRITIIND,,ISIN INE479D01038 maps to 2 symbols,False
+symbol_change,ACRYSIL / CARYSIL,,ISIN INE482D01024 maps to 2 symbols,False
+symbol_change,GAL / SHAH,,ISIN INE482J01021 maps to 2 symbols,False
+symbol_change,CCAVENUE / INFIBEAM,,ISIN INE483S01020 maps to 2 symbols,False
+symbol_change,TIDEWATER / VEEDOL,,ISIN INE484C01030 maps to 2 symbols,False
+symbol_change,IIFLCAPS / IIFLSEC,,ISIN INE489L01022 maps to 2 symbols,False
+symbol_change,CLNINDIA / HEUBACHIND / SUDARCOLOR,,ISIN INE492A01029 maps to 3 symbols,False
+symbol_change,SALONA / SALONACOT,,ISIN INE498E01010 maps to 2 symbols,False
+symbol_change,L&TFH / LTF,,ISIN INE498L01015 maps to 2 symbols,False
+symbol_change,DCMSHRIRAM / DCMSRMCONS,,ISIN INE499A01024 maps to 2 symbols,False
+symbol_change,DCB / DCBBANK,,ISIN INE503A01015 maps to 2 symbols,False
+symbol_change,DHARAMSI / DMCC,,ISIN INE505A01010 maps to 2 symbols,False
+symbol_change,MAGMA / POONAWALLA,,ISIN INE511C01022 maps to 2 symbols,False
+symbol_change,CAREERP / CPCAP / CPIL,,ISIN INE521J01018 maps to 3 symbols,False
+symbol_change,IIFL / INDIAINFO,,ISIN INE530B01024 maps to 2 symbols,False
+symbol_change,CIEINDIA / MAHINDCIE / MAHINDFORG,,ISIN INE536H01010 maps to 3 symbols,False
+symbol_change,GFLLIMITED / GUJFLUORO,,ISIN INE538A01037 maps to 2 symbols,False
+symbol_change,PIPAVAVDOC / PIPAVAVYD / RDEL / RNAVAL,,ISIN INE542F01012 maps to 4 symbols,False
+symbol_change,AXIS-IT&T / AXISCADES,,ISIN INE555B01013 maps to 2 symbols,False
+symbol_change,BIRLANU / HIL / HYDRBADIND,,ISIN INE557A01011 maps to 3 symbols,False
+symbol_change,CREST / SHARRESLTD,,ISIN INE559D01011 maps to 2 symbols,False
+symbol_change,URAVI / URAVIDEF,,ISIN INE568Z01015 maps to 2 symbols,False
+symbol_change,ORIENTABRA / ORIENTCER,,ISIN INE569C01020 maps to 2 symbols,False
+symbol_change,ARROWCOAT / ARROWGREEN,,ISIN INE570D01018 maps to 2 symbols,False
+symbol_change,SENTINEL / STEL,,ISIN INE577L01016 maps to 2 symbols,False
+symbol_change,GULFPETRO / SAHPETRO,,ISIN INE586G01017 maps to 2 symbols,False
+symbol_change,GTECJAINX / KEERTI,,ISIN INE586X01012 maps to 2 symbols,False
+symbol_change,NEYVELILIG / NLCINDIA,,ISIN INE589A01014 maps to 2 symbols,False
+symbol_change,CRONIMET / METKORE,,ISIN INE592I01029 maps to 2 symbols,False
+symbol_change,HGM / HOVS,,ISIN INE596H01014 maps to 2 symbols,False
+symbol_change,AMJLAND / PDUMJEPULP,,ISIN INE606A01024 maps to 2 symbols,False
+symbol_change,ORIENTBELL / ORIENTCERA,,ISIN INE607D01018 maps to 2 symbols,False
+symbol_change,TITAGARH / TWL,,ISIN INE615H01020 maps to 2 symbols,False
+symbol_change,DHANVARSHA / TRU,,ISIN INE615R01029 maps to 2 symbols,False
+symbol_change,REVATHI / SEMAC,,ISIN INE617A01013 maps to 2 symbols,False
+symbol_change,PATANJALI / RUCHI,,ISIN INE619A01035 maps to 2 symbols,False
+symbol_change,A2ZINFRA / A2ZMES,,ISIN INE619I01012 maps to 2 symbols,False
+symbol_change,FEL / FRL / PANTALOONR,,ISIN INE623B01027 maps to 3 symbols,False
+symbol_change,WELENT / WELPROJ,,ISIN INE625G01013 maps to 2 symbols,False
+symbol_change,UNIPHOS / UPL,,ISIN INE628A01036 maps to 2 symbols,False
+symbol_change,VIDHIDYE / VIDHIING,,ISIN INE632C01026 maps to 2 symbols,False
+symbol_change,KAVDEFENCE / KAVVERITEL,,ISIN INE641C01019 maps to 2 symbols,False
+symbol_change,JTEKTINDIA / SONASTEER,,ISIN INE643A01035 maps to 2 symbols,False
+symbol_change,ABFRL / PFRL,,ISIN INE647O01011 maps to 2 symbols,False
+symbol_change,8KMILES / SECURKLOUD,,ISIN INE650K01021 maps to 2 symbols,False
+symbol_change,SURAJDIAMN / WINSOMEDJ,,ISIN INE664A01015 maps to 2 symbols,False
+symbol_change,SWANCORP / SWANENERGY,,ISIN INE665A01038 maps to 2 symbols,False
+symbol_change,BORORENEW / BOROSIL,,ISIN INE666D01022 maps to 2 symbols,False
+symbol_change,BHARATIDIL / BHARTISHIP,,ISIN INE673G01013 maps to 2 symbols,False
+symbol_change,TATASPONGE / TATASTLLP,,ISIN INE674A01014 maps to 2 symbols,False
+symbol_change,DEEPENR / DEEPIND,,ISIN INE677H01012 maps to 2 symbols,False
+symbol_change,KEYCORPSER / KEYFINSERV,,ISIN INE681C01015 maps to 2 symbols,False
+symbol_change,CEMPRO / ITDCEM,,ISIN INE686A01026 maps to 2 symbols,False
+symbol_change,CAPF / FCH,,ISIN INE688I01017 maps to 2 symbols,False
+symbol_change,EXCEL / LANDSMILL,,ISIN INE688J01023 maps to 2 symbols,False
+symbol_change,CAMBRIDGE / XCHANGING,,ISIN INE692G01013 maps to 2 symbols,False
+symbol_change,COUNCODOS / NEOCURE,,ISIN INE695B01025 maps to 2 symbols,False
+symbol_change,JUBILANT / JUBLPHARMA,,ISIN INE700A01033 maps to 2 symbols,False
+symbol_change,ACKRUTI / HUBTOWN,,ISIN INE703H01016 maps to 2 symbols,False
+symbol_change,CINELINE / CINEPRO,,ISIN INE704H01022 maps to 2 symbols,False
+symbol_change,TIPSINDLTD / TIPSMUSIC,,ISIN INE716B01029 maps to 2 symbols,False
+symbol_change,EBIXFOREX / WEIZFOREX,,ISIN INE726L01019 maps to 2 symbols,False
+symbol_change,SAMPANN / SEPOWER,,ISIN INE735M01018 maps to 2 symbols,False
+symbol_change,ADROITINFO / SPHEREGSL,,ISIN INE737B01033 maps to 2 symbols,False
+symbol_change,MODISNME / MODISONLTD,,ISIN INE737D01021 maps to 2 symbols,False
+symbol_change,DUCON / DYNATECH,,ISIN INE741L01018 maps to 2 symbols,False
+symbol_change,ADANIPORTS / MUNDRAPORT,,ISIN INE742F01042 maps to 2 symbols,False
+symbol_change,AIONJSW / JSWISPL,,ISIN INE743C01021 maps to 2 symbols,False
+symbol_change,ORIENTREF / RHIM,,ISIN INE743M01012 maps to 2 symbols,False
+symbol_change,ORTINGLOBE / ORTINLAB,,ISIN INE749B01020 maps to 2 symbols,False
+symbol_change,SHIV-VANI / SVOGL,,ISIN INE756B01017 maps to 2 symbols,False
+symbol_change,COSMOFILMS / COSMOFIRST,,ISIN INE757A01017 maps to 2 symbols,False
+symbol_change,SHREYAS / TRANSWORLD,,ISIN INE757B01015 maps to 2 symbols,False
+symbol_change,ETERNAL / ZOMATO,,ISIN INE758T01015 maps to 2 symbols,False
+symbol_change,HEADSUP / TMRVL,,ISIN INE759V01019 maps to 2 symbols,False
+symbol_change,CAMLIN / KOKUYOCMLN,,ISIN INE760A01029 maps to 2 symbols,False
+symbol_change,TARIL / TRIL,,ISIN INE763I01026 maps to 2 symbols,False
+symbol_change,MOTHERSON / MOTHERSUMI,,ISIN INE775A01035 maps to 2 symbols,False
+symbol_change,GMRAIRPORT / GMRINFRA,,ISIN INE776C01039 maps to 2 symbols,False
+symbol_change,NATHSEED / TECHIN,,ISIN INE778A01021 maps to 2 symbols,False
+symbol_change,EMAMIINFRA / EMAMIREAL,,ISIN INE778K01012 maps to 2 symbols,False
+symbol_change,BOSCH-HCIL / HITACHIHOM / JCHAC,,ISIN INE782A01015 maps to 3 symbols,False
+symbol_change,ACCELYA / KALECONSUL,,ISIN INE793A01012 maps to 2 symbols,False
+symbol_change,BHAGWATIHO / TGBHOTELS,,ISIN INE797H01018 maps to 2 symbols,False
+symbol_change,BIRLACABLE / BIRLAERIC,,ISIN INE800A01015 maps to 2 symbols,False
+symbol_change,VIKASECO / VIKASGLOB,,ISIN INE806A01020 maps to 2 symbols,False
+symbol_change,SEQUENT / VIYASH,,ISIN INE807F01027 maps to 2 symbols,False
+symbol_change,ANTELOPUS / SELAN,,ISIN INE818A01017 maps to 2 symbols,False
+symbol_change,DAAWAT / LTFOODS,,ISIN INE818H01020 maps to 2 symbols,False
+symbol_change,BHUSANSTL / TATASTLBSL,,ISIN INE824B01021 maps to 2 symbols,False
+symbol_change,JINDALSWHL / JSWHL,,ISIN INE824G01012 maps to 2 symbols,False
+symbol_change,BKMINDST / MANAKINDST,,ISIN INE831Q01016 maps to 2 symbols,False
+symbol_change,IBIPL / RTNINDIA / RTNINFRA,,ISIN INE834M01019 maps to 3 symbols,False
+symbol_change,ALLDIGI / ALLSEC,,ISIN INE835G01018 maps to 2 symbols,False
+symbol_change,BSOFT / KPIT,,ISIN INE836A01035 maps to 2 symbols,False
+symbol_change,IZMO / LOGIXMICRO,,ISIN INE848A01014 maps to 2 symbols,False
+symbol_change,MCDOWELL-N / UNITDSPR,,ISIN INE854D01024 maps to 2 symbols,False
+symbol_change,RAIN / RAINCOM,,ISIN INE855B01025 maps to 2 symbols,False
+symbol_change,GSS / GSSAMERICA,,ISIN INE871H01011 maps to 2 symbols,False
+symbol_change,BALKRISHNA / NIRVIKARA,,ISIN INE875R01011 maps to 2 symbols,False
+symbol_change,AIL / APIL / GEPIL / GVPIL,,ISIN INE878A01011 maps to 4 symbols,False
+symbol_change,AMARAJABAT / ARE&M,,ISIN INE885A01032 maps to 2 symbols,False
+symbol_change,IBN18 / TV18BRDCST,,ISIN INE886H01027 maps to 2 symbols,False
+symbol_change,AURUM / MAJESCO,,ISIN INE898S01029 maps to 2 symbols,False
+symbol_change,MBSWITCH / UJAAS,,ISIN INE899L01022 maps to 2 symbols,False
+symbol_change,ASTERSILI / SHRIASTER,,ISIN INE900K01012 maps to 2 symbols,False
+symbol_change,TTKHEALTH / TTKHLTCARE,,ISIN INE910C01018 maps to 2 symbols,False
+symbol_change,FORTUNEFIN / THEINVEST,,ISIN INE924D01017 maps to 2 symbols,False
+symbol_change,ROMAN / TARMAT,,ISIN INE924H01018 maps to 2 symbols,False
+symbol_change,AURIGROW / GODHA,,ISIN INE925Y01036 maps to 2 symbols,False
+symbol_change,DIGISPICE / SMOBILITY / SPICEMOBI / SPICEMOBIL,,ISIN INE927C01020 maps to 4 symbols,False
+symbol_change,AANJANEYA / DRDATSONS,,ISIN INE928K01013 maps to 2 symbols,False
+symbol_change,ADANIENSOL / ADANITRANS,,ISIN INE931S01010 maps to 2 symbols,False
+symbol_change,MEGASOFT / SIGMAADV,,ISIN INE933B01012 maps to 2 symbols,False
+symbol_change,BAJAJCON / BAJAJCORP,,ISIN INE933K01021 maps to 2 symbols,False
+symbol_change,MERCATOR / MLL,,ISIN INE934B01028 maps to 2 symbols,False
+symbol_change,LANCOIN / SRIPIPES,,ISIN INE943C01027 maps to 2 symbols,False
+symbol_change,VIPUL / VIPULLTD,,ISIN INE946H01037 maps to 2 symbols,False
+symbol_change,ADI / FAIRCHEM / PRIVISCL,,ISIN INE959A01019 maps to 3 symbols,False
+symbol_change,SEPC / SHRIRAMEPC,,ISIN INE964H01014 maps to 2 symbols,False
+symbol_change,SITICABLE / SITINET / WWIL,,ISIN INE965H01011 maps to 3 symbols,False
+symbol_change,DOLAT / DOLATALGO,,ISIN INE966A01022 maps to 2 symbols,False
+symbol_change,ZEEMEDIA / ZEENEWS,,ISIN INE966H01019 maps to 2 symbols,False
+symbol_change,JUMPNET / WINPRO,,ISIN INE974C01022 maps to 2 symbols,False
+symbol_change,NUCENT / PRESSMN,,ISIN INE980A01023 maps to 2 symbols,False
+symbol_change,CNL / CREATIVE,,ISIN INE985W01018 maps to 2 symbols,False

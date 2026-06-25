@@ -1,0 +1,3 @@
+date,num_holdings,turnover_pct,holdings_snapshot,notes,snapshot_id
+2026-04-01,10,100.0,TRENT;LT;TITAN;BAJFINANCE;SBIN;INFY;TCS;HINDUNILVR;ASIANPAINT;SUNPHARMA,Inception — full deployment,2026-Q2
+2026-07-01,10,38.4,TRENT;LT;TITAN;BAJFINANCE;SBIN;INFY;TCS;HINDUNILVR;ASIANPAINT;SUNPHARMA,Q3 rebalance (planned) — Buffer20 turnover in band,2026-Q3

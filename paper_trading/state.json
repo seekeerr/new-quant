@@ -1,0 +1,12 @@
+{
+  "mode": "EXAMPLE",
+  "strategy_label": "Momentum + LowVol \u00b7 Top10 \u00b7 Quarterly \u00b7 Buffer20 \u00b7 Equal Weight",
+  "frozen_commit": "8f0482f",
+  "frozen_tag": "price-only-final",
+  "inception_date": "2026-04-01",
+  "initial_capital": 500000.0,
+  "cash": 22565.09,
+  "last_rebalance": "2026-04-01",
+  "next_rebalance": "2026-07-01",
+  "benchmark": "NIFTY 500 (price)"
+}

@@ -1,0 +1,2 @@
+{"severity": "NOTIFY", "category": "VALIDATION", "title": "C3 Corp-Action Reconciliation", "detail": "269 corporate-action event(s) detected (none on watched names).", "ts": "2026-06-25T16:58:34"}
+{"severity": "NOTIFY", "category": "VALIDATION", "title": "C1 Approval Gate", "detail": "Approval check skipped (require_approval=False).", "ts": "2026-06-25T16:58:34"}

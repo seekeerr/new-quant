@@ -1,0 +1,4 @@
+# Generated at runtime by auto_data_update.py / the scheduler — not source.
+# Regenerated every weekday run; versioning them would create daily churn.
+logs/
+health/

@@ -1,0 +1,35 @@
+==============================================================================
+  PAPER-TRADING REHEARSAL 001  —  Track A historical dress rehearsal
+  Momentum+LowVol · Top10 · Quarterly · Buffer20 · Equal Weight (frozen)
+==============================================================================
+  Run at: 2026-06-24 13:36:35   commit: 8f0482f
+
+[T-5] Stage 1 — load archived survivorship-free panels
+      panel: 3799 dates x 3291 equity symbols; last close = 2026-05-29
+
+[T]   Stage 2 — data validation gate
+      price-integrity (all > 0 present)............ PASS
+      recent-history present (252d) ............... PASS
+      freshness (26d vs quarterly tolerance) ....... PASS
+      quarterly signal dates -> prev 2026-01-01 | current 2026-04-01
+
+[T_prev 2026-01-01] Stage 3-5 — establish inception book
+      universe 500 names; inception Top10: MARUTI, SBILIFE, MFSL, EICHERMOT, BHARTIARTL, ASIANPAINT, RELIANCE, HEROMOTOCO, NYKAA, TVSMOTOR
+      inception book value rolled to 2026-04-01: Rs 405,907
+
+[T 2026-04-01] Stage 3 — signal generation (Mom+LowVol blend)
+      universe 500 names; determinism re-run: PASS (bit-identical)
+      no-NaN in top-30 ............................ PASS
+
+[T 2026-04-01] Stage 4-5 — Buffer20 selection + equal-weight construction
+      target Top10: MFSL, EICHERMOT, TVSMOTOR, SBILIFE, HEROMOTOCO, MARUTI, SBIN, SBC, TORNTPHARM, TITAN
+      retained 6 | entered ['SBC', 'SBIN', 'TITAN', 'TORNTPHARM'] | exited ['ASIANPAINT', 'BHARTIARTL', 'NYKAA', 'RELIANCE']
+
+[T->T+1] Stage 6 — trade list (14 orders, SELLs first)
+      turnover 47.8%  (Buffer-20 expectation ~38%)  IN BAND
+      modelled txn costs: Rs 1,054
+
+[T+1 EOD] Stage 12 — audit package written to audit_packages\rehearsal_001/
+      files: ['CHECKSUMS.txt', 'alerts.csv', 'holdings.csv', 'manifest.json', 'ranks_T.csv', 'run_log.txt', 'trade_list.csv', 'trades.csv']
+      elapsed: 3.6s
+==============================================================================

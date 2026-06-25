@@ -1,0 +1,18 @@
+{
+  "rehearsal_id": "rehearsal_001",
+  "generated_at": "2026-06-24T13:36:38",
+  "git_commit": "8f0482f",
+  "frozen_tag": "price-only-final",
+  "strategy": "Momentum+LowVol 50/50 \u00b7 Top10 \u00b7 Quarterly \u00b7 Buffer20 \u00b7 EqualWeight",
+  "signal_date_prev": "2026-01-01",
+  "signal_date": "2026-04-01",
+  "data_last_close": "2026-05-29",
+  "universe_size_T": 500,
+  "initial_capital": 500000.0,
+  "portfolio_value_at_T": 405906.66,
+  "turnover_pct": 47.78,
+  "total_costs": 1054.23,
+  "n_trades": 14,
+  "determinism_pass": true,
+  "elapsed_seconds": 3.6
+}

@@ -1,0 +1,44 @@
+{
+  "verdict": "GO",
+  "rebalance_date": "2026-07-01",
+  "evaluated_at": "2026-06-25T16:58:34",
+  "git_commit": "8f0482f",
+  "config_fingerprint": "43e610ffbb82d789",
+  "frozen_tag": "price-only-final",
+  "trade_list": "paper_trading/2026Q2/audit_package/trade_list.csv",
+  "watch_size": 10,
+  "controls": {
+    "C2": {
+      "name": "Backup Data Source",
+      "status": "PASS",
+      "summary": "Primary fresh, secondary covers 100.0%, no unexplained divergence.",
+      "report": "C:\\Users\\KaranThakkar\\Desktop\\Karan data\\New Folder\\new-quant\\paper_trading\\controls\\reports\\c2_data_discrepancy.csv"
+    },
+    "C3": {
+      "name": "Corp-Action Reconciliation",
+      "status": "NOTIFY",
+      "summary": "269 corporate-action event(s) detected (none on watched names).",
+      "report": "C:\\Users\\KaranThakkar\\Desktop\\Karan data\\New Folder\\new-quant\\paper_trading\\controls\\reports\\c3_corp_action_report.csv"
+    },
+    "C4": {
+      "name": "Broker Reconciliation",
+      "status": "PASS",
+      "summary": "All 10 positions reconcile with the broker.",
+      "report": "C:\\Users\\KaranThakkar\\Desktop\\Karan data\\New Folder\\new-quant\\paper_trading\\controls\\reports\\c4_broker_reconciliation.csv"
+    },
+    "C1": {
+      "name": "Approval Gate",
+      "status": "NOTIFY",
+      "summary": "Approval check skipped (require_approval=False).",
+      "report": null
+    },
+    "C5": {
+      "name": "Alert Delivery",
+      "status": "PASS",
+      "summary": "Delivered 2 alert(s) [0 HALT / 2 NOTIFY] over local.",
+      "report": null
+    }
+  },
+  "blocking_controls": [],
+  "n_alerts": 2
+}

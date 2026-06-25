@@ -1,0 +1,5 @@
+7ae9457494bdfa88  alerts.csv
+f066275832ee8a80  holdings.csv
+ecfc33a51fb6f239  ranks_T.csv
+b0e5d81ad6b5f5b1  trade_list.csv
+b0e5d81ad6b5f5b1  trades.csv

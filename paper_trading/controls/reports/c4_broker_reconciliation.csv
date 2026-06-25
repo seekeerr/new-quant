@@ -1,0 +1,11 @@
+symbol,quantity_expected,quantity_broker,delta,status
+ASIANPAINT,18,18,0,match
+BHARTIARTL,23,23,0,match
+EICHERMOT,6,6,0,match
+HEROMOTOCO,8,8,0,match
+MARUTI,2,2,0,match
+MFSL,29,29,0,match
+NYKAA,188,188,0,match
+RELIANCE,31,31,0,match
+SBILIFE,24,24,0,match
+TVSMOTOR,13,13,0,match

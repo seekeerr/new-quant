@@ -1,0 +1,9 @@
+To: []
+Subject: [HALT x1] Rebalance controls — 2 alert(s)
+
+Operational control alerts (frozen champion):
+
+[HALT] HALT: Test HALT
+    demo  (2026-06-24T14:00:31)
+[NOTIFY] REBALANCE: Test notify
+    demo  (2026-06-24T14:00:31)
