@@ -1,0 +1,941 @@
+<title>The 5-Day Spike Trap</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F5F8;
+  --surface:#FFFFFF;
+  --surface-2:#E9EDF2;
+  --ink:#13171C;
+  --ink-2:#3B4550;
+  --muted:#6C7784;
+  --rule:#D7DDE5;
+  --rule-2:#B6BFCA;
+  --accent:#2B4A63;
+  --accent-soft:#D9E3EB;
+  --neg:#AE3A36;
+  --neg-soft:#EBD1CF;
+  --pos:#26786A;
+  --pos-soft:#C7E0DA;
+  --warn:#8E6218;
+  --shadow:0 1px 2px rgba(19,23,28,.06), 0 8px 24px -16px rgba(19,23,28,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1216;
+    --surface:#161B21;
+    --surface-2:#1C242C;
+    --ink:#E7EBEF;
+    --ink-2:#B6BFC9;
+    --muted:#8390A0;
+    --rule:#28313A;
+    --rule-2:#3A4651;
+    --accent:#86AECC;
+    --accent-soft:#22303C;
+    --neg:#DF7570;
+    --neg-soft:#3A2422;
+    --pos:#5CBCA4;
+    --pos-soft:#1C302C;
+    --warn:#CFA057;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1216;
+  --surface:#161B21;
+  --surface-2:#1C242C;
+  --ink:#E7EBEF;
+  --ink-2:#B6BFC9;
+  --muted:#8390A0;
+  --rule:#28313A;
+  --rule-2:#3A4651;
+  --accent:#86AECC;
+  --accent-soft:#22303C;
+  --neg:#DF7570;
+  --neg-soft:#3A2422;
+  --pos:#5CBCA4;
+  --pos-soft:#1C302C;
+  --warn:#CFA057;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans", system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size:15.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px 96px}
+.col{max-width:none}
+p{margin:0 0 1em}
+.prose{max-width:66ch}
+strong{font-weight:600;color:var(--ink)}
+a{color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.mast{
+  border-bottom:2px solid var(--ink);
+  padding:52px 0 20px;
+  margin-bottom:0;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono", ui-monospace, monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+}
+h1{
+  font-family:"Newsreader", Georgia, serif;
+  font-weight:500;
+  font-size:clamp(38px,6.2vw,66px);
+  line-height:1.03;
+  letter-spacing:-.018em;
+  margin:.22em 0 .18em;
+  text-wrap:balance;
+}
+.standfirst{
+  font-family:"Newsreader", Georgia, serif;
+  font-size:clamp(18px,2.3vw,22px);
+  line-height:1.46;
+  color:var(--ink-2);
+  max-width:60ch;
+  margin:0 0 .6em;
+}
+
+/* ---------- tearsheet meta strip ---------- */
+.meta{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
+  gap:0;
+  border-bottom:1px solid var(--rule);
+  margin-bottom:44px;
+}
+.meta div{
+  padding:14px 18px 14px 0;
+  border-right:1px solid var(--rule);
+}
+.meta div:last-child{border-right:0}
+.meta dt{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:3px;
+}
+.meta dd{
+  margin:0;font-size:13.5px;line-height:1.35;color:var(--ink-2);
+  font-variant-numeric:tabular-nums;
+}
+
+/* ---------- section rhythm ---------- */
+section{margin:0 0 62px}
+h2{
+  font-family:"Newsreader", Georgia, serif;
+  font-weight:600;
+  font-size:clamp(25px,3.2vw,33px);
+  line-height:1.16;letter-spacing:-.012em;
+  margin:0 0 .1em;text-wrap:balance;
+}
+h3{
+  font-family:"IBM Plex Sans", sans-serif;
+  font-weight:600;font-size:16px;letter-spacing:-.005em;
+  margin:34px 0 8px;
+}
+.sec-head{
+  border-top:1px solid var(--rule-2);
+  padding-top:14px;margin-bottom:22px;
+}
+.sec-head .eyebrow{display:block;margin-bottom:6px}
+.dek{color:var(--muted);font-size:14.5px;max-width:62ch;margin:.45em 0 0}
+
+/* ---------- verdict tiles ---------- */
+.tiles{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin:0 0 34px;
+}
+.tile{background:var(--surface);padding:20px 20px 18px}
+.tile .k{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:8px;
+}
+.tile .v{
+  font-family:"Newsreader", Georgia, serif;
+  font-size:38px;line-height:1;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;
+}
+.tile .n{font-size:12.5px;color:var(--muted);margin-top:7px;line-height:1.4}
+.v.neg{color:var(--neg)}
+.v.warn{color:var(--warn)}
+
+/* ---------- charts ---------- */
+figure{margin:26px 0 0;background:var(--surface);border:1px solid var(--rule);
+  box-shadow:var(--shadow);padding:20px 20px 14px}
+figure .cap{
+  font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.5;
+  padding-top:10px;border-top:1px solid var(--rule);
+}
+figure .cap b{color:var(--ink-2);font-weight:600}
+.chart{width:100%;height:auto;display:block;overflow:visible}
+.grid-line{stroke:var(--rule);stroke-width:1}
+.zero-line{stroke:var(--rule-2);stroke-width:1.4}
+.ax{fill:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:11px}
+.ax-cat{fill:var(--ink-2);font-family:"IBM Plex Sans",sans-serif;font-size:12px;font-weight:500}
+.val{font-family:"IBM Plex Mono",monospace;font-size:9.5px;fill:var(--muted)}
+.hl-band{fill:var(--neg-soft)}
+.ref-line{stroke:var(--neg);stroke-width:1.4;stroke-dasharray:5 4}
+.ref-lab{fill:var(--neg);font-family:"IBM Plex Mono",monospace;font-size:10.5px}
+.legend{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:6px;
+  font-size:12px;color:var(--muted);font-family:"IBM Plex Sans",sans-serif}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{width:12px;height:12px;display:inline-block;border-radius:2px}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:24px 0 0;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;
+  font-variant-numeric:tabular-nums}
+th,td{padding:9px 14px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--rule)}
+th:first-child,td:first-child{text-align:left}
+thead th{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;
+  border-bottom:1px solid var(--rule-2);background:var(--surface-2);
+}
+tbody tr:last-child td{border-bottom:0}
+tr.hl td{background:var(--neg-soft)}
+tr.base td{background:var(--surface-2);font-weight:600}
+td.mono,th.mono{font-family:"IBM Plex Mono",monospace}
+.neg{color:var(--neg)}
+.pos{color:var(--pos)}
+.tnote{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:70ch}
+
+/* ---------- contract note ---------- */
+.note{
+  background:var(--surface);border:1px solid var(--rule-2);
+  max-width:520px;box-shadow:var(--shadow);margin:26px 0 0;
+}
+.note-h{
+  padding:14px 20px;border-bottom:1px solid var(--rule-2);
+  background:var(--surface-2);
+}
+.note-h .t{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.note-h .s{font-family:"Newsreader",Georgia,serif;font-size:19px;margin-top:2px}
+.note-b{padding:6px 20px 16px}
+.row{display:flex;justify-content:space-between;gap:20px;
+  padding:9px 0;border-bottom:1px dotted var(--rule);align-items:baseline}
+.row:last-child{border-bottom:0}
+.row .l{font-size:13.5px;color:var(--ink-2);line-height:1.35}
+.row .l small{display:block;color:var(--muted);font-size:11.5px}
+.row .r{font-family:"IBM Plex Mono",monospace;font-size:14.5px;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.row.total{border-top:1.5px solid var(--ink);border-bottom:0;margin-top:6px;padding-top:12px}
+.row.total .l{font-weight:600;color:var(--ink);font-size:15px}
+.row.total .r{font-size:20px;font-weight:600}
+
+/* ---------- attempt list ---------- */
+.attempts{display:grid;gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin-top:26px}
+.att{background:var(--surface);padding:18px 20px;
+  display:grid;grid-template-columns:1fr auto;gap:6px 24px;align-items:start}
+.att h4{margin:0;font-size:15px;font-weight:600;font-family:"IBM Plex Sans",sans-serif}
+.att p{margin:2px 0 0;font-size:13.5px;color:var(--ink-2);max-width:64ch}
+.verdict{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;padding:4px 10px;white-space:nowrap;
+  background:var(--neg-soft);color:var(--neg);align-self:start;
+}
+
+/* ---------- callout ---------- */
+.callout{
+  border-left:3px solid var(--accent);background:var(--surface);
+  padding:18px 22px;margin:28px 0 0;max-width:70ch;
+}
+.callout p:last-child{margin-bottom:0}
+.callout .lab{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block;
+}
+
+/* ---------- recommendations ---------- */
+.recs{counter-reset:r;margin-top:26px;display:grid;gap:1px;
+  background:var(--rule);border:1px solid var(--rule)}
+.rec{background:var(--surface);padding:20px 22px 20px 62px;position:relative}
+.rec::before{
+  counter-increment:r;content:counter(r);
+  position:absolute;left:22px;top:19px;
+  font-family:"Newsreader",Georgia,serif;font-size:24px;line-height:1;
+  color:var(--accent);
+}
+.rec h4{margin:0 0 4px;font-size:15.5px;font-weight:600}
+.rec p{margin:0;font-size:14px;color:var(--ink-2);max-width:62ch}
+
+ul.plain{margin:0;padding-left:20px}
+ul.plain li{margin-bottom:8px;color:var(--ink-2);font-size:14px;max-width:66ch}
+
+.foot{border-top:2px solid var(--ink);padding-top:20px;margin-top:8px;
+  font-size:13px;color:var(--muted)}
+.foot code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-2)}
+
+@media (max-width:640px){
+  .wrap{padding:0 18px 64px}
+  .att{grid-template-columns:1fr}
+  .meta div{border-right:0;border-bottom:1px solid var(--rule)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <span class="eyebrow">Quant Research Note · NSE Equities · Sept 2026</span>
+  <h1>The 5-Day Spike Trap</h1>
+  <p class="standfirst">Jo stock 5 trading din mein 10–12% bhaag jaata hai, wo agle 5 din mein
+  aur nahi bhaagta. 16,508 cases ka data kehta hai wo market se <em>peeche</em> rehta hai — aur
+  brokerage kaatne ke baad clear nuksan deta hai.</p>
+</header>
+
+<dl class="meta">
+  <div><dt>Data</dt><dd>NSE bhavcopy spine<br>survivorship-free</dd></div>
+  <div><dt>Period</dt><dd>03 Jan 2022 –<br>21 May 2026</dd></div>
+  <div><dt>Universe</dt><dd>3,291 equities<br>ETFs excluded</dd></div>
+  <div><dt>Eligible</dt><dd>8,35,636<br>stock-days</dd></div>
+  <div><dt>Events tested</dt><dd>16,508<br>10–12% spikes</dd></div>
+  <div><dt>Liquidity</dt><dd>≥ ₹5 cr<br>median 20d ADV</dd></div>
+</dl>
+
+<!-- ================= VERDICT ================= -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">Verdict</span>
+    <h2>Spike ke baad follow-through nahi hai — halka reversal hai</h2>
+    <p class="dek">Char numbers jo poori kahani keh dete hain.</p>
+  </div>
+
+  <div class="tiles">
+    <div class="tile">
+      <div class="k">Excess return, agle 5 din</div>
+      <div class="v neg">−0.15%</div>
+      <div class="n">Market se kitna aage/peeche. Baseline 0.00%.</div>
+    </div>
+    <div class="tile">
+      <div class="k">Market ko beat kiya</div>
+      <div class="v neg">42.9%</div>
+      <div class="n">100 mein 43 baar. Random stock 45 baar karta hai.</div>
+    </div>
+    <div class="tile">
+      <div class="k">Round-trip cost</div>
+      <div class="v warn">0.49%</div>
+      <div class="n">STT + stamp + GST + brokerage + slippage, ₹1L position.</div>
+    </div>
+    <div class="tile">
+      <div class="k">Statistical check</div>
+      <div class="v">t = −2.89</div>
+      <div class="n">1,034 din, non-overlapping signals. Noise nahi hai.</div>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Yeh study ek hi sawal ka jawab deti hai: <strong>spike dekh ke usme ghusna faydemand hai
+    ya nahi?</strong> Jawab clear hai — nahi. Aur sirf "faayda nahi" nahi, balki teen tarah se
+    ulta padta hai: return market se kam, jeetne ki frequency market se kam, aur <strong>risk 25%
+    zyada</strong>.</p>
+  </div>
+</section>
+
+<!-- ================= MONEY ================= -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">Step 1 — Raw sach</span>
+    <h2>₹1 lakh ka seedha hisaab</h2>
+    <p class="dek">Pehle bina kisi statistics ke: agar aap har aise stock mein ₹1 lakh lagate,
+    to 5 din baad kya milta.</p>
+  </div>
+
+  <div class="note">
+    <div class="note-h">
+      <div class="t">Average trade · 16,508 events</div>
+      <div class="s">Contract note (indicative)</div>
+    </div>
+    <div class="note-b">
+      <div class="row"><div class="l">Position size<small>Entry at close[t], exit at close[t+5]</small></div><div class="r">₹1,00,000</div></div>
+      <div class="row"><div class="l">Gross P&amp;L, 5 trading days<small>Average +0.27%</small></div><div class="r pos">+₹271</div></div>
+      <div class="row"><div class="l">Round-trip charges<small>STT, stamp duty, GST, brokerage, slippage — 0.49%</small></div><div class="r neg">−₹490</div></div>
+      <div class="row total"><div class="l">Net</div><div class="r neg">−₹219</div></div>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:26px">
+    <p>Aur yeh <em>average</em> hai, jise chand bade winners upar kheench rahe hain. <strong>Typical
+    (median) trade</strong> mein gross P&amp;L <span class="neg">−0.26% = −₹256</span> hai, charges
+    ke baad <span class="neg">−₹746</span>. Sirf <strong>48.1%</strong> baar hi 5 din baad stock
+    upar tha.</p>
+    <p>Toh pehli baat yahi hai: <strong>jo 0.27% "profit" dikh raha hai wo transaction cost bhi
+    cover nahi karta.</strong> Kamai 0.27%, kharcha 0.49%.</p>
+  </div>
+</section>
+
+<!-- ================= BENCHMARK ================= -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">Step 2 — Asli sawal</span>
+    <h2>Kya wo 0.27% spike ki wajah se tha?</h2>
+    <p class="dek">Yeh study ka sabse zaroori control hai, aur isi se poora natija badalta hai.</p>
+  </div>
+
+  <div class="prose">
+    <p>Socho class mein exam hua aur aapka beta 72 marks laya. Achha hai ya bura? <strong>Pata
+    nahi</strong> — jab tak class ka average na maloom ho. Agar class average 80 hai, to 72 kharab
+    hai.</p>
+    <p>Market mein bhi wahi. 2022–2026 India mein bull market tha — <strong>har stock upar jaa
+    raha tha.</strong> Toh sawal yeh nahi ki spike wale stock ne kitna diya, sawal yeh hai ki
+    <strong>us hi din baaki sabne kitna diya.</strong></p>
+  </div>
+
+  <figure>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--accent)"></i>Agle 5 din ka average return</span>
+    </div>
+    <div id="c-bench"></div>
+    <div class="cap"><b>Same-day comparison.</b> Us din ke saare eligible stocks ka average
+    forward-5d return nikala, aur spike wale stocks ka usse compare kiya. Spike wale
+    <b>0.07 percentage point peeche</b> hain — market ki taraqqi hata do to signal ne khud kuch
+    nahi kamaya.</div>
+  </figure>
+
+  <div class="callout">
+    <span class="lab">Jargon translate</span>
+    <p>Isi ko report mein <strong>"excess return"</strong> ya <strong>"date-demeaned"</strong> kaha
+    gaya hai. Simple matlab: <em>us din market ne jo diya wo minus kar do — jo bacha, wahi signal
+    ki asli kamai hai.</em> Yahan wo bachta hai <strong class="neg">−0.15%</strong>.</p>
+  </div>
+</section>
+
+<!-- ================= THE CURVE ================= -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">Step 3 — Poora curve</span>
+    <h2>Sirf 10–12% nahi — har size ka move check kiya</h2>
+    <p class="dek">Aur jo pattern nikla wo 10–12% wale sawal se kahin bada hai.</p>
+  </div>
+
+  <figure>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--accent)"></i>Mean excess</span>
+      <span><i class="sw" style="background:var(--warn)"></i>Median excess</span>
+      <span><i class="sw" style="background:var(--neg-soft);border:1px solid var(--neg)"></i>Aapka sawal (10–12%)</span>
+    </div>
+    <div id="c-buckets"></div>
+    <div class="cap"><b>Pichhle 5 din ka move (x-axis) vs agle 5 din ka excess return (y-axis).</b>
+    Median har up-bucket mein negative hai. 15–30% par jo halka positive mean dikh raha hai wo
+    <b>skew artifact</b> hai — median wahan bhi −0.84% se −0.91% hai aur win rate baseline se neeche,
+    yaani mutthi bhar runaway winners average utha rahe hain jabki zyadatar names fade ho rahe hain.
+    Usse edge mat samajhiye.</div>
+  </figure>
+
+  <figure>
+    <div id="c-win"></div>
+    <div class="cap"><b>Kitni baar stock ne us din ke average stock ko haraya.</b> Baseline 45.0%.
+    Har up-bucket neeche hai; 30%+ blow-off moves sirf <b>39.7%</b>. Y-axis 38% se shuru hota hai.</div>
+  </figure>
+
+  <div class="callout">
+    <span class="lab">Asli finding</span>
+    <p><strong>Short-horizon returns India mein mean-revert karte hain, continue nahi.</strong>
+    Jo gira hai wo sambhalta hai (−0.39% median, 45.8% win — poore curve mein best), jo bhaaga hai
+    wo thakta hai, aur jo 30%+ bhaag gaya hai use sabse zyada saza milti hai (−2.16% median).</p>
+    <p>Aur yeh aapke apne system ko validate karta hai: <strong>12-1 momentum jaanbujh ke last
+    1 mahina skip karta hai</strong> — theek isi reversal se bachne ke liye. Yeh study us design
+    choice ka direct proof hai.</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr>
+          <th>Pichhla 5-din move</th><th class="mono">n</th>
+          <th class="mono">Excess mean</th><th class="mono">Excess median</th>
+          <th class="mono">Win %</th><th class="mono">Std dev</th>
+          <th class="mono">p10</th><th class="mono">p90</th>
+          <th class="mono">Raw mean</th>
+        </tr>
+      </thead>
+      <tbody id="tb-buckets"></tbody>
+    </table>
+  </div>
+  <p class="tnote"><b>Excess</b> = stock ka return minus us din ke saare eligible stocks ka average
+  return. <b>Raw</b> = bina adjust kiye, jismein market ki taraqqi shaamil hai. <b>Win %</b> =
+  kitni baar excess positive raha.</p>
+</section>
+
+<!-- ================= RESCUE ATTEMPTS ================= -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">Step 4 — Bachane ki koshish</span>
+    <h2>Chaar tarike se signal ko bachane ki koshish ki</h2>
+    <p class="dek">Har baar yeh soch ke ki shayad kisi khaas situation mein kaam karta ho. Koi
+    kaam nahi aaya.</p>
+  </div>
+
+  <div class="attempts">
+    <div class="att">
+      <div>
+        <h4>Zyada der rok ke rakho?</h4>
+        <p>1, 3, 5, 10 aur 20 din tak hold karke dekha. Raw return badhta gaya (20 din mein
+        +1.46%) — lekin wo poora market drift hai. Excess wahin ka wahin, aur median lagatar
+        gehra hota gaya: −0.35% → −1.64%.</p>
+      </div>
+      <span class="verdict">Fail</span>
+    </div>
+    <div class="att">
+      <div>
+        <h4>Sirf bade, liquid stocks mein?</h4>
+        <p>₹1 cr, ₹5 cr aur ₹25 cr ADV — teen liquidity tiers. Jitna liquid, utna kam bura
+        (−0.19% → −0.08%), lekin kabhi positive nahi. Chhote/illiquid names mein effect
+        <em>zyada</em> bura hai — yeh noise-driven pops ka classic signature hai.</p>
+      </div>
+      <span class="verdict">Fail</span>
+    </div>
+    <div class="att">
+      <div>
+        <h4>Kya kisi ek saal ki galti hai?</h4>
+        <p>5 mein se 4 saal excess mean negative, aur <strong>median paanchon saal
+        negative</strong>. 2023 mein halka positive mean (+0.19%) aaya lekin median wahan bhi
+        −0.57% tha. Yeh regime artifact nahi, stable pattern hai.</p>
+      </div>
+      <span class="verdict">Fail</span>
+    </div>
+    <div class="att">
+      <div>
+        <h4>Sirf uptrend wale stocks mein?</h4>
+        <p>200-DMA ke upar + positive 12-1 momentum wale stocks — sabse achha case. Wahan bhi
+        excess mean sirf <strong>+0.06%</strong>, median abhi bhi −0.73%, win rate 43.8% (baseline
+        45%). Best case = break-even, aur wo bhi cost se pehle.</p>
+      </div>
+      <span class="verdict">Break-even</span>
+    </div>
+  </div>
+
+  <figure>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--muted)"></i>Raw mean (market drift shaamil)</span>
+      <span><i class="sw" style="background:var(--accent)"></i>Excess mean</span>
+      <span><i class="sw" style="background:var(--warn)"></i>Excess median</span>
+    </div>
+    <div id="c-horizon"></div>
+    <div class="cap"><b>Kitne din rokna chahiye?</b> Raw line upar chadhti hai aur dhoka deti hai —
+    wo sirf bull-market drift collect kar rahi hai. Excess flat-to-negative rehta hai aur median
+    lagatar giroti hai. <b>Delayed continuation naam ki koi cheez nahi mili.</b></div>
+  </figure>
+
+  <figure>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--accent)"></i>Excess mean</span>
+      <span><i class="sw" style="background:var(--warn)"></i>Excess median</span>
+    </div>
+    <div id="c-year"></div>
+    <div class="cap"><b>Saal-dar-saal stability.</b> Mean 5 mein 4 saal negative; median paanchon
+    saal negative. Sample har saal 1,919–4,977 events ka hai.</div>
+  </figure>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Saal</th><th class="mono">Events</th><th class="mono">Raw mean</th>
+        <th class="mono">Excess mean</th><th class="mono">Excess median</th><th class="mono">Win %</th></tr></thead>
+      <tbody id="tb-year"></tbody>
+    </table>
+  </div>
+  <p class="tnote">* 2026 partial hai — data 21 May 2026 tak ka hai.</p>
+
+  <h3>Liquidity tiers</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Median 20-day ADV</th><th class="mono">Events</th><th class="mono">Excess mean</th>
+        <th class="mono">Excess median</th><th class="mono">Win %</th><th class="mono">Std dev</th></tr></thead>
+      <tbody id="tb-liq"></tbody>
+    </table>
+  </div>
+
+  <h3>Trend context — damage kahan hai</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Cut (10–12% bucket ke andar)</th><th class="mono">Events</th>
+        <th class="mono">Excess mean</th><th class="mono">Excess median</th><th class="mono">Win %</th></tr></thead>
+      <tbody id="tb-ctx"></tbody>
+    </table>
+  </div>
+  <p class="tnote">Sabse kaam ki line yahi hai: trend context batata hai <b>nuksan kahan hai</b>,
+  faayda kahan hai wo nahi. Downtrend mein 10–12% ka pop ek genuine fade signal hai (−0.55%,
+  39.8% win). Uptrend mein wahi pop sirf <b>neutral</b> hai.</p>
+</section>
+
+<!-- ================= COST WALL ================= -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">Step 5 — Cost ki deewar</span>
+    <h2>Best case bhi cost se 8 guna peeche hai</h2>
+    <p class="dek">5-din ke round trip par ₹1 lakh position ka kharcha 0.49% hai. Har variant ko
+    us hurdle ke saamne rakh ke dekhiye.</p>
+  </div>
+
+  <figure>
+    <div id="c-hurdle"></div>
+    <div class="cap"><b>Har cut ka excess mean, cost hurdle ke saamne.</b> Laal dashed line =
+    +0.49%, wo minimum jo profit dene ke liye chahiye. Sabse achha variant (+0.06%) us line se
+    <b>0.43 percentage point neeche</b> hai. Koi bhi bar hurdle ko chhu tak nahi raha.</div>
+  </figure>
+
+  <div class="prose">
+    <p>Iska matlab yeh nahi ki signal "thoda kamzor" hai. Iska matlab yeh hai ki <strong>signal ki
+    theoretical best kamai bhi kharche ka pachchisva hissa hai.</strong> Cost kam karke bhi yeh
+    theek nahi hota — discount broker par bhi STT aur slippage bache rahenge.</p>
+  </div>
+</section>
+
+<!-- ================= WHAT TO DO ================= -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">Recommendations</span>
+    <h2>Toh iska karna kya hai</h2>
+  </div>
+
+  <div class="recs">
+    <div class="rec">
+      <h4>Spike dekh ke mat kudiye</h4>
+      <p>"Yeh to 11% bhaag gaya, aur bhaagega" — yeh soch 16,508 cases par galat sabit hoti hai.
+      Cost se pehle halka negative, cost ke baad pakka nuksan. Is par koi strategy mat banaiye.</p>
+    </div>
+    <div class="rec">
+      <h4>Entry-timing rule — yeh actually kaam ka hai</h4>
+      <p>Jab aapki momentum strategy kisi stock ko "buy" bolti hai aur wo stock abhi-abhi 5 din
+      mein 10%+ bhaag chuka hai, to <strong>ek hafta ruk jaaiye</strong>. Data kehta hai rukne se
+      kuch nahi khoya, aur typical case mein ~0.87% sasta entry mila. Yeh nayi strategy nahi —
+      purani strategy ka sasta entry hai.</p>
+    </div>
+    <div class="rec">
+      <h4>Downtrend ka pop = avoid filter</h4>
+      <p>200-DMA ke neeche wale stock mein 10–12% ka pop 5 din mein 0.55% underperform karta hai,
+      sirf 39.8% win rate ke saath. Standalone short strategy ke liye yeh bhi cost hurdle se
+      chhota hai — lekin ek <em>avoid list</em> ke roop mein legitimate hai.</p>
+    </div>
+    <div class="rec">
+      <h4>Bucket edges tune mat kijiye</h4>
+      <p>5% se 30% tak ka poora range ek hi kahani keh raha hai. Yeh 10–12% cut-point ki property
+      nahi, India mein short-horizon reversal ki property hai. Yahan "jo bucket kaam karta hai"
+      dhoondhna wahi overfitting hogi jo is project mein pehle se banned hai.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= METHOD ================= -->
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">Method &amp; caveats</span>
+    <h2>Yeh numbers kaise nikle</h2>
+  </div>
+
+  <div class="prose">
+    <h3>Design</h3>
+    <ul class="plain">
+      <li><strong>Survivorship-free.</strong> Universe NSE daily bhavcopy se bana hai, jismein
+      delisted aur merged names bhi hain — sirf aaj ke survivors nahi. Isi wajah se yeh project ke
+      purane 47.7% CAGR jaise inflated numbers se bachta hai.</li>
+      <li><strong>ETF leakage band.</strong> NSE bhavcopy mein ETFs bhi <code>SERIES=="EQ"</code>
+      ke naam se aate hain. Sirf ISIN <code>INE</code> (asli equity) rakhe gaye — 3,291 names.</li>
+      <li><strong>Look-ahead nahi.</strong> Signal close[t] par dikhta hai aur entry bhi close[t]
+      par hai. Trend context (200-DMA, 12-1 momentum) sab strictly backward-looking.</li>
+      <li><strong>Overlap handle kiya.</strong> Ek stock lagatar 5 din trigger kar sakta hai, isse
+      sample artificially bada lagta hai. Isliye ek non-overlapping variant bhi chalaya (per stock
+      7+ din ka gap, n=12,084) aur har date ko ek observation maana — <strong>mean daily excess
+      −0.303%, 1,034 dates, t = −2.89</strong>.</li>
+      <li><strong>Filters.</strong> t−5 se t+5 tak har session trade hua ho; close ≥ ₹10; median
+      20-day turnover ≥ ₹5 cr (primary tier).</li>
+    </ul>
+
+    <h3>Caveats — jo is study ki limits hain</h3>
+    <ul class="plain">
+      <li>Prices bhavcopy par gap-detection se back-adjust hue hain (Upstox ke against median
+      single-day error ~0.25%). Kuch unadjusted corporate actions spike buckets mein baith sakte
+      hain — 30%+ bucket mein yeh known noise source hai.</li>
+      <li>Entry close[t] par maana gaya hai, cost model se zyada slippage nahi. Asli mein bhaagte
+      hue stock ka fill kharab milta hai — yaani asli result <em>isse bhi bura</em> hoga.</li>
+      <li>Excess equal-weighted cross-section ke against hai, sector-neutral ya beta-adjusted nahi.
+      Spike bucket mein high-beta names zyada hain, isliye 25% extra volatility ka ek hissa beta
+      hai, pure idiosyncratic risk nahi.</li>
+      <li>Main tables (buckets, years, liquidity, context) overlapping events par hain — unka
+      <em>n</em> effective sample se bada hai. Significance ke liye sirf non-overlapping t-stat
+      dekhein.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="foot">
+  <p><strong>Reproduce:</strong> <code>py study_spike_followthrough.py</code> —
+  outputs <code>results/spike_followthrough/</code>: <code>report.png</code>,
+  <code>report.txt</code>, <code>WALKTHROUGH.md</code>, aur 6 CSVs
+  (<code>buckets_excess_fwd5.csv</code>, <code>horizons_10_12.csv</code>,
+  <code>by_year_10_12.csv</code>, <code>by_liquidity_10_12.csv</code>,
+  <code>by_context_10_12.csv</code>, <code>events_10_12.csv</code> — saare 16,508 raw events).</p>
+  <p style="margin-bottom:0">Cost figures <code>costs/cost_model.py</code> se (Indian delivery
+  trades: STT, stamp duty, GST, exchange charges, SEBI fee, brokerage, slippage).</p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var NS="http://www.w3.org/2000/svg";
+  function E(t,a,k){var n=document.createElementNS(NS,t);for(var x in a)n.setAttribute(x,a[x]);
+    (k||[]).forEach(function(c){n.appendChild(c);});return n;}
+  function T(s,a){var n=E("text",a);n.textContent=s;return n;}
+  function svg(W,H){var s=E("svg",{viewBox:"0 0 "+W+" "+H,class:"chart",
+    preserveAspectRatio:"xMidYMid meet",role:"img"});return s;}
+  function f2(v){return (v>0?"+":"")+v.toFixed(2);}
+
+  // ---------- grouped vertical bars ----------
+  function groupedBars(id,cfg){
+    var W=880,H=cfg.H||360,m={t:16,r:16,b:cfg.mb||56,l:52};
+    var pw=W-m.l-m.r, ph=H-m.t-m.b;
+    var lo=cfg.dom[0], hi=cfg.dom[1];
+    var y=function(v){return m.t+(hi-v)/(hi-lo)*ph;};
+    var s=svg(W,H);
+    // grid
+    cfg.ticks.forEach(function(t){
+      s.appendChild(E("line",{x1:m.l,x2:m.l+pw,y1:y(t),y2:y(t),
+        class:(t===0?"zero-line":"grid-line")}));
+      s.appendChild(T(cfg.tickFmt?cfg.tickFmt(t):t.toFixed(1),
+        {x:m.l-9,y:y(t)+4,class:"ax","text-anchor":"end"}));
+    });
+    var band=pw/cfg.cats.length, ns=cfg.series.length;
+    var gw=band*0.62, bw=gw/ns;
+    // highlight band
+    if(cfg.highlight!=null){
+      s.appendChild(E("rect",{x:m.l+cfg.highlight*band+2,y:m.t,width:band-4,height:ph,
+        class:"hl-band"}));
+    }
+    cfg.cats.forEach(function(c,i){
+      cfg.series.forEach(function(se,j){
+        var v=se.values[i];
+        var x=m.l+i*band+(band-gw)/2+j*bw;
+        var y0=y(0), y1=y(v);
+        s.appendChild(E("rect",{x:x+1,y:Math.min(y0,y1),width:bw-2,
+          height:Math.max(1.5,Math.abs(y1-y0)),fill:"var("+se.color+")"}));
+        s.appendChild(T(f2(v),{x:x+bw/2,y:v>=0?Math.min(y0,y1)-5:Math.max(y0,y1)+11,
+          class:"val","text-anchor":"middle"}));
+      });
+      s.appendChild(T(c,{x:m.l+i*band+band/2,y:H-m.b+22,class:"ax-cat","text-anchor":"middle"}));
+    });
+    if(cfg.xTitle) s.appendChild(T(cfg.xTitle,{x:m.l+pw/2,y:H-12,class:"ax","text-anchor":"middle"}));
+    if(cfg.yTitle) s.appendChild(T(cfg.yTitle,{x:0,y:0,class:"ax",
+      transform:"translate(13,"+(m.t+ph/2)+") rotate(-90)","text-anchor":"middle"}));
+    document.getElementById(id).appendChild(s);
+  }
+
+  // ---------- single-series bars with reference line ----------
+  function refBars(id,cfg){
+    var W=880,H=300,m={t:16,r:16,b:56,l:52};
+    var pw=W-m.l-m.r, ph=H-m.t-m.b;
+    var lo=cfg.dom[0], hi=cfg.dom[1];
+    var y=function(v){return m.t+(hi-v)/(hi-lo)*ph;};
+    var s=svg(W,H);
+    cfg.ticks.forEach(function(t){
+      s.appendChild(E("line",{x1:m.l,x2:m.l+pw,y1:y(t),y2:y(t),class:"grid-line"}));
+      s.appendChild(T(t.toFixed(0)+"%",{x:m.l-9,y:y(t)+4,class:"ax","text-anchor":"end"}));
+    });
+    var band=pw/cfg.cats.length, bw=band*0.52;
+    if(cfg.highlight!=null){
+      s.appendChild(E("rect",{x:m.l+cfg.highlight*band+2,y:m.t,width:band-4,height:ph,
+        class:"hl-band"}));
+    }
+    cfg.cats.forEach(function(c,i){
+      var v=cfg.values[i], x=m.l+i*band+(band-bw)/2;
+      s.appendChild(E("rect",{x:x,y:y(v),width:bw,height:Math.max(1.5,y(lo)-y(v)),
+        fill:"var("+(v>=cfg.ref?"--pos":"--accent")+")"}));
+      s.appendChild(T(v.toFixed(1),{x:x+bw/2,y:y(v)-6,class:"val","text-anchor":"middle"}));
+      s.appendChild(T(c,{x:m.l+i*band+band/2,y:H-m.b+22,class:"ax-cat","text-anchor":"middle"}));
+    });
+    s.appendChild(E("line",{x1:m.l,x2:m.l+pw,y1:y(cfg.ref),y2:y(cfg.ref),class:"ref-line"}));
+    s.appendChild(T(cfg.refLabel,{x:m.l+pw-4,y:y(cfg.ref)-7,class:"ref-lab","text-anchor":"end"}));
+    document.getElementById(id).appendChild(s);
+  }
+
+  // ---------- lines ----------
+  function lines(id,cfg){
+    var W=880,H=330,m={t:18,r:22,b:54,l:52};
+    var pw=W-m.l-m.r, ph=H-m.t-m.b;
+    var lo=cfg.dom[0], hi=cfg.dom[1];
+    var y=function(v){return m.t+(hi-v)/(hi-lo)*ph;};
+    var x=function(i){return m.l+(pw/(cfg.cats.length-1))*i;};
+    var s=svg(W,H);
+    cfg.ticks.forEach(function(t){
+      s.appendChild(E("line",{x1:m.l,x2:m.l+pw,y1:y(t),y2:y(t),
+        class:(t===0?"zero-line":"grid-line")}));
+      s.appendChild(T(f2(t),{x:m.l-9,y:y(t)+4,class:"ax","text-anchor":"end"}));
+    });
+    cfg.series.forEach(function(se){
+      var pts=se.values.map(function(v,i){return x(i)+","+y(v);}).join(" ");
+      s.appendChild(E("polyline",{points:pts,fill:"none",stroke:"var("+se.color+")",
+        "stroke-width":2.2,"stroke-linejoin":"round"}));
+      se.values.forEach(function(v,i){
+        s.appendChild(E("circle",{cx:x(i),cy:y(v),r:3.6,fill:"var("+se.color+")"}));
+        s.appendChild(T(f2(v),{x:x(i),y:y(v)-10,class:"val","text-anchor":"middle"}));
+      });
+    });
+    cfg.cats.forEach(function(c,i){
+      s.appendChild(T(c,{x:x(i),y:H-m.b+22,class:"ax-cat","text-anchor":"middle"}));
+    });
+    s.appendChild(T(cfg.xTitle,{x:m.l+pw/2,y:H-12,class:"ax","text-anchor":"middle"}));
+    document.getElementById(id).appendChild(s);
+  }
+
+  // ---------- horizontal bars vs hurdle ----------
+  function hbars(id,cfg){
+    var W=880,rowH=34,m={t:14,r:24,b:44,l:250};
+    var H=m.t+m.b+cfg.rows.length*rowH;
+    var pw=W-m.l-m.r, ph=cfg.rows.length*rowH;
+    var lo=cfg.dom[0], hi=cfg.dom[1];
+    var x=function(v){return m.l+(v-lo)/(hi-lo)*pw;};
+    var s=svg(W,H);
+    cfg.ticks.forEach(function(t){
+      s.appendChild(E("line",{x1:x(t),x2:x(t),y1:m.t,y2:m.t+ph,
+        class:(t===0?"zero-line":"grid-line")}));
+      s.appendChild(T(f2(t)+"%",{x:x(t),y:m.t+ph+18,class:"ax","text-anchor":"middle"}));
+    });
+    cfg.rows.forEach(function(r,i){
+      var cy=m.t+i*rowH+rowH/2;
+      var x0=x(0), x1=x(r.v);
+      s.appendChild(E("rect",{x:Math.min(x0,x1),y:cy-9,width:Math.max(2,Math.abs(x1-x0)),
+        height:18,fill:"var("+(r.v>=0?"--pos":"--neg")+")"}));
+      s.appendChild(T(r.label,{x:m.l-14,y:cy+4,class:"ax-cat","text-anchor":"end"}));
+      s.appendChild(T(f2(r.v)+"%",{x:(r.v>=0?x1+7:x1-7),y:cy+4,class:"val",
+        "text-anchor":(r.v>=0?"start":"end")}));
+    });
+    s.appendChild(E("line",{x1:x(cfg.ref),x2:x(cfg.ref),y1:m.t-4,y2:m.t+ph+4,class:"ref-line"}));
+    s.appendChild(T(cfg.refLabel,{x:x(cfg.ref),y:m.t+ph+36,class:"ref-lab","text-anchor":"middle"}));
+    document.getElementById(id).appendChild(s);
+  }
+
+  // ================= DATA =================
+  var CATS=["<0%","0–5%","5–10%","10–12%","12–15%","15–20%","20–30%","30%+"];
+  var EX_MEAN=[0.03,-0.03,-0.04,-0.15,-0.02,0.16,0.26,-0.53];
+  var EX_MED =[-0.39,-0.51,-0.66,-0.87,-0.84,-0.84,-0.91,-2.16];
+  var WIN    =[45.75,44.47,44.09,42.93,43.72,44.24,44.25,39.71];
+  var N      =[414073,278332,95319,16508,13957,10383,5543,1521];
+  var STD    =[4.96,4.88,5.70,6.49,6.76,7.56,8.60,10.34];
+  var P10    =[-5.04,-5.06,-5.93,-6.64,-7.03,-7.53,-8.72,-11.09];
+  var P90    =[5.59,5.45,6.43,7.08,7.87,8.75,10.69,12.33];
+  var RAW    =[0.41,0.22,0.31,0.27,0.40,0.62,0.72,-0.15];
+
+  // benchmark comparison
+  groupedBars("c-bench",{
+    H:250, mb:52,
+    cats:["Spike wale stocks (10–12%)","Us din ke saare stocks (average)"],
+    series:[{color:"--accent",values:[0.27,0.34]}],
+    dom:[0,0.45], ticks:[0,0.15,0.30,0.45],
+    tickFmt:function(t){return t.toFixed(2)+"%";},
+    yTitle:"Raw fwd-5d return"
+  });
+
+  groupedBars("c-buckets",{
+    H:380, mb:62,
+    cats:CATS,
+    series:[{color:"--accent",values:EX_MEAN},{color:"--warn",values:EX_MED}],
+    dom:[-2.5,0.6], ticks:[-2.5,-2,-1.5,-1,-0.5,0,0.5],
+    tickFmt:function(t){return t.toFixed(1)+"%";},
+    highlight:3,
+    xTitle:"Pichhle 5 trading din ka return",
+    yTitle:"Excess fwd-5d return"
+  });
+
+  refBars("c-win",{
+    cats:CATS, values:WIN, dom:[38,47], ticks:[38,40,42,44,46],
+    ref:45.0, refLabel:"baseline 45.0%", highlight:3
+  });
+
+  lines("c-horizon",{
+    cats:["1 din","3 din","5 din","10 din","20 din"],
+    series:[
+      {color:"--muted",values:[0.15,0.25,0.27,0.51,1.46]},
+      {color:"--accent",values:[-0.01,-0.11,-0.15,-0.16,-0.08]},
+      {color:"--warn",values:[-0.35,-0.67,-0.87,-1.18,-1.64]}
+    ],
+    dom:[-2.0,1.7], ticks:[-2,-1.5,-1,-0.5,0,0.5,1,1.5],
+    xTitle:"Kitne din hold kiya (10–12% bucket)"
+  });
+
+  groupedBars("c-year",{
+    H:320, mb:52,
+    cats:["2022","2023","2024","2025","2026*"],
+    series:[{color:"--accent",values:[-0.28,0.19,-0.24,-0.26,-0.08]},
+            {color:"--warn",values:[-0.83,-0.57,-1.16,-0.84,-0.73]}],
+    dom:[-1.35,0.35], ticks:[-1.2,-0.8,-0.4,0,0.4],
+    tickFmt:function(t){return t.toFixed(1)+"%";},
+    yTitle:"Excess fwd-5d return"
+  });
+
+  hbars("c-hurdle",{
+    dom:[-0.75,0.75], ticks:[-0.75,-0.5,-0.25,0,0.25,0.5,0.75],
+    ref:0.49, refLabel:"cost hurdle +0.49%",
+    rows:[
+      {label:"Above 200-DMA + momentum > 0",v:0.06},
+      {label:"Gappy spike (max 1-day ≥ 8%)",v:0.03},
+      {label:"Very liquid (≥ ₹25 cr ADV)",v:-0.08},
+      {label:"Above 200-DMA",v:-0.03},
+      {label:"Baseline 10–12% bucket",v:-0.15},
+      {label:"Smooth spike (max 1-day < 5%)",v:-0.30},
+      {label:"12-1 momentum ≤ 0",v:-0.46},
+      {label:"Below 200-DMA",v:-0.55}
+    ]
+  });
+
+  // ================= TABLES =================
+  function cls(v){return v>0?"pos":(v<0?"neg":"");}
+  function td(v,d,suf){return '<td class="mono '+cls(v)+'">'+
+    (v>0?"+":"")+v.toFixed(d)+(suf||"")+"</td>";}
+  var tb="";
+  for(var i=0;i<CATS.length;i++){
+    tb+='<tr'+(i===3?' class="hl"':'')+'><td>'+CATS[i]+"</td>"+
+      '<td class="mono">'+N[i].toLocaleString("en-IN")+"</td>"+
+      td(EX_MEAN[i],2,"%")+td(EX_MED[i],2,"%")+
+      '<td class="mono">'+WIN[i].toFixed(2)+"%</td>"+
+      '<td class="mono">'+STD[i].toFixed(2)+"</td>"+
+      td(P10[i],2)+td(P90[i],2)+td(RAW[i],2,"%")+"</tr>";
+  }
+  tb+='<tr class="base"><td>ALL — baseline</td><td class="mono">835,636</td>'+
+    '<td class="mono">0.00%</td><td class="mono neg">−0.48%</td>'+
+    '<td class="mono">45.00%</td><td class="mono">5.18</td>'+
+    '<td class="mono neg">−5.30</td><td class="mono pos">+5.77</td>'+
+    '<td class="mono pos">+0.34%</td></tr>';
+  document.getElementById("tb-buckets").innerHTML=tb;
+
+  var YR=[["2022",2787,-0.22,-0.28,-0.83,42.45],["2023",3108,1.12,0.19,-0.57,45.43],
+          ["2024",4977,0.22,-0.24,-1.16,40.97],["2025",3717,-0.72,-0.26,-0.84,43.10],
+          ["2026*",1919,1.64,-0.08,-0.73,44.35]];
+  document.getElementById("tb-year").innerHTML=YR.map(function(r){
+    return "<tr><td>"+r[0]+'</td><td class="mono">'+r[1].toLocaleString("en-IN")+"</td>"+
+      td(r[2],2,"%")+td(r[3],2,"%")+td(r[4],2,"%")+
+      '<td class="mono">'+r[5].toFixed(2)+"%</td></tr>";}).join("");
+
+  var LQ=[["≥ ₹1 cr",24956,-0.19,-1.06,41.76,6.76],
+          ["≥ ₹5 cr (primary)",16508,-0.15,-0.87,42.93,6.49],
+          ["≥ ₹25 cr",7230,-0.08,-0.67,43.55,6.23]];
+  document.getElementById("tb-liq").innerHTML=LQ.map(function(r){
+    return "<tr><td>"+r[0]+'</td><td class="mono">'+r[1].toLocaleString("en-IN")+"</td>"+
+      td(r[2],2,"%")+td(r[3],2,"%")+
+      '<td class="mono">'+r[4].toFixed(2)+'%</td><td class="mono">'+r[5].toFixed(2)+"</td></tr>";
+  }).join("");
+
+  var CX=[["Above 200-DMA",10773,-0.03,-0.78,43.53],
+          ["Below 200-DMA",3313,-0.55,-1.07,39.81],
+          ["12-1 momentum > 0",10333,-0.01,-0.76,43.67],
+          ["12-1 momentum ≤ 0",4147,-0.46,-1.06,40.87],
+          ["Above 200-DMA AND momentum > 0",8601,0.06,-0.73,43.77],
+          ["Smooth spike (max 1-day < 5%)",4565,-0.30,-0.88,42.37],
+          ["Gappy spike (max 1-day ≥ 8%)",4573,0.03,-0.86,43.01]];
+  document.getElementById("tb-ctx").innerHTML=CX.map(function(r){
+    return "<tr><td>"+r[0]+'</td><td class="mono">'+r[1].toLocaleString("en-IN")+"</td>"+
+      td(r[2],2,"%")+td(r[3],2,"%")+
+      '<td class="mono">'+r[4].toFixed(2)+"%</td></tr>";}).join("");
+})();
+</script>
