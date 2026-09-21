@@ -1,0 +1,45 @@
+====================================================================================================
+                        PROGRAM #2 — A+B ENSEMBLE HARDENING (net, Rs 1,00,000)                      
+====================================================================================================
+Period 2012-01-03..2026-05-29   NIFTY500(px) 13.62%   Champion bar 17.4%/0.69
+Base A+B (idealised daily 50/50): CAGR 19.41% | Sharpe 0.95 | MaxDD -30.37% | roll3y-min -2.0%
+  split-sample alpha: H1 +5.5% / H2 +10.7% (both +ve = no flip)
+
+1a. BLEND-WEIGHT STABILITY (w_B = small-cap-tail weight):
+       w_B     CAGR  Sharpe    MaxDD  roll3yMin   gates
+       0.3   18.3%    0.85   -30.7%     -0.5%   fail:roll3y>0
+       0.4   18.9%    0.90   -29.9%     -1.3%   fail:roll3y>0
+       0.5   19.4%    0.95   -30.4%     -2.0%   fail:roll3y>0
+       0.6   19.9%    0.98   -31.2%     -2.8%   fail:roll3y>0
+       0.7   20.4%    1.01   -32.0%     -3.6%   fail:roll3y>0
+
+1b. B-SLEEVE PARAMETER STABILITY (one-at-a-time, blended 50/50 with A):
+    variant          CAGR  Sharpe    MaxDD  roll3yMin
+    base           19.4%    0.95   -30.4%     -2.0%
+    wmom0.4        18.6%    0.92   -31.4%     -0.9%
+    wmom0.6        21.3%    1.04   -31.3%     -2.4%
+    vollb126       18.5%    0.85   -32.8%     -0.4%
+    vollb378       20.3%    1.00   -30.9%     -0.0%
+    band200        17.9%    0.82   -29.8%      2.5%
+    band400        19.4%    0.90   -35.8%     -3.5%
+
+2. REALISTIC IMPLEMENTATION (idealised vs actual two-sleeve rebalancing + cost):
+    scheme                   CAGR  Sharpe    MaxDD  roll3yMin   gates
+    daily (idealised)      19.4%    0.95   -30.4%     -2.0%   fail:roll3y>0
+    drift 50/50            19.6%    0.95   -30.3%     -2.0%   fail:roll3y>0
+    monthly-rebal          19.4%    0.94   -30.4%     -2.1%   fail:roll3y>0
+    quarterly-rebal        19.4%    0.94   -30.5%     -2.1%   fail:roll3y>0
+
+3. COST STRESS (both sleeves stressed, re-blended 50/50):
+    x 5 slippage: CAGR 17.9% | Sharpe 0.84 | roll3y-min -2.9%  (bm 13.6%)
+    x10 slippage: CAGR 15.9% | Sharpe 0.68 | roll3y-min -5.0%  (bm 13.6%)
+
+----------------------------------------------------------------------------------------------------
+ASSESSMENT:
+  Param/weight CAGR range 17.9%..21.3% (spread 3.4%) -> STABLE to reasonable parameter choices.
+  Param Sharpe range 0.82..1.04.
+  Realistic implementation CAGR 19.4%..19.6% (idealised 19.4%) -> realism cost 0.0% pts.
+  Cost stress: x5 17.9%, x10 15.9% (x10 > benchmark 13.6%).
+  All-gate-passing weights w_B: NONE.
+  (Compare vs A+C hardening: A+C was param-sensitive on breakout + failed x10 stress; A+C w=0.3 passed all gates at 18.9%.)
+====================================================================================================

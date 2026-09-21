@@ -1,0 +1,23 @@
+====================================================================================================
+                 PROGRAM #2 EXP 2B — VOLUME-CONFIRMED BREAKOUT (Liquid Top-500, NET)                
+====================================================================================================
+Period 2012-01-03..2026-05-29   Shell Top10/EW/Buffer20   NIFTY500(px) 13.62%
+Champion ref (Mom+LowVol Top-500 quarterly): CAGR 16.54% Sharpe 0.66 MaxDD -33.0%
+Breakout: close>=95% of 252d-high, volume 5d/50d >= 1.5x (where confirmed).
+
+Cell               Net CAGR    Gross    Drag  Sharpe    MaxDD   Turn  roll3yMin    H1 a    H2 a
+----------------------------------------------------------------------------------------------------
+vol-monthly          22.8%    29.0%    6.2%    0.66   -40.6%   79%     -3.7%  +11.7%   +5.5%
+vol-quarterly        12.3%    14.3%    1.9%    0.24   -75.5%   77%    -23.3%   +0.4%   -4.5%
+novol-quarterly      15.0%    17.2%    2.3%    0.38   -50.4%   89%     -6.4%   +2.8%   -0.7%
+----------------------------------------------------------------------------------------------------
+
+[vol-monthly]  FAILS: Sharpe>=0.69, MaxDD>=-38.5%, roll3y min>0
+[vol-quarterly]  FAILS: CAGR>17.4%, Sharpe>=0.69, MaxDD>=-38.5%, no sign-flip, roll3y min>0
+[novol-quarterly]  FAILS: CAGR>17.4%, Sharpe>=0.69, MaxDD>=-38.5%, no sign-flip, roll3y min>0
+
+Volume confirmation marginal value (quarterly): -2.6% net CAGR (vol 12.3% vs no-vol 15.0%).
+----------------------------------------------------------------------------------------------------
+VERDICT: NO breakout cell clears all gates. Best = vol-monthly (Sharpe 0.66, CAGR 22.8%).
+  Volume-confirmed breakout does NOT beat the frozen champion net of costs in this shell.
+====================================================================================================

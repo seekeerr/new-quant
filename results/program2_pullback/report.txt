@@ -1,0 +1,23 @@
+====================================================================================================
+                PROGRAM #2 EXP 2C — PULLBACK-IN-UPTREND (Liquid Top-500, NET of costs)              
+====================================================================================================
+Period 2012-01-03..2026-05-29   Shell Top10/EW/swing-exit   NIFTY500(px) 13.62%
+Champion ref (Mom+LowVol Top-500 quarterly): CAGR 16.54% Sharpe 0.66 MaxDD -33.0%
+Gate bar: CAGR>17.4%, Sharpe>=0.69, MaxDD>=-38.5%, no sign-flip, roll3y-min>0, survives stress.
+
+Freq        Net CAGR    Gross    Drag  Sharpe    MaxDD Turn/reb  roll3yMin    H1 a    H2 a
+----------------------------------------------------------------------------------------------------
+weekly       -38.6%    26.8%   65.4%   -1.92   -99.9%     28%    -87.2%  -75.4%   -8.7%
+biweekly     -37.8%    16.4%   54.1%   -1.68   -99.9%     57%    -71.6%  -34.6%  -60.8%
+monthly       -2.4%    12.4%   14.8%   -0.37   -62.6%     91%    -17.8%  -21.2%  -12.2%
+----------------------------------------------------------------------------------------------------
+
+[weekly]  FAILS: CAGR>17.4%, Sharpe>=0.69, MaxDD>=-38.5%, no sign-flip, roll3y min>0
+[biweekly]  FAILS: CAGR>17.4%, Sharpe>=0.69, MaxDD>=-38.5%, no sign-flip, roll3y min>0
+[monthly]  FAILS: CAGR>17.4%, Sharpe>=0.69, MaxDD>=-38.5%, no sign-flip, roll3y min>0
+
+----------------------------------------------------------------------------------------------------
+VERDICT: NO pullback cadence clears all gates. Best = monthly (CAGR -2.4%, Sharpe -0.37, drag 14.8%).
+  Pullback-in-uptrend does NOT beat the frozen champion net of Indian costs in this shell.
+  (Whether the loss is cost-drag or raw edge is shown by the gross/drag columns.) -> 2B next.
+====================================================================================================

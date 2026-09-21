@@ -1,0 +1,37 @@
+====================================================================================================
+           PROGRAM #2 EXP 1 — VALIDATION OF SMALLCAP 300-1000 MOM+LOWVOL (Rs 1,00,000, NET)         
+====================================================================================================
+Period 2012-01-03..2026-05-29   Shell Top10/quarterly/Buffer20/EW
+NIFTY500(px) CAGR 13.62%   Champion ref (Liquid Top-500, same shell) CAGR 16.54% Sharpe 0.66
+
+HEADLINE (the cell under test):
+  Net CAGR 21.82% (gross 23.65%, cost drag 1.83%) | Sharpe 1.02 | Sortino 1.34 | Calmar 0.63
+  MaxDD -34.81% | Vol 15.07% | Alpha +10.85% | Beta 0.60 | Final Rs 1,716,057
+  Rolling 3y CAGR: min -6.3% | median 26.9% | max 56.6%
+
+[C] SPLIT-SAMPLE (FIP-killer — the edge must NOT sign-flip):
+   2012-2018 : CAGR  14.5%  Sharpe  0.64  Alpha  +4.2%  (bm 14.3%)
+   2019-2026 : CAGR  29.2%  Sharpe  1.33  Alpha +17.9%  (bm 13.0%)
+
+[D] COST-REALISM STRESS (slippage multiplied):
+   x 5 slippage : net CAGR  19.8% | Sharpe  0.88 | MaxDD -36.0%  (bm 13.6%)
+   x10 slippage : net CAGR  16.9% | Sharpe  0.68 | MaxDD -40.7%  (bm 13.6%)
+
+[E] HONEST CAPACITY (impact-aware engine; impact term ACTIVE):
+   Rs    1L : CAGR  21.8% (+0.0% vs Rs1L) | Sharpe  1.02 | impact Rs           11 | costs Rs       83,873
+   Rs   10L : CAGR  22.7% (+0.8% vs Rs1L) | Sharpe  1.03 | impact Rs      152,112 | costs Rs      825,378
+   Rs   50L : CAGR  21.9% (+0.1% vs Rs1L) | Sharpe  0.98 | impact Rs    2,921,801 | costs Rs    5,983,996
+
+----------------------------------------------------------------------------------------------------
+PRE-REGISTERED GATES:
+   [PASS]  1. Net CAGR > champion 17.4%                     21.82%
+   [PASS]  2. Sharpe >= champion 0.69                       1.02
+   [PASS]  3. MaxDD >= -38.5% (not >5pts worse)             -34.8%
+   [PASS]  4. No split-sample sign-flip (alpha>0 both halves) H1 +4.2% / H2 +17.9%
+   [PASS]  5. Survives x5/x10 stress vs benchmark           x5 19.8% / x10 16.9%  (bm 13.6%)
+   [FAIL]  6. Rolling 3y min CAGR > 0                       -6.3%
+----------------------------------------------------------------------------------------------------
+VERDICT: NOT VALIDATED. Failed gate(s): 6. Rolling 3y min CAGR > 0
+  -> The 21.8% is not robust under this gate; the tail is (partly) a mirage. Champion stands;
+     the higher-CAGR question moves to Track 2's new styles.
+====================================================================================================

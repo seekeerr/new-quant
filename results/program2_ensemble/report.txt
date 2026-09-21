@@ -1,0 +1,34 @@
+====================================================================================================
+           PROGRAM #2 — ARCHITECTURE COMPARISON (STANDALONE vs ENSEMBLE vs PORTFOLIO), NET          
+====================================================================================================
+Period 2012-01-03..2026-05-29   NIFTY500(px) 13.62%   Champion bar 17.4%/Sharpe0.69
+Sleeves: A=champion Top-500, B=smalltail 300-1000, C=breakout-monthly. Daily-rebalanced blend.
+
+SLEEVE RETURN CORRELATION (daily, the diversification test):
+               A       B       C
+   A        1.00    0.62    0.59
+   B        0.62    1.00    0.58
+   C        0.59    0.58    1.00
+
+Architecture         CAGR  Sharpe  Calmar    MaxDD  roll3yMin    H1 a    H2 a
+----------------------------------------------------------------------------------------------------
+A champion         16.5%    0.66    0.50   -33.0%      1.8%   +6.6%   +3.3%
+B smalltail        21.8%    1.02    0.63   -34.8%     -6.3%   +4.2%  +17.9%
+C breakout         22.8%    0.66    0.56   -40.6%     -3.7%  +11.7%   +5.5%
+B+C 50/50          22.9%    0.92    0.62   -37.0%     -4.6%   +8.3%  +12.2%
+A+C 50/50          20.2%    0.77    0.60   -33.8%     -0.6%   +9.6%   +5.0%
+A+B 50/50          19.4%    0.95    0.64   -30.4%     -2.0%   +5.5%  +10.7%
+A+B+C 1/3          21.0%    0.92    0.63   -33.2%     -2.3%   +7.9%   +9.5%
+----------------------------------------------------------------------------------------------------
+
+[A champion]  FAILS: CAGR>17.4%, Sharpe>=0.69
+[B smalltail]  FAILS: roll3y min>0
+[C breakout]  FAILS: Sharpe>=0.69, MaxDD>=-38.5%, roll3y min>0
+[B+C 50/50]  FAILS: roll3y min>0
+[A+C 50/50]  FAILS: roll3y min>0
+[A+B 50/50]  FAILS: roll3y min>0
+[A+B+C 1/3]  FAILS: roll3y min>0
+----------------------------------------------------------------------------------------------------
+VERDICT: NO architecture clears all six gates on the blend span. Best risk-adjusted = B smalltail (Sharpe 1.02). The ~22% engines stay individually
+  cyclical; champion remains the only all-gate product. Fundamentals track is the next lever.
+====================================================================================================

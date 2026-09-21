@@ -1,0 +1,38 @@
+========================================================================================================
+                 FULL (UNFILTERED) UNIVERSE STRATEGY SEARCH — Rs 1,00,000 — NET OF COSTS                
+========================================================================================================
+Capital Rs 100,000   Period 2012-01-03..2026-05-29   Shell Top10/EW. NIFTY500(px) CAGR 13.62%
+[x5 cost] = slippage & impact x5 (micro-cap cost realism stress).
+
+Signal      Universe              Freq          CAGR   MaxDD  Sharpe  Calmar   Alpha   Turn  Trades      Costs
+--------------------------------------------------------------------------------------------------------
+ShortRev-21 Filtered-500          monthly    -29.9%  -99.6%   -1.34   -0.30  -42.9%    73%    2487     96,808
+ShortRev-21 Unfiltered >=Rs1      monthly   -100.0% -100.0%     nan     nan   +nan%    29%     920     27,300
+ShortRev-21 Unfiltered >=Rs1 [x5 cost]monthly   -100.0% -100.0%     nan     nan   +nan%    24%     781     35,593
+ShortRev-21 Unfiltered >=Rs5      monthly    -42.7% -100.0%   -1.44   -0.43  -51.5%    36%    1210     37,236
+ShortRev-21 Unfiltered >=Rs5 [x5 cost]monthly    -43.5% -100.0%   -1.43   -0.43  -51.6%    28%     943     43,045
+PureMom     Filtered-500          quarterly   17.0%  -56.8%    0.37    0.30   +2.1%    59%     877     63,814
+PureMom     Unfiltered >=Rs1      quarterly   26.3%  -59.7%    0.74    0.44  +12.3%    64%     909    194,727
+PureMom     Unfiltered >=Rs1 [x5 cost]quarterly   23.2%  -61.4%    0.62    0.38   +9.2%    64%     911    388,982
+PureMom     Unfiltered >=Rs5      quarterly   23.5%  -56.1%    0.64    0.42   +9.5%    63%     905    155,899
+PureMom     Unfiltered >=Rs5 [x5 cost]quarterly   20.7%  -58.0%    0.53    0.36   +6.7%    63%     906    311,317
+Mom+LowVol  Filtered-500          quarterly   16.5%  -33.0%    0.66    0.50   +4.7%    42%     720     57,290
+Mom+LowVol  Unfiltered >=Rs1      quarterly   16.2%  -30.9%    0.64    0.52   +4.6%    47%     752     59,076
+Mom+LowVol  Unfiltered >=Rs1 [x5 cost]quarterly   15.0%  -30.9%    0.56    0.49   +3.4%    47%     747    102,986
+Mom+LowVol  Unfiltered >=Rs5      quarterly   17.1%  -30.9%    0.69    0.55   +5.5%    47%     756     61,914
+Mom+LowVol  Unfiltered >=Rs5 [x5 cost]quarterly   15.9%  -31.0%    0.61    0.51   +4.2%    47%     747    107,088
+--------------------------------------------------------------------------------------------------------
+
+[ShortRev-21] Filtered-500 net CAGR -29.93% (Sharpe -1.34, MaxDD -99.6%)
+   Unfiltered >=Rs1   net -100.0%  ->  x5-stress -100.0%  =>  does not beat Filtered-500
+   Unfiltered >=Rs5   net -42.7%  ->  x5-stress -43.5%  =>  does not beat Filtered-500
+
+[PureMom] Filtered-500 net CAGR 16.97% (Sharpe 0.37, MaxDD -56.8%)
+   Unfiltered >=Rs1   net  26.3%  ->  x5-stress  23.2%  =>  REAL: beats Filtered-500 AND survives x5 stress vs benchmark
+   Unfiltered >=Rs5   net  23.5%  ->  x5-stress  20.7%  =>  REAL: beats Filtered-500 AND survives x5 stress vs benchmark
+
+[Mom+LowVol] Filtered-500 net CAGR 16.54% (Sharpe 0.66, MaxDD -33.0%)
+   Unfiltered >=Rs1   net  16.2%  ->  x5-stress  15.0%  =>  does not beat Filtered-500
+   Unfiltered >=Rs5   net  17.1%  ->  x5-stress  15.9%  =>  REAL: beats Filtered-500 AND survives x5 stress vs benchmark
+
+========================================================================================================

@@ -1,0 +1,41 @@
+====================================================================================================
+                     PROGRAM #2 EXP 2F — SEASONALITY / CALENDAR (family #5) — NET                   
+====================================================================================================
+
+Loading survivorship-free bhavcopy panels ...
+  equity universe: 3291 symbols x 3823 dates
+
+[base] Mom+LowVol Top-500 quarterly (always-invested underlying) ...
+[net] base:   0%|          | 0/3551 [00:00<?, ?day/s][net] base:   0%|          | 1/3551 [00:00<07:58,  7.41day/s][net] base:   2%|▏         | 62/3551 [00:00<00:12, 282.32day/s][net] base:   3%|▎         | 124/3551 [00:00<00:09, 378.14day/s][net] base:   5%|▌         | 186/3551 [00:00<00:08, 391.70day/s][net] base:   7%|▋         | 247/3551 [00:00<00:08, 395.03day/s][net] base:   9%|▊         | 309/3551 [00:00<00:08, 403.42day/s][net] base:  10%|█         | 371/3551 [00:01<00:12, 264.07day/s][net] base:  12%|█▏        | 434/3551 [00:01<00:16, 189.27day/s][net] base:  14%|█▍        | 495/3551 [00:03<00:34, 87.41day/s] [net] base:  16%|█▌        | 557/3551 [00:03<00:31, 95.36day/s][net] base:  17%|█▋        | 617/3551 [00:04<00:32, 89.14day/s][net] base:  19%|█▉        | 680/3551 [00:05<00:30, 92.65day/s][net] base:  21%|██        | 738/3551 [00:05<00:25, 110.53day/s][net] base:  23%|██▎       | 799/3551 [00:05<00:20, 131.92day/s][net] base:  24%|██▍       | 860/3551 [00:05<00:17, 155.30day/s][net] base:  26%|██▌       | 924/3551 [00:06<00:14, 180.16day/s][net] base:  28%|██▊       | 985/3551 [00:06<00:12, 198.77day/s][net] base:  29%|██▉       | 1046/3551 [00:06<00:11, 209.75day/s][net] base:  31%|███       | 1108/3551 [00:06<00:11, 219.88day/s][net] base:  33%|███▎      | 1170/3551 [00:07<00:10, 224.44day/s][net] base:  35%|███▍      | 1231/3551 [00:07<00:11, 209.09day/s][net] base:  36%|███▋      | 1293/3551 [00:07<00:11, 192.09day/s][net] base:  38%|███▊      | 1354/3551 [00:08<00:12, 170.29day/s][net] base:  40%|███▉      | 1417/3551 [00:08<00:13, 157.82day/s][net] base:  42%|████▏     | 1479/3551 [00:09<00:14, 144.37day/s][net] base:  43%|████▎     | 1539/3551 [00:09<00:15, 130.74day/s][net] base:  45%|████▌     | 1603/3551 [00:10<00:17, 113.92day/s][net] base:  47%|████▋     | 1664/3551 [00:11<00:19, 98.20day/s] [net] base:  49%|████▊     | 1725/3551 [00:12<00:20, 88.88day/s][net] base:  50%|█████     | 1787/3551 [00:13<00:20, 85.41day/s][net] base:  52%|█████▏    | 1847/3551 [00:13<00:21, 78.43day/s][net] base:  54%|█████▍    | 1909/3551 [00:14<00:21, 76.14day/s][net] base:  55%|█████▌    | 1969/3551 [00:15<00:23, 68.37day/s][net] base:  57%|█████▋    | 2032/3551 [00:16<00:20, 73.84day/s][net] base:  59%|█████▉    | 2091/3551 [00:17<00:18, 77.98day/s][net] base:  61%|██████    | 2157/3551 [00:17<00:15, 90.68day/s][net] base:  62%|██████▏   | 2219/3551 [00:18<00:13, 101.12day/s][net] base:  64%|██████▍   | 2280/3551 [00:18<00:11, 108.99day/s][net] base:  66%|██████▌   | 2341/3551 [00:19<00:10, 114.74day/s][net] base:  68%|██████▊   | 2404/3551 [00:19<00:09, 119.75day/s][net] base:  69%|██████▉   | 2467/3551 [00:20<00:08, 122.69day/s][net] base:  71%|███████   | 2528/3551 [00:21<00:15, 67.91day/s] [net] base:  73%|███████▎  | 2590/3551 [00:23<00:15, 62.32day/s][net] base:  75%|███████▍  | 2653/3551 [00:23<00:13, 67.22day/s][net] base:  76%|███████▋  | 2715/3551 [00:24<00:11, 69.89day/s][net] base:  78%|███████▊  | 2777/3551 [00:25<00:11, 65.06day/s][net] base:  80%|███████▉  | 2837/3551 [00:26<00:10, 65.00day/s][net] base:  82%|████████▏ | 2900/3551 [00:27<00:09, 71.19day/s][net] base:  83%|████████▎ | 2960/3551 [00:28<00:07, 76.64day/s][net] base:  85%|████████▌ | 3020/3551 [00:28<00:06, 84.84day/s][net] base:  87%|████████▋ | 3080/3551 [00:29<00:05, 87.59day/s][net] base:  89%|████████▊ | 3144/3551 [00:29<00:04, 89.10day/s][net] base:  90%|█████████ | 3206/3551 [00:30<00:03, 89.36day/s][net] base:  92%|█████████▏| 3267/3551 [00:31<00:03, 88.94day/s][net] base:  94%|█████████▎| 3328/3551 [00:31<00:02, 89.26day/s][net] base:  96%|█████████▌| 3392/3551 [00:32<00:01, 95.38day/s][net] base:  97%|█████████▋| 3454/3551 [00:33<00:00, 99.75day/s][net] base:  99%|█████████▉| 3513/3551 [00:33<00:00, 102.44day/s][net] base: 100%|██████████| 3551/3551 [00:33<00:00, 105.48day/s]
+    Always-invested      CAGR 16.54% | Sharpe 0.66 | MaxDD -32.99% | invested 100%
+    Turn-of-month        CAGR 1.05% | Sharpe -0.76 | MaxDD -30.75% | invested 19%
+    Halloween(Nov-Apr)   CAGR 6.37% | Sharpe -0.01 | MaxDD -32.99% | invested 50%
+
+====================================================================================================
+                     PROGRAM #2 EXP 2F — SEASONALITY / CALENDAR (family #5, NET)                    
+====================================================================================================
+Period 2012-01-03..2026-05-29   NIFTY500(px) 13.62%   Champion 17.4%/Sharpe0.69
+Underlying: Mom+LowVol Top-500 quarterly. Switch cost 0.48%/transition.
+
+Variant                    CAGR  Sharpe  Calmar    MaxDD  Invested  roll3yMin
+----------------------------------------------------------------------------------------------------
+Always-invested          16.5%    0.66    0.50   -33.0%     100%       1.8%
+Turn-of-month             1.1%   -0.76    0.03   -30.7%      19%     -10.7%
+Halloween(Nov-Apr)        6.4%   -0.01    0.19   -33.0%      50%      -2.2%
+----------------------------------------------------------------------------------------------------
+
+RAW SEASONAL EFFECT (annualised mean return inside vs outside window):
+  Turn-of-month (strat) inside   50.5% (19% of days) | outside   11.6% | spread  +38.9%
+  Turn-of-month (NIFTY500) inside   50.1% (19% of days) | outside    8.3% | spread  +41.8%
+  Halloween (strat) inside   10.1% (50% of days) | outside   27.1% | spread  -17.0%
+  Halloween (NIFTY500) inside   11.9% (50% of days) | outside   19.1% | spread   -7.1%
+
+[Turn-of-month]  FAILS: CAGR>17.4%, Sharpe>=0.69, no sign-flip, roll3y min>0
+[Halloween(Nov-Apr)]  FAILS: CAGR>17.4%, Sharpe>=0.69, no sign-flip, roll3y min>0
+----------------------------------------------------------------------------------------------------
+VERDICT: calendar timing does NOT beat the champion on CAGR (expected: it cuts exposure).
+  Always-invested 16.5%/Sh0.66 vs best-timed Halloween(Nov-Apr) 6.4%/Sh-0.01. Seasonality is a RISK-TIMING family, not a
+  high-CAGR standalone edge. Effect existence + risk value recorded for the portfolio stage.
+====================================================================================================
+
+  Saved to C:\Users\KaranThakkar\Desktop\Karan data\New Folder\new-quant\results\program2_seasonality/   (total 38s)

@@ -1,0 +1,25 @@
+================================================================================================
+                SMALL-CAP UNIVERSE BREADTH STUDY — Rs 1,00,000 BOOK — NET OF COSTS              
+================================================================================================
+Capital: Rs 100,000   Period: 2012-01-03..2026-05-29   Shell: Top10/quarterly/Buffer20/EW
+Only the universe slice varies. NIFTY500(px) CAGR over span: 13.62%
+
+Signal     Slice                   CAGR   Gross   Drag   MaxDD  Sharpe  Calmar   Alpha  Trades      Costs   3yMin
+------------------------------------------------------------------------------------------------
+PureMom    Liquid Top-500        17.0%   19.1%   2.2%  -56.8%    0.37    0.30   +2.1%     877     63,814   -9.5%
+PureMom    Broad Top-1000        15.2%   17.5%   2.3%  -53.7%    0.31    0.28   +0.6%     905     73,144   -7.6%
+PureMom    SmallCap 300-1000     17.0%   19.5%   2.5%  -69.6%    0.38    0.24   +2.5%     965     89,462  -25.6%
+PureMom    All-Equity filtered   14.8%   17.1%   2.4%  -53.7%    0.30    0.28   +0.3%     906     74,743   -7.6%
+Mom+LowVol Liquid Top-500        16.5%   17.9%   1.3%  -33.0%    0.66    0.50   +4.7%     720     57,290    1.8%
+Mom+LowVol Broad Top-1000        17.0%   18.4%   1.5%  -33.0%    0.68    0.51   +5.1%     736     56,233    1.5%
+Mom+LowVol SmallCap 300-1000     21.8%   23.6%   1.8%  -34.8%    1.02    0.63  +10.8%     816     83,862   -6.3%
+Mom+LowVol All-Equity filtered   17.2%   18.6%   1.5%  -33.0%    0.69    0.52   +5.4%     732     56,885    1.5%
+------------------------------------------------------------------------------------------------
+
+[PureMom] baseline Liquid Top-500: CAGR 16.97%, MaxDD -56.8%, Sharpe 0.37
+   => NO wider slice beats Top-500 within drawdown tolerance. Breadth edge is a mirage after costs; stay with Top-500.
+
+[Mom+LowVol] baseline Liquid Top-500: CAGR 16.54%, MaxDD -33.0%, Sharpe 0.66
+   => WIDER SLICE WINS: SmallCap 300-1000 CAGR 21.82% (+5.28%) at MaxDD -34.8%. Small-cap breadth pays for a Rs 1L book.
+
+================================================================================================

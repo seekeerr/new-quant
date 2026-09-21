@@ -1,0 +1,20 @@
+====================================================================================================
+                 PROGRAM #2 EXP 2E — EVENT-DRIVEN POST-EVENT DRIFT (PEAD proxy, NET)                
+====================================================================================================
+Period 2012-01-03..2026-05-29   NIFTY500(px) 13.62%   Champion 17.4%/Sharpe0.69
+Event: 1-day ret>=+8% AND volume>=3x 50d-avg; enter t+1 close; hold 40d; max 10 EW slots.
+
+Universe            CAGR  Sharpe    MaxDD    Alpha  Trades  roll3yMin    H1 a    H2 a
+----------------------------------------------------------------------------------------------------
+Top-500            2.6%   -0.14   -68.6%   -12.3%    1758    -24.8%  -10.7%  -14.0%
+All-filtered       3.8%   -0.10   -77.5%   -10.9%    1770    -34.7%   -3.7%  -17.6%
+----------------------------------------------------------------------------------------------------
+
+[Top-500]  FAILS: CAGR>17.4%, Sharpe>=0.69, MaxDD>=-38.5%, no sign-flip, roll3y min>0
+[All-filtered]  FAILS: CAGR>17.4%, Sharpe>=0.69, MaxDD>=-38.5%, no sign-flip, roll3y min>0
+
+----------------------------------------------------------------------------------------------------
+VERDICT: NO event-drift cell clears all gates. Best = All-filtered (CAGR 3.8%, Sharpe -0.10, alpha -10.9%).
+  The gap+volume PEAD proxy does not beat the champion net of costs as a standalone.
+  (Records whether an independent event family has ANY standalone edge for later ensemble.)
+====================================================================================================
