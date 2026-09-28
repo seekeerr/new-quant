@@ -13,3 +13,6 @@ _*.json
 # Python
 __pycache__/
 *.pyc
+
+# Tracker runtime log (regenerated on every run)
+strategy_live/server.log
