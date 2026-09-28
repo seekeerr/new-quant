@@ -1,0 +1,6 @@
+{
+  "_comment": "The money actually being tracked. This drives a REAL backtest at this size - fixed brokerage and whole-share rounding bite harder on small books, so the figures are not a scaled version of a larger run.",
+  "starting_capital": 100000,
+  "started_on": "2023-01-03",
+  "is_real_money": false
+}
